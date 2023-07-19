@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Navbar(props: any) {
     console.log(props);
     return (
-        <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <nav className="border-gray-200 bg-gray-900">
           <div className="flex flex-wrap items-center justify-between mx-10 p-4">
             <Link href="https://flowbite.com/" className="flex items-center">
               <span id = "logo-text" className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">volapyk</span>
