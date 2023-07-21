@@ -1,18 +1,33 @@
-import Image from 'next/image'
-import Card from '@/components/Card.tsx'
-import Navbar from '@/components/Navbar.tsx'
+'use client'
 
-export default function InstantChecker() {
+// pages/somepage.tsx
+import React, { useState, useEffect } from 'react';
+
+const SomePage: React.FC = () => {
+  const [data, setData] = useState<any>(null);
+
+  useEffect(() => {
+    // Define the URL of your API route
+    const apiUrl = '/api/database';
+
+    // Fetch data from the API
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
+
+  if (data === null) {
+    // Loading state while data is being fetched
+    return <div>Loading...</div>;
+  }
+
   return (
-    <html>
-        <body className="static bg-slate-900">
-            <Navbar/>
-            <div className='fixed flex items-center min-h-screen'>
-                <h1 className="lg:text-9xl text-transparent bg-clip-text bg-gradient-to-r to-red-600 from-sky-400">| C0MING S00N</h1>
-            </div>
-        
-        </body>
-    </html>
-    
-  )
-}
+    <div>
+      <h1>Data from API:</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+};
+
+export default SomePage;

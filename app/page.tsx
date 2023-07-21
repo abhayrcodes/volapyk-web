@@ -1,7 +1,10 @@
+'use client'
+
 import Image from 'next/image';
 import Card from '../components/Card.tsx';
 import Navbar from '../components/Navbar.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
+import React, { useState, useEffect } from 'react';
 
 function Logo() {
   return (
@@ -15,74 +18,81 @@ function Logo() {
 }
 
 export default function Home() {
-  const data = [
-    {
-      service_name: 'Facebook',
-      numbers: [
-        'They steal your data',
-        'They sell your data to other services or companies',
-        'They steal your data',
-        'They sell your data to other services or companies',
-        'They steal your data',
-      ],
-    },
-    {
-      service_name: 'Amazon',
-      numbers: [
-        'They steal your data',
-        'They sell your data to other services or companies',
-        'They steal your data',
-        'They sell your data to other services or companies',
-        'They steal your data',
-      ],
-    },
-    {
-      service_name: 'Google',
-      numbers: [
-        'They steal your data',
-        'They sell your data to other services or companies',
-        'They steal your data',
-        'They sell your data to other services or companies',
-        'They steal your data',
-      ],
-    },
-    {
-      service_name: 'Twitter',
-      numbers: [
-        'They steal your data',
-        'They sell your data to other services or companies',
-        'They steal your data',
-        'They sell your data to other services or companies',
-        'They steal your data',
-      ],
-    },
-  ];
+  const [data, setData] = useState([]); // Initialize data as an empty array
 
-  const tableContent = (
-    <>
-      <tr>
-        <td className="pr-3">
-          <Card service_name={data[0].service_name} numbers={data[0].numbers} />
+  useEffect(() => {
+    // Define the URL of your API route
+    const apiUrl = '/api/database?q=SELECT%20*%20FROM%20service_scores'
+
+    // Fetch JSON data from the API
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
+
+  const tableContent = [];
+  for (let i = 0; i < data.length; i += 2) {
+    const firstService = data[i];
+    const secondService = data[i + 1];
+
+    tableContent.push(
+      <tr key={i}>
+        <td className='pr-3'>
+          {firstService && (
+            <Card
+              service_name={firstService.service_name}
+              char_score={firstService.char_score}
+              numbers={[
+                firstService.case0_title,
+                firstService.case1_title,
+                firstService.case2_title,
+                firstService.case3_title,
+                firstService.case4_title,
+              ]}
+              colors={[
+                firstService.case0_class,
+                firstService.case1_class,
+                firstService.case2_class,
+                firstService.case3_class,
+                firstService.case4_class,
+              ]}
+            />
+          )}
         </td>
-        <td className="pl-3">
-          <Card service_name={data[1].service_name} numbers={data[1].numbers} />
+        <td className='pl-3'>
+          {secondService && (
+            <Card
+              service_name={secondService.service_name}
+              char_score={secondService.char_score}
+              numbers={[
+                secondService.case0_title,
+                secondService.case1_title,
+                secondService.case2_title,
+                secondService.case3_title,
+                secondService.case4_title,
+              ]}
+              colors={[
+                secondService.case0_class,
+                secondService.case1_class,
+                secondService.case2_class,
+                secondService.case3_class,
+                secondService.case4_class,
+              ]}
+            />
+          )}
         </td>
       </tr>
-      <tr>
-        <td className="pr-3">
-          <Card service_name={data[2].service_name} numbers={data[2].numbers} />
-        </td>
-        <td className="pl-3">
-          <Card service_name={data[3].service_name} numbers={data[3].numbers} />
-        </td>
-      </tr>
-    </>
-  );
+    );
+  }
+
 
   const stackedContent = data.map((item, index) => (
     <tr key={index}>
       <td colSpan={2}>
-        <Card service_name={item.service_name} numbers={item.numbers} />
+        <Card service_name={item.service_name} char_score={item.char_score} 
+          numbers={[item.case0_title, item.case1_title, item.case2_title, item.case3_title, item.case4_title]}
+          colors={[item.case0_class, item.case1_class, item.case2_class, item.case3_class, item.case4_class]} />
       </td>
     </tr>
   ));

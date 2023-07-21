@@ -1,21 +1,74 @@
-import Navbar from "@/components/Navbar"
+'use client'
+
+// About.js
+import React, { useState, useEffect } from 'react';
+import Navbar from '@/components/Navbar';
 
 export default function About() {
-    return (
-        <html>
-            <body className="bg-slate-900">
-                <Navbar/>
+  const paragraphs = [
+    "Paragraph 1",
+    "Paragraph 2",
+    "Paragraph 3",
+    // Add more paragraphs as needed
+  ];
 
-                <div className="mx-10 mt-20">
-                    <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-8xl">NEVER FEAR THE WEB AGAIN<span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">.</span></h1>
-                </div>
-                <p className="text-white">
-                    Welcome to Volapyk. We are a project that harnesses the power of machine learning to revolutionize the way people interact with privacy policies and terms of service. Our mission is to make these complex and often convoluted documents accessible and understandable to everyone.
-                </p>
-            </body>
-        </html>
-    )
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  // Function to handle scrolling
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    setScrollPosition(scrollY);
+  };
+
+  // Attach the scroll event listener for the Client Component
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <div className="flex items-center justify-center">
+        <div className="w-5/6">
+          <h1 className="mt-20 mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-5xl text-center">
+            Everyone has a right to{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
+              Transparency & Simplicity
+            </span>
+          </h1>
+          <div className="h-80 overflow-y-scroll scroll-smooth relative">
+            {paragraphs.map((paragraph, index) => (
+              <p
+                key={index}
+                className="absolute w-full text-white"
+                style={{
+                  top: `${index * 100}%`,
+                  opacity: Math.max(1 - Math.abs((scrollPosition - index * 100) / 200), 0),
+                  transition: 'opacity 0.2s',
+                }}
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
+
+
+
+
+
+
+
+
+
+
 
 /*
 Welcome to Volapyk. We are a project that harnesses the power of machine learning to revolutionize the way people interact with privacy policies and terms of service. Our mission is to make these complex and often convoluted documents accessible and understandable to everyone.
