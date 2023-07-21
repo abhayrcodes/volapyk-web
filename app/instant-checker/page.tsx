@@ -1,33 +1,18 @@
-'use client'
+import Image from 'next/image'
+import Card from '@/components/Card.tsx'
+import Navbar from '@/components/Navbar.tsx'
 
-// pages/somepage.tsx
-import React, { useState, useEffect } from 'react';
-
-const SomePage: React.FC = () => {
-  const [data, setData] = useState<any>(null);
-
-  useEffect(() => {
-    // Define the URL of your API route
-    const apiUrl = '/api/database';
-
-    // Fetch data from the API
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
-
-  if (data === null) {
-    // Loading state while data is being fetched
-    return <div>Loading...</div>;
-  }
-
+export default function AddService() {
   return (
-    <div>
-      <h1>Data from API:</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
-  );
-};
-
-export default SomePage;
+    <html>
+        <body className="static bg-slate-900">
+            <Navbar/>
+            <div className='fixed flex items-center min-h-screen'>
+                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">| C0MING S00N</h1>
+            </div>
+        
+        </body>
+    </html>
+    
+  )
+}
