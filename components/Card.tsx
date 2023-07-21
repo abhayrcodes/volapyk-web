@@ -1,12 +1,11 @@
 export default function Card(props: any) {
   const numbers = props.numbers;
-  const defaultColors = ['gray']; // Set default color if colors prop is not provided
 
   const colorMap: { [key: string]: string } = {
-    good: 'bg-green-600',
-    neutral: 'bg-gray-600',
-    bad: 'bg-orange-500',
-    blocker: 'bg-red-500'
+    good: 'bg-green-600 hover:bg-opacity-75',
+    neutral: 'bg-gray-600 hover:bg-opacity-75',
+    bad: 'bg-orange-500 hover:bg-opacity-75',
+    blocker: 'bg-red-500 hover:bg-opacity-75'
     // Add more mappings as needed
   };
 
@@ -16,7 +15,7 @@ export default function Card(props: any) {
     };
 
     return (
-      <li key={index} className={`relative transition ease-in-out duration-250 text-white font-bold font-sans block border border-transparent rounded-lg p-2 my-1 ${listItemStyle.backgroundColor}`}>
+      <li key={index} className={`relative transition ease-in-out duration-250 text-white font-sans block border border-transparent rounded-lg p-2 my-1 ${listItemStyle.backgroundColor}`}>
         <div className="overflow-hidden line-clamp-1">
           {number}
         </div>
