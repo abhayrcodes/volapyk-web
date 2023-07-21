@@ -22,7 +22,7 @@ export default function Home() {
 
   useEffect(() => {
     // Define the URL of your API route
-    const apiUrl = '/api/database?q=SELECT%20*%20FROM%20service_scores'
+    const apiUrl = '/api/database?q=SELECT * FROM service_scores'
 
     // Fetch JSON data from the API
     fetch(apiUrl)
