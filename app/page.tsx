@@ -18,7 +18,7 @@ function Logo() {
 }
 
 export default function Home() {
-  const [data, setData] = useState([]); // Initialize data as an empty array
+  const [data, setData] = useState<Array<any>>([]); // Initialize data as an empty array
 
   useEffect(() => {
     // Define the URL of your API route
@@ -30,6 +30,8 @@ export default function Home() {
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
+
+  console.log(typeof(data[0]));
 
   const tableContent = [];
   for (let i = 0; i < data.length; i += 2) {
