@@ -37,7 +37,7 @@ export default function About() {
                   <td className='pr-3 w-1/2 flex'>
                     <div className="border-2 transition ease-in-out mb-7 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
                       <p className="text-xl font-bold tracking-tight mb-5">
-                        Volapyk ("vola-pike") uses machine learning to automate the processing of privacy policies and terms of service. Each service is then given an easy to understand grade based on its documents.
+                        Volapyk (&quot;vola-pike&quot;) uses machine learning to automate the processing of privacy policies and terms of service. Each service is then given an easy to understand grade based on its documents.
                       </p>
                       <div>
                         <div>
