@@ -41,21 +41,21 @@ export default function Home() {
         <td className='pr-3'>
           {firstService && (
             <Card
-              service_name={firstService["service_name"]}
-              char_score={firstService["char_score"]}
+              service_name={firstService.service_name}
+              char_score={firstService.char_score}
               numbers={[
-                firstService["case0_title"],
-                firstService["case1_title"],
-                firstService["case2_title"],
-                firstService["case3_title"],
-                firstService["case4_title"],
+                firstService.case0_title,
+                firstService.case1_title,
+                firstService.case2_title,
+                firstService.case3_title,
+                firstService.case4_title,
               ]}
               colors={[
-                firstService["case0_class"],
-                firstService["case1_class"],
-                firstService["case2_class"],
-                firstService["case3_class"],
-                firstService["case4_class"],
+                firstService.case0_class,
+                firstService.case1_class,
+                firstService.case2_class,
+                firstService.case3_class,
+                firstService.case4_class,
               ]}
             />
           )}
@@ -63,21 +63,21 @@ export default function Home() {
         <td className='pl-3'>
           {secondService && (
             <Card
-              service_name={secondService["service_name"]}
-              char_score={secondService["char_score"]}
+              service_name={secondService.service_name}
+              char_score={secondService.char_score}
               numbers={[
-                secondService["case0_title"],
-                secondService["case1_title"],
-                secondService["case2_title"],
-                secondService["case3_title"],
-                secondService["case4_title"],
+                secondService.case0_title,
+                secondService.case1_title,
+                secondService.case2_title,
+                secondService.case3_title,
+                secondService.case4_title, 
               ]}
               colors={[
-                secondService["case0_class"],
-                secondService["case1_class"],
-                secondService["case2_class"],
-                secondService["case3_class"],
-                secondService["case4_class"],
+                secondService.case0_class,
+                secondService.case1_class,
+                secondService.case2_class,
+                secondService.case3_class,
+                secondService.case4_class,
               ]}
             />
           )}
@@ -90,9 +90,9 @@ export default function Home() {
   const stackedContent = data.map((item, index) => (
     <tr key={index}>
       <td colSpan={2}>
-        <Card service_name={item["service_name"]} char_score={item["char_score"]} 
-          numbers={[item["case0_title"], item["case1_title"], item["case2_title"], item["case3_title"], item["case4_title"]]}
-          colors={[item["case0_class"], item["case1_class"], item["case2_class"], item["case3_class"], item["case4_class"]]} />
+        <Card service_name={item.service_name} char_score={item.char_score} 
+          numbers={[item.case0_title, item.case1_title, item.case2_title, item.case3_title, item.case4_title]}
+          colors={[item.case0_class, item.case1_class, item.case2_class, item.case3_class, item.case4_class]} />
       </td>
     </tr>
   ));
