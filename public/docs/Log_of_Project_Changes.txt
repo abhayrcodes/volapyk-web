@@ -1,0 +1,52 @@
+Log of Project Changes
+
+RESEARCH PHASE
+March 25th - Project idea created
+March 26th - Academic advisor at Columbia joined as oversight
+March 31st to April 23rd - Started with GPT-JT and switched to bart-large-mnli as main-model for prototype
+
+PROTOTYPE PHASE
+April 24th - First prototype with bart-large-mnli and tosdr extracted data tested (bad results, see below)
+April 25th - Added two collaborators to the project (had brainstorm meeting)
+May 1st - Decided to use databases for storage of data to maximize speed (over json and csv)
+
+BACKEND DEVELOPMENT & FRONTEND PROTOTYPE PHASE
+May 5th - Created relevance labeling to generate training data for the classifier (hand labeled 600 sentences)
+May 6th - Converted ml training data to csv format for ease of use with pandas and ml code
+May 10th to May 23rd - Training started at 70% and moved to 87% for the relevance machine learning model (involved preprocessing to remove bad characters)
+May 24th - ai1 for relevance classification hits 90% accuracy
+May 26th to May 31st - Quote augmenting ml model implemented to create 100 examples of each case for training of case classifier ai (switched from chatgpt to parrot)
+May 31st - First website design implemented at a test phase
+June 1st to June 24th - Began training ai2 (pivoted from bart-large-mnli to bert-large-cased to bert-base-cased to bart-large-mnli)
+June 22nd - Achieved 93% accuracy on ai2 case selection with 30 epochs over 15 hours of training
+June 24th - Intensive testing on ai reveals faults, transition back to bart-large-mnli (semi accurate compared to tosdr, but very accurate in finding valid alternatives)
+
+MATURE BACKEND & FRONTEND DEVELOPMENT PHASE
+July 1st - New database code and format adopted for storing all ai results
+July 2nd - Website design plan finalized
+July 4th - Calculation code for new database shifted to softmax w/ multi_label as false
+July 9th - Alpha service set selected (16 services, 88 policies), double mnli run gives promising 
+July 10th - 404 page and frontend basics complete
+July 17th - Alpha frontend pages and design finished and sql integration in progress
+July 18th - Alpha database optimized and reduced from 280 mb to 40 mb on alpha service set
+July 19th - Database successfully linked to services page
+July 21st - Service pages, search, and about pages completed
+
+ALPHA PHASE
+tbd - Alpha launched!
+
+BETA PHASE
+tbd - Beta launched!
+
+PRODUCTION PHASE
+tbd - Project launched!
+
+
+April prototype results
+# Reddit = -2,083,457 https://www.redditinc.com/policies/privacy-policy
+# Duckduckgo = -2,660,479 https://duckduckgo.com/privacy
+# Spotify = -10,327,305 https://www.spotify.com/us/legal/privacy-policy/
+# Startpage = 464,114 https://www.startpage.com/en/privacy-policy/
+# Proton = -943,446 https://proton.me/legal/privacy
+# Apple = -3,991,176 https://www.apple.com/legal/privacy/en-ww/
+# Paypal = -2,813,848 https://www.paypal.com/us/legalhub/privacy-full
