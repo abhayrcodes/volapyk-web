@@ -27,7 +27,7 @@ export default function Navbar(props: any) {
                   <Link href="/instant-checker" className="block border-2 border-transparent text-white bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">Instant Checker</Link>
                 </li>
                 <li>
-                  <Link href="https://gofund.me/91740cfb" className="block border-2 border-transparent text-white bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">Donate</Link>
+                  <Link href="https://gofundme.com/f/volapyk" className="block border-2 border-transparent text-white bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">Donate</Link>
                 </li>
               </ul>
             </div>
