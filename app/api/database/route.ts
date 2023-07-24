@@ -1,7 +1,6 @@
 // pages/api/database.js
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
-import type { NextApiRequest } from 'next';
 import { NextResponse } from 'next/server';
 /*
 export async function GET(req: any, res: any) {
@@ -32,7 +31,7 @@ export async function GET(req: any, res: any) {
 }
 */
 
-export async function GET(request: NextApiRequest) {
+export async function GET(request: Request) {
     /*
     const { searchParams } = new URL(request.url || "");
     const query = searchParams.has('otherquery');
