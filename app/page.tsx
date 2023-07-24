@@ -1,28 +1,22 @@
-'use client'
-
 import Image from 'next/image';
 import Card from '../components/Card.tsx';
 import Navbar from '../components/Navbar.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
 import React, { useState, useEffect } from 'react';
+import { headers } from 'next/dist/client/components/headers';
 
-function Logo() {
-  return (
-    <Image
-      src="/images/logo.svg" // Route of the image file
-      height={144} // Desired size with correct aspect ratio
-      width={144} // Desired size with correct aspect ratio
-      alt="Your Name"
-    />
-  );
+const fetchAll = async (host: string) => {
+  const res = await fetch("https://"+host+"/api/database");
+  return res.json();
 }
 
-export default function Home() {
+export default async function Home() {
+  /*
   const [data, setData] = useState<Array<any>>([]); // Initialize data as an empty array
 
   useEffect(() => {
     // Define the URL of your API route
-    const apiUrl = '/api/database?q=SELECT * FROM service_scores'
+    const apiUrl = '/api/database'
 
     // Fetch JSON data from the API
     fetch(apiUrl)
@@ -30,13 +24,15 @@ export default function Home() {
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
-
-  console.log(typeof(data[0]));
+  */
+  const host = headers().get("host") || "";
+  const serviceData = fetchAll(host);
+  const [data] = await Promise.all([serviceData]);
 
   const tableContent = [];
-  for (let i = 0; i < data.length; i += 2) {
-    const firstService = data[i];
-    const secondService = data[i + 1];
+  for (let i = 0; i < data.data.length; i += 2) {
+    const firstService = data.data[i];
+    const secondService = data.data[i + 1];
 
     tableContent.push(
       <tr key={i}>
@@ -89,7 +85,7 @@ export default function Home() {
   }
 
 
-  const stackedContent = data.map((item, index) => (
+  const stackedContent = data.data.map((item: any, index: any) => (
     <tr key={index}>
       <td colSpan={2}>
         <Card service_name={item.service_name} char_score={item.char_score} 

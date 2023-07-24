@@ -1,8 +1,10 @@
 // pages/api/database.js
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
-
-export default async function handler(req, res) {
+import type { NextApiRequest } from 'next';
+import { NextResponse } from 'next/server';
+/*
+export async function GET(req: any, res: any) {
   try {
     const { q } = req.query;
 
@@ -27,4 +29,23 @@ export default async function handler(req, res) {
     console.error('Error while handling database API:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
+}
+*/
+
+export async function GET(request: NextApiRequest) {
+    /*
+    const { searchParams } = new URL(request.url || "");
+    const query = searchParams.has('otherquery');
+    */
+
+    // Open the SQLite database
+    const db = await open({
+        filename: 'frontend2.db',
+        driver: sqlite3.Database,
+    });
+
+    const data = await db.all('SELECT * FROM service_scores');
+    return NextResponse.json({ data });
+
+    //return NextResponse.json({ query });
 }
