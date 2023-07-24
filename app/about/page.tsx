@@ -5,12 +5,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 
 export default function About() {
-  const paragraphs = [
-    "Paragraph 1",
-    "Paragraph 2",
-    "Paragraph 3",
-    // Add more paragraphs as needed
-  ];
 
   return (
     <html>
@@ -109,7 +103,7 @@ export default function About() {
                     </a>
                   </td>
                   <td className='w-1/3'>
-                    <a href="https://gofund.me/91740cfb" className="border-2 ml-20 py-3 group transition text-center ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                    <a href="https://gofundme.com/f/volapyk" className="border-2 ml-20 py-3 group transition text-center ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
                       Fund Future Growth
                     </a>
                   </td>
@@ -122,16 +116,6 @@ export default function About() {
     </html>
   );
 }
-
-
-
-
-
-
-
-
-
-
 
 /*
 Welcome to Volapyk. We are a project that harnesses the power of machine learning to revolutionize the way people interact with privacy policies and terms of service. Our mission is to make these complex and often convoluted documents accessible and understandable to everyone.
