@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { headers } from 'next/dist/client/components/headers';
 
 const fetchAll = async (host: string) => {
-  const res = await fetch("https://"+host+"/api/database");
+  const res = await fetch("http://"+host+"/api/database");
   return res.json();
 }
 
