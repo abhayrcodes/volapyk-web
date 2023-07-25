@@ -21,7 +21,8 @@ export default async function Home({
 
   const host = headers().get("host") || "";
 
-  const serviceData = fetchPosts("https://"+host+"/api/search?q="+searchParams.q);
+  const query = (typeof searchParams === "undefined") ? "" : searchParams.q;
+  const serviceData = fetchPosts("https://"+host+"/api/search?q="+query);
   const [data] = await Promise.all([serviceData]);
 
   const tableContent = [];
