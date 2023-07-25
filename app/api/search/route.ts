@@ -3,6 +3,8 @@ import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import { NextResponse } from 'next/server';
 
+export const dynamic = "force-dynamic"
+
 export async function GET(request: Request) {
     try {
         const { searchParams } = new URL(request.url || "");
