@@ -45,6 +45,6 @@ export async function GET(request: Request) {
         return NextResponse.json({ data });
     } catch (error) {
         console.error('Error while handling database API:', error);
-        NextResponse.json({ message: 'Internal server error'}, {status: 500});
+        return NextResponse.json({ message: 'Internal server error'}, {status: 500});
     }
 }
