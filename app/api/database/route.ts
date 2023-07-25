@@ -32,19 +32,19 @@ export async function GET(req: any, res: any) {
 */
 
 export async function GET(request: Request) {
-    /*
-    const { searchParams } = new URL(request.url || "");
-    const query = searchParams.has('otherquery');
-    */
+    try {
+        const { searchParams } = new URL(request.url || "");
+        const query = searchParams.has('q');
+        // Open the SQLite database
+        const db = await open({
+            filename: 'frontend2.db',
+            driver: sqlite3.Database,
+        });
 
-    // Open the SQLite database
-    const db = await open({
-        filename: 'frontend2.db',
-        driver: sqlite3.Database,
-    });
-
-    const data = await db.all('SELECT * FROM service_scores');
-    return NextResponse.json({ data });
-
-    //return NextResponse.json({ query });
+        const data = await db.all('SELECT * FROM service_scores');
+        return NextResponse.json({ data });
+    } catch (error) {
+        console.error('Error while handling database API:', error);
+        NextResponse.json({ message: 'Internal server error'}, {status: 500});
+    }
 }

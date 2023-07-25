@@ -26,6 +26,7 @@ export default async function Home() {
   }, []);
   */
   const host = headers().get("host") || "";
+
   const serviceData = fetchAll(host);
   const [data] = await Promise.all([serviceData]);
 
