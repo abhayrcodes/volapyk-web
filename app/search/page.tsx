@@ -6,16 +6,6 @@ import React, { useState, useEffect } from 'react';
 import { headers } from 'next/dist/client/components/headers';
 import Router, { useRouter } from 'next/navigation';
 
-export async function getServerSideProps(ctx: any) {
-    const { search } = ctx.query;
-  
-    return {
-      props: {
-        search,
-      },
-    };
-  }
-
 const fetchPosts = async (url: string) => {
   const res = await fetch(url);
   return res.json();
