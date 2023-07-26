@@ -11,7 +11,7 @@ const fetchPosts = async (url: string) => {
   return res.json();
 }
 
-export default async function Home({
+export default async function Search({
     params,
     searchParams,
   }: {
@@ -22,7 +22,7 @@ export default async function Home({
   const host = headers().get("host") || "";
 
   const query = (typeof searchParams === "undefined") ? "" : searchParams.q;
-  const serviceData = fetchPosts("https://"+host+"/api/search?q="+query);
+  const serviceData = fetchPosts("http://"+host+"/api/search?q="+query);
   const [data] = await Promise.all([serviceData]);
 
   const tableContent = [];
@@ -35,6 +35,7 @@ export default async function Home({
         <td className='pr-3'>
           {firstService && (
             <Card
+              service_id={firstService.service_id}
               service_name={firstService.service_name}
               char_score={firstService.char_score}
               numbers={[
@@ -57,6 +58,7 @@ export default async function Home({
         <td className='pl-3'>
           {secondService && (
             <Card
+              service_id={secondService.service_id}
               service_name={secondService.service_name}
               char_score={secondService.char_score}
               numbers={[

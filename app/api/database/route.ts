@@ -43,6 +43,7 @@ export async function GET(request: Request) {
         });
 
         const data = await db.all('SELECT * FROM service_scores');
+        db.close()
         return NextResponse.json({ data });
     } catch (error) {
         console.error('Error while handling database API:', error);

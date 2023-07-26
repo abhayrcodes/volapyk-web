@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Card(props: any) {
   const numbers = props.numbers;
 
@@ -24,7 +26,7 @@ export default function Card(props: any) {
   });
 
   return (
-    <a href="#" className="border-2 group transition ease-in-out mb-7 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg shadow bg-slate-900 border-gray-700">
+    <Link href={"/service/"+props.service_id} className="border-2 group transition ease-in-out mb-7 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg shadow bg-slate-900 border-gray-700">
       <div className="flex items-center justify-between">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">{props.service_name}</h5>
         <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
@@ -37,6 +39,6 @@ export default function Card(props: any) {
           {listItems}
         </ul>
       </div>
-    </a>
+    </Link>
   )
 }

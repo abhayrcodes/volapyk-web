@@ -5,30 +5,16 @@ import SearchInput from '@/components/SearchInput.tsx';
 import React, { useState, useEffect } from 'react';
 import { headers } from 'next/dist/client/components/headers';
 
-const fetchAll = async (host: string) => {
-  console.log("https://"+host+"/api/database");
-  const res = await fetch("https://"+host+"/api/database");
+const fetchAll = async (url: string) => {
+  const res = await fetch(url);
   return res.json();
 }
 
 export default async function Home() {
-  /*
-  const [data, setData] = useState<Array<any>>([]); // Initialize data as an empty array
-
-  useEffect(() => {
-    // Define the URL of your API route
-    const apiUrl = '/api/database'
-
-    // Fetch JSON data from the API
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
-  */
+  
   const host = headers().get("host") || "";
 
-  const serviceData = fetchAll(host);
+  const serviceData = fetchAll("http://"+host+"/api/database");
   const [data] = await Promise.all([serviceData]);
 
   const tableContent = [];
@@ -41,6 +27,7 @@ export default async function Home() {
         <td className='pr-3'>
           {firstService && (
             <Card
+              service_id = {firstService.service_id}
               service_name={firstService.service_name}
               char_score={firstService.char_score}
               numbers={[
@@ -63,6 +50,7 @@ export default async function Home() {
         <td className='pl-3'>
           {secondService && (
             <Card
+            service_id = {secondService.service_id}
               service_name={secondService.service_name}
               char_score={secondService.char_score}
               numbers={[
@@ -90,7 +78,7 @@ export default async function Home() {
   const stackedContent = data.data.map((item: any, index: any) => (
     <tr key={index}>
       <td colSpan={2}>
-        <Card service_name={item.service_name} char_score={item.char_score} 
+        <Card service_id = {item.service_id} service_name={item.service_name} char_score={item.char_score} 
           numbers={[item.case0_title, item.case1_title, item.case2_title, item.case3_title, item.case4_title]}
           colors={[item.case0_class, item.case1_class, item.case2_class, item.case3_class, item.case4_class]} />
       </td>
