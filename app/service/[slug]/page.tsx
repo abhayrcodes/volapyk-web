@@ -21,7 +21,6 @@ export default async function ServicePage({ params }: { params: { slug: string }
     <html>
       <body className='bg-slate-900'>
         <Navbar />
-        <div><Link href = "/">Services</Link></div>
 
         <div className="flex items-center justify-between w-2/3 mx-auto my-12">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">{data.name}</h1>

@@ -12,7 +12,7 @@ export default function About() {
         <Navbar />
         <div className="flex items-center justify-center">
           <div className="w-5/6">
-            <h1 className="mt-20 mb-10 text-3xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-5xl text-center">
+            <h1 className="mt-20 mb-10 text-3xl font-extrabold text-white md:text-3xl lg:text-5xl text-center">
               Simple{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
                 Privacy
@@ -89,11 +89,11 @@ export default function About() {
                 </tr>
               </tbody>
             </table>
-            <table className="w-full gap-4 text-sm leading-6 grid-template-column justify-center text-white py-3">
+            <table className="w-full gap-4 text-sm mb-10 leading-6 grid-template-column justify-center text-white py-3">
               <tbody>
                 <tr>
                   <td className='w-1/3'>
-                    <a href="/docs/Log_of_Project_Changes.txt" className="border-2 mr-20 py-3 group transition text-center ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                    <a href="/docs/Log_of_Project_Changes.txt" className="border-2 mr-20 py-3 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
                       View Project Timeline
                     </a>
                   </td>
@@ -103,7 +103,7 @@ export default function About() {
                     </a>
                   </td>
                   <td className='w-1/3'>
-                    <a href="https://gofundme.com/f/volapyk" className="border-2 ml-20 py-3 group transition text-center ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                    <a href="https://gofundme.com/f/volapyk" className="border-2 ml-20 py-3 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
                       Fund Future Growth
                     </a>
                   </td>

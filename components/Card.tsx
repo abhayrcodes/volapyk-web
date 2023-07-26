@@ -33,8 +33,8 @@ export default function Card(props: any) {
           Grade {props.char_score}
         </div>
       </div>
-      <hr className="h-px my-4 bg-gray-700 border-0 dark:bg-gray-700"></hr>
-      <div className="h-56 space-y-1 text-gray-500 list-none list-inside dark:text-gray-400">
+      <hr className="h-px my-4 bg-gray-700 border-0"></hr>
+      <div className="h-56 space-y-1 list-none list-inside">
         <ul>
           {listItems}
         </ul>

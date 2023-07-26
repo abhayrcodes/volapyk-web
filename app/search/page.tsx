@@ -32,7 +32,7 @@ export default async function Search({
 
     tableContent.push(
       <tr key={i}>
-        <td className='pr-3'>
+        <td className='pr-3 w-1/2'>
           {firstService && (
             <Card
               service_id={firstService.service_id}
@@ -55,7 +55,7 @@ export default async function Search({
             />
           )}
         </td>
-        <td className='pl-3'>
+        <td className='pl-3 w-1/2'>
           {secondService && (
             <Card
               service_id={secondService.service_id}
