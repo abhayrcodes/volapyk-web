@@ -14,7 +14,7 @@ export default async function ServicePage({ params }: { params: { slug: string }
   const host = headers().get("host") || "";
 
   const query = params.slug;
-  const serviceData = fetchCasesAndLinks("http://"+host+"/api/service-query?q="+query);
+  const serviceData = fetchCasesAndLinks("https://"+host+"/api/service-query?q="+query);
   const [data] = await Promise.all([serviceData]);
 
   return (
