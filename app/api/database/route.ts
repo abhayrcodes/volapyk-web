@@ -2,6 +2,7 @@
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import { NextResponse } from 'next/server';
+import path from 'path';
 /*
 export async function GET(req: any, res: any) {
   try {
@@ -33,13 +34,11 @@ export async function GET(req: any, res: any) {
 
 export async function GET(request: Request) {
     try {
-        const abspath = request.url.split("/api")[0];
-        console.log(abspath);
         const { searchParams } = new URL(request.url || "");
         const query = searchParams.has('q');
         // Open the SQLite database
         const db = await open({
-            filename: 'database\\frontend2.db',
+            filename: path.resolve("database", "frontend2.db"),
             driver: sqlite3.Database,
         });
 
