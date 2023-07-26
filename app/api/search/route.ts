@@ -9,7 +9,7 @@ export async function GET(request: Request) {
         const query = decodeURI(searchParams.get('q') || "");
         // Open the SQLite database
         const db = await open({
-            filename: 'frontend2.db',
+            filename: 'database\\frontend2.db',
             driver: sqlite3.Database,
         });
 

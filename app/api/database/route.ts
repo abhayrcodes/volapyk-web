@@ -33,11 +33,13 @@ export async function GET(req: any, res: any) {
 
 export async function GET(request: Request) {
     try {
+        const abspath = request.url.split("/api")[0];
+        console.log(abspath);
         const { searchParams } = new URL(request.url || "");
         const query = searchParams.has('q');
         // Open the SQLite database
         const db = await open({
-            filename: 'frontend2.db',
+            filename: 'database\\frontend2.db',
             driver: sqlite3.Database,
         });
 
