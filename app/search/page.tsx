@@ -102,7 +102,7 @@ export default async function Search({
 
         <div className="w-5/6 m-auto relative">
           {/* Use media query to conditionally render the projects in a grid layout on larger screens */}
-          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 md:hidden">
+          <table className="w-full text-sm text-left text-gray-400 md:hidden">
             <tbody>
               {stackedContent}
             </tbody>
