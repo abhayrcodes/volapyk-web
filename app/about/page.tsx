@@ -1,20 +1,120 @@
-import Navbar from "@/components/Navbar"
+'use client'
+
+// About.js
+import React, { useState, useEffect } from 'react';
+import Navbar from '@/components/Navbar';
 
 export default function About() {
-    return (
-        <html>
-            <body className="bg-slate-900">
-                <Navbar/>
 
-                <div className="mx-10 mt-20">
-                    <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-8xl">NEVER FEAR THE WEB AGAIN<span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">.</span></h1>
-                </div>
-                <p className="text-white">
-                    Welcome to Volapyk. We are a project that harnesses the power of machine learning to revolutionize the way people interact with privacy policies and terms of service. Our mission is to make these complex and often convoluted documents accessible and understandable to everyone.
-                </p>
-            </body>
-        </html>
-    )
+  return (
+    <html>
+      <body>
+        <Navbar />
+        <div className="flex items-center justify-center">
+          <div className="w-5/6">
+            <h1 className="mt-20 mb-10 text-3xl font-extrabold text-white md:text-3xl lg:text-5xl text-center">
+              Simple{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
+                Privacy
+              </span>
+              {' '}through the power of{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
+                AI
+              </span>
+            </h1>
+            <div className="border-2 transition ease-in-out mb-7 block p-6 rounded-lg text-white shadow border-red-700">
+              <p className='text-red-400 font-bold text-center text-2xl'>NOTE: We are currently in Private Alpha, grades and appearance are all subject to change.</p>
+            </div>
+            <table className="w-full gap-4 text-sm leading-6 grid">
+              <tbody>
+                <tr className='flex'>
+                  <td className='pr-3 w-1/2 flex'>
+                    <div className="border-2 transition ease-in-out mb-7 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+                      <p className="text-xl font-bold tracking-tight mb-5">
+                        Volapyk (&quot;vola-pike&quot;) uses machine learning to automate the processing of privacy policies and terms of service. Each service is then given an easy to understand grade based on its documents.
+                      </p>
+                      <div>
+                        <div>
+                          <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+                            Grade A
+                          </div>
+                          {' '}-&gt; Respects user privacy and data 
+                        </div>
+                        <div>
+                          <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+                            Grade B
+                          </div>
+                          {' '}-&gt; Tends to respect privacy with transparent issues
+                        </div>
+                        <div>
+                          <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+                            Grade C
+                          </div>
+                          {' '}-&gt; Can respect privacy in certain areas, lacks transparency
+                        </div>
+                        <div>
+                          <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+                            Grade D
+                          </div>
+                          {' '}-&gt; Lacks privacy and transparency, issues should not be taken lightly
+                        </div>
+                        <div>
+                          <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+                            Grade E
+                          </div>
+                          {' '}-&gt; Disregards user privacy with invasive and harmful practices
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className='pl-3 w-1/2 flex'>
+                    <div className="border-2 transition ease-in-out mb-7 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+                      <p className="text-xl font-bold tracking-tight mb-5">
+                        For every sentence marked as relevant by our machine learning model, the probabalility of 250+ privacy related cases are calculated. The top 5 of these cases appear on each service card, color-coded by class.
+                      </p>
+                      <div className={`relative transition ease-in-out duration-250 text-white bg-green-600 hover:bg-opacity-75 font-sans block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
+                        Good: A positive case that signifies protection of user privacy
+                      </div>
+                      <div className={`relative transition ease-in-out duration-250 text-white bg-gray-600 hover:bg-opacity-75 font-sans block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
+                        Neutral: A case that neither helps nor hurts the final grade but is important information
+                      </div>
+                      <div className={`relative transition ease-in-out duration-250 text-white bg-orange-500 hover:bg-opacity-75 font-sans block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
+                        Bad: A negative case that signifies disrespect for user privacy
+                      </div>
+                      <div className={`relative transition ease-in-out duration-250 text-white bg-red-500 font-sans hover:bg-opacity-75 block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
+                        Blocker: A triple negative case signifying a violation of privacy rights
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table className="w-full gap-4 text-sm mb-10 leading-6 grid-template-column justify-center text-white py-3">
+              <tbody>
+                <tr>
+                  <td className='w-1/3'>
+                    <a href="/docs/Log_of_Project_Changes.txt" className="border-2 mr-20 py-3 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                      View Project Timeline
+                    </a>
+                  </td>
+                  <td className='w-1/3'>
+                    <a href="/" className="border-2 mx-5 group transition text-center text-md font-bold ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg shadow border-none">
+                      EXPLORE SCORED SERVICES
+                    </a>
+                  </td>
+                  <td className='w-1/3'>
+                    <a href="https://gofundme.com/f/volapyk" className="border-2 ml-20 py-3 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                      Fund Future Growth
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </body>
+    </html>
+  );
 }
 
 /*
