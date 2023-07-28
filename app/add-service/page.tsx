@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Card from '@/components/Card.tsx'
 import Navbar from '@/components/Navbar.tsx'
 
 export default function AddService() {

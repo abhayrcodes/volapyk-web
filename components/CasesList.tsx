@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function CasesList(props: any) {
   const numbers = props.case_titles;
 

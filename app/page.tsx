@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Card from '../components/Card.tsx';
 import Navbar from '../components/Navbar.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
@@ -93,14 +92,12 @@ export default async function Home() {
         <SearchInput />
 
         <div className="w-5/6 m-auto relative">
-          {/* Use media query to conditionally render the projects in a grid layout on larger screens */}
           <table className="w-full text-sm text-left md:hidden">
             <tbody>
               {stackedContent}
             </tbody>
           </table>
 
-          {/* Use media query to conditionally render the projects in a stacked layout on smaller screens */}
           <div className="w-full gap-4 text-sm leading-6 hidden md:grid">
             <table>
               <tbody>

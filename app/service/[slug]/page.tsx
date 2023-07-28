@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import CasesList from '@/components/CasesList';
 import Navbar from '@/components/Navbar';
-import Link from 'next/link';
 import { headers } from 'next/dist/client/components/headers';
 
 const fetchCasesAndLinks = async (url: string) => {

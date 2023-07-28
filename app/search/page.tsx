@@ -1,10 +1,8 @@
-import Image from 'next/image';
 import Card from '@/components/Card';
 import Navbar from '@/components/Navbar';
 import SearchInput from '@/components/SearchInput.tsx';
 import React, { useState, useEffect } from 'react';
 import { headers } from 'next/dist/client/components/headers';
-import Router, { useRouter } from 'next/navigation';
 
 const fetchPosts = async (url: string) => {
   const res = await fetch(url);

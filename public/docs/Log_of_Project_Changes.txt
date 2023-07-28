@@ -29,11 +29,12 @@ July 9th - Alpha service set selected (16 services, 88 policies), double mnli ru
 July 10th - 404 page and frontend basics complete
 July 17th - Alpha frontend pages and design finished and sql integration in progress
 July 18th - Alpha database optimized and reduced from 280 mb to 40 mb on alpha service set
-July 19th - Database successfully linked to services page
-July 21st - Service pages, search, and about pages completed
+July 19th - Database successfully linked to services page (on local machine, issue w/ vercel deployment)
+July 21st - About page and donation site created completed
+July 25th - Service and search functionality added (with database patch on vercel deployment)
 
 ALPHA PHASE
-tbd - Alpha launched!
+July 26th - Alpha launched!
 
 BETA PHASE
 tbd - Beta launched!
