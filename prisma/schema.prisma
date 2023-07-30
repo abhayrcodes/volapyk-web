@@ -8,8 +8,8 @@ datasource db {
 }
 
 model cases {
-  id             Int     @unique
-  title          String? @unique
+  id             Int    @unique
+  title          String @unique
   classification String
 }
 
@@ -38,7 +38,8 @@ model scored_links {
 
 /// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
 model service_main {
-  service_id Int @unique
+  id         Int @unique
+  service_id Int
   link_id    Int
   quote_id   Int
   value1     Int
