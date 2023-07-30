@@ -7,10 +7,9 @@ const prisma = new PrismaClient();
 export default async function ServicePage({ params }: { params: { id: string } }) {
   const data = await prisma.service_scores.findMany({
     where: {
-      service_id: Number(params.id),
-    },
-  });
-  console.log(data)
+      service_id: Number(params.id)
+    }
+  })
 
   const case_titles = [
     {"title": data[0].case0_title, "class": data[0].case0_class},

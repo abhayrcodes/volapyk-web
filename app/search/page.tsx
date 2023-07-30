@@ -18,9 +18,9 @@ export default async function Search({
 
   const data = await prisma.service_scores.findMany({
     where: {
-      service_name: { contains: query },
-    },
-  });
+      service_name: { contains: query }
+    }
+  })
 
   const tableContent = [];
   for (let i = 0; i < data.length; i += 2) {
