@@ -10,14 +10,30 @@ export default async function ServicePage({ params }: { params: { id: string } }
       service_id: Number(params.id),
     },
   });
+  console.log(data)
 
-  const case_titles = []
-  for (let i = 0; i < 20; i += 1) {
-    case_titles.push({
-      "title": data[0]["case"+i+"_title"],
-      "class": data[0]["case"+i+"_class"]
-    })
-  }
+  const case_titles = [
+    {"title": data[0].case0_title, "class": data[0].case0_class},
+    {"title": data[0].case1_title, "class": data[0].case1_class},
+    {"title": data[0].case2_title, "class": data[0].case2_class},
+    {"title": data[0].case3_title, "class": data[0].case3_class},
+    {"title": data[0].case4_title, "class": data[0].case4_class},
+    {"title": data[0].case5_title, "class": data[0].case5_class},
+    {"title": data[0].case6_title, "class": data[0].case6_class},
+    {"title": data[0].case7_title, "class": data[0].case7_class},
+    {"title": data[0].case8_title, "class": data[0].case8_class},
+    {"title": data[0].case9_title, "class": data[0].case9_class},
+    {"title": data[0].case10_title, "class": data[0].case10_class},
+    {"title": data[0].case11_title, "class": data[0].case11_class},
+    {"title": data[0].case12_title, "class": data[0].case12_class},
+    {"title": data[0].case13_title, "class": data[0].case13_class},
+    {"title": data[0].case14_title, "class": data[0].case14_class},
+    {"title": data[0].case15_title, "class": data[0].case15_class},
+    {"title": data[0].case16_title, "class": data[0].case16_class},
+    {"title": data[0].case17_title, "class": data[0].case17_class},
+    {"title": data[0].case18_title, "class": data[0].case18_class},
+    {"title": data[0].case19_title, "class": data[0].case19_class},
+  ]
 
   return (
     <html>
