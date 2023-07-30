@@ -12,7 +12,7 @@ export default async function ServicePage({ params }: { params: { slug: string }
   const host = headers().get("host") || "";
 
   const query = params.slug;
-  const serviceData = fetchCasesAndLinks("https://"+host+"/api/service-query?q="+query);
+  const serviceData = fetchCasesAndLinks("http://"+host+"/api/service-query?q="+query);
   const [data] = await Promise.all([serviceData]);
 
   return (
@@ -33,7 +33,7 @@ export default async function ServicePage({ params }: { params: { slug: string }
           </div>
         </div>
 
-        <div className='w-3/4 mx-auto my-5 border-2 rounded-lg border-indigo-600 shadow-lg shadow-indigo-600'>
+        <div className='w-3/4 mx-auto my-5 border-transparent rounded-lg'>
           <CasesList
             case_titles = {data.case_titles}
           />

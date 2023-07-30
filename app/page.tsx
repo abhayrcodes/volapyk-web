@@ -13,7 +13,7 @@ export default async function Home() {
   
   const host = headers().get("host") || "";
 
-  const serviceData = fetchAll("https://"+host+"/api/database");
+  const serviceData = fetchAll("http://"+host+"/api/database");
   const [data] = await Promise.all([serviceData]);
 
   const tableContent = [];
