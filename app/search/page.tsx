@@ -10,15 +10,17 @@ export default async function Search({
     params,
     searchParams,
   }: {
-    params: { slug: string };
-    searchParams?: { [key: string]: string | string[] | undefined };
+    params: { id: string };
+    searchParams?: { [key: string]: string };
   }) {
 
-    const data = await prisma.service_scores.findMany({
-      where: {
-        service_name: { contains: searchParams.q },
-      },
-    });
+  const query = (typeof searchParams === "undefined") ? "" : searchParams.q;
+
+  const data = await prisma.service_scores.findMany({
+    where: {
+      service_name: { contains: query },
+    },
+  });
 
   const tableContent = [];
   for (let i = 0; i < data.length; i += 2) {

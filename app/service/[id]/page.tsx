@@ -11,7 +11,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
     },
   });
 
-  const case_titles = [];
+  const case_titles = []
   for (let i = 0; i < 20; i += 1) {
     case_titles.push({
       "title": data[0]["case"+i+"_title"],
