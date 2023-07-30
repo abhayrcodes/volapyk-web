@@ -35,6 +35,7 @@ July 25th - Service and search functionality added (with database patch on verce
 
 ALPHA PHASE
 July 26th - Alpha launched!
+July 28th - Contributors, roadmap, and hamburger menu added; service page redesigned
 
 BETA PHASE
 tbd - Beta launched!

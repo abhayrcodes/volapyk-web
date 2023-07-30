@@ -1,13 +1,10 @@
 import Card from '@/components/Card';
 import Navbar from '@/components/Navbar';
 import SearchInput from '@/components/SearchInput.tsx';
-import React, { useState, useEffect } from 'react';
-import { headers } from 'next/dist/client/components/headers';
+import React from 'react';
+import { PrismaClient } from '@prisma/client';
 
-const fetchPosts = async (url: string) => {
-  const res = await fetch(url);
-  return res.json();
-}
+const prisma = new PrismaClient();
 
 export default async function Search({
     params,
@@ -17,16 +14,16 @@ export default async function Search({
     searchParams?: { [key: string]: string | string[] | undefined };
   }) {
 
-  const host = headers().get("host") || "";
-
-  const query = (typeof searchParams === "undefined") ? "" : searchParams.q;
-  const serviceData = fetchPosts("https://"+host+"/api/search?q="+query);
-  const [data] = await Promise.all([serviceData]);
+    const data = await prisma.service_scores.findMany({
+      where: {
+        service_name: { contains: searchParams.q },
+      },
+    });
 
   const tableContent = [];
-  for (let i = 0; i < data.data.length; i += 2) {
-    const firstService = data.data[i];
-    const secondService = data.data[i + 1];
+  for (let i = 0; i < data.length; i += 2) {
+    const firstService = data[i];
+    const secondService = data[i + 1];
 
     tableContent.push(
       <tr key={i}>
@@ -81,7 +78,7 @@ export default async function Search({
   }
 
 
-  const stackedContent = data.data.map((item: any, index: any) => (
+  const stackedContent = data.map((item: any, index: any) => (
     <tr key={index}>
       <td colSpan={2}>
         <Card service_name={item.service_name} char_score={item.char_score} 
