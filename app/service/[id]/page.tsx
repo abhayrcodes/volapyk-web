@@ -47,7 +47,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
               Character Grade <br></br> {data[0].char_score}
             </div>
             <div className="text-lg ml-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
-              Numerical Grade <br></br> {data[0].num_score}
+              Numerical Grade <br></br> {String(data[0].num_score)}
             </div>
           </div>
         </div>
