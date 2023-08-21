@@ -53,20 +53,20 @@ export default async function ServicePage({ params }: { params: { id: string } }
       <body className='bg-slate-900'>
         <Navbar />
 
-        <div className="flex my-12">
-          <Link className="absolute labil back-to-services border-2 border-slate-100 bg-slate-100 rounded-lg hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back'] hover:text-center" href="/">
-            <span>←&nbsp;</span>
+        <div className="flex items-center my-12">
+          <Link className="hidden lg:block absolute back-to-services font-bold border-2 border-slate-100 bg-slate-100 rounded-lg hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back'] hover:text-center" href="/">
+            <span>🡸  </span>
           </Link>
       
-          <div className="flex items-center justify-between w-2/3 mx-auto">
-            <div className='flex items-center justify-between'>
-              <h2 className="labil text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-100">{data[0].service_name}</h2>
+          <div className="flex-col lg:flex-row flex items-center lg:justify-between w-3/4 lg:w-2/3 mx-auto">
+            <div className='flex items-center justify-between lg:m-0 mb-5'>
+              <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-100 font-bold">{data[0].service_name}</h2>
             </div>
-            <div className='grid grid-flow-col auto-cols-max'>
-              <div className="labil text-lg mr-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
+            <div className='grid grid-flow-col auto-cols-max text-sm sm:text-base lg:text-lg'>
+              <div className="mr-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
                 Character Grade <br></br> {data[0].char_score}
               </div>
-              <div className="labil text-lg ml-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
+              <div className="ml-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
                 Numerical Grade <br></br> {String(data[0].num_score)}
               </div>
             </div>
@@ -79,9 +79,9 @@ export default async function ServicePage({ params }: { params: { id: string } }
           />
         </div>
 
-        <h1 className="labil text-3xl text-red-900 w-3/4 mx-auto my-12">⚠ Cases above only represent the top 20, not the full data used to compute scores.</h1>
+        <h1 className="text-lg sm:text-2xl lg:text-3xl text-red-900 w-3/4 mx-auto my-12">⚠ Cases above only represent the top 20, not the full data used to compute scores.</h1>
         
-        <h3 className="w-3/4 my-2 mx-auto labil sm:text-3xl md:text-4xl lg:text-5xl text-slate-100 mb-7">Links</h3>
+        <h3 className="w-3/4 my-2 mx-auto sm:text-3xl md:text-4xl lg:text-5xl text-slate-100 mb-7">Links</h3>
         <div className="w-3/4 my-2 mx-auto border border-slate-800 rounded-lg md:rounded-md mb-7">
           <NormList
             numbers = {links}
@@ -93,15 +93,3 @@ export default async function ServicePage({ params }: { params: { id: string } }
     
   )
 }
-
-/*
-<div className='flex absolute h-full hover:text-indigo-600 group'>
-            <div className='flex h-full absolute border-y-2 group-hover:border-y-indigo-600 bg-slate-100 items-center p-5 z-10 group'>
-                <Link className = "labil" href="/">←</Link>
-            </div>
-            <div className='flex h-full absolute border-2 group-hover:border-indigo-600 bg-slate-100 items-center p-5 transition-transform ease-in-out duration-300 -translate-x-3/4 group-hover:translate-x-0'>
-              <Link className = "labil" href="/">←</Link>
-              <Link className = "labil ml-5" href="/">Back to Services</Link>
-            </div>
-          </div>
-          */

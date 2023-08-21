@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/images/favicon.ico'/>
       </head>
-      <body className={jost.className}>{children}</body>
+      <body className={`main-font ${jost.className}`}>{children}</body>
     </html>
   )
 }

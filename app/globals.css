@@ -1,16 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: 'Yapari';
     src: url(/fonts/YapariTrial-Bold.ttf);
 }
 
 @font-face {
-    font-family: Labil;
+    font-family: 'Labil';
     src: url(/fonts/LabilGrotesk-Medium.ttf);
 }
 
 @font-face {
-    font-family: Space;
+    font-family: 'Space';
     src: url(/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+@layer base {
+    html {
+      font-family: Space;
+    }
 }
 
 body {
@@ -25,21 +35,13 @@ h1 {
     font-family: Yapari;
 }
 
-.labil {
-    font-family: Space;
-}
-
 .back-to-services {
-    transform: translateX(-50%);
-    width: 10%;
+    transform: translateX(-65%);
+    width: 150px;
     text-align: right;
-    padding: 1% 2%;
+    padding: 15px 15px 15px 45px;
 }
 
 .back-to-services:hover {
     transform: translateX(-25%);
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

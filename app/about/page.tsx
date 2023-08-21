@@ -12,10 +12,10 @@ export default function About() {
         <tbody>
           <tr className='flex'>
             <td className='flex-shrink-0'>
-              <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+              <div className="h-8 mb-2 p-2 border border-green-500 rounded-lg items-center justify-center text-green-500 inline-flex">
                 Grade A
               </div>
-              {' '}→
+              {' '}➔
             </td>
             <td className='p-1'>
               Respects user privacy and data 
@@ -23,10 +23,10 @@ export default function About() {
           </tr>
           <tr className='flex'>
             <td className='flex-shrink-0'>
-              <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+              <div className="h-8 mb-2 p-2 border border-lime-500 rounded-lg items-center justify-center text-lime-500 inline-flex">
                 Grade B
               </div>
-              {' '}-&gt;
+              {' '}➔
             </td>
             <td className='p-1'>
               Tends to respect privacy with transparent issues 
@@ -34,10 +34,10 @@ export default function About() {
           </tr>
           <tr className='flex'>
             <td className='flex-shrink-0'>
-              <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+              <div className="h-8 mb-2 p-2 border border-yellow-500 rounded-lg items-center justify-center text-yellow-500 inline-flex">
                 Grade C
               </div>
-              {' '}-&gt;
+              {' '}➔
             </td>
             <td className='p-1'>
               Can respect privacy in certain areas, lacks transparency
@@ -45,10 +45,10 @@ export default function About() {
           </tr>
           <tr className='flex'>
             <td className='flex-shrink-0'>
-              <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+              <div className="h-8 mb-2 p-2 border border-orange-500 rounded-lg items-center justify-center text-orange-500 inline-flex">
                 Grade D
               </div>
-              {' '}-&gt;
+              {' '}➔
             </td>
             <td className='p-1'>
               Lacks privacy and transparency, issues should not be taken lightly
@@ -56,10 +56,10 @@ export default function About() {
           </tr>
           <tr className='flex'>
             <td className='flex-shrink-0'>
-              <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
+              <div className="h-8 mb-2 p-2 border border-red-500 rounded-lg items-center justify-center text-red-500 inline-flex">
                 Grade E
               </div>
-              {' '}-&gt;
+              {' '}➔
             </td>
             <td className='p-1'>
               Disregards user privacy with invasive and harmful practices
@@ -75,16 +75,16 @@ export default function About() {
       <p className="text-md lg:text-xl font-bold tracking-tight mb-5">
         For every sentence marked as relevant by our machine learning model, the probabalility of 250+ privacy related cases are calculated. The top 5 of these cases appear on each service card, color-coded by class.
       </p>
-      <div className={`relative transition ease-in-out duration-250 text-white bg-green-600 hover:bg-opacity-75 font-sans block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
+      <div className={`relative transition ease-in-out duration-250 text-white bg-green-600 hover:bg-opacity-75 block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
         Good: A positive case that signifies protection of user privacy
       </div>
-      <div className={`relative transition ease-in-out duration-250 text-white bg-gray-600 hover:bg-opacity-75 font-sans block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
+      <div className={`relative transition ease-in-out duration-250 text-white bg-gray-600 hover:bg-opacity-75 block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
         Neutral: A case that neither helps nor hurts the final grade but is important information
       </div>
-      <div className={`relative transition ease-in-out duration-250 text-white bg-orange-500 hover:bg-opacity-75 font-sans block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
+      <div className={`relative transition ease-in-out duration-250 text-white bg-orange-500 hover:bg-opacity-75 block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
         Bad: A negative case that signifies disrespect for user privacy
       </div>
-      <div className={`relative transition ease-in-out duration-250 text-white bg-red-500 font-sans hover:bg-opacity-75 block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
+      <div className={`relative transition ease-in-out duration-250 text-white bg-red-500 hover:bg-opacity-75 block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
         Blocker: A triple negative case signifying a violation of privacy rights
       </div>
     </div>
@@ -151,7 +151,7 @@ export default function About() {
               </span>
             </h1>
             <div className="border-2 transition ease-in-out mb-7 block p-6 rounded-lg text-white shadow border-red-700">
-              <p className='text-red-400 font-bold text-center text-2xl'>NOTE: We are currently in Public Alpha, grades and appearance are all subject to change.</p>
+              <p className='text-red-400 font-sans font-bold text-center text-2xl'>NOTE: We are currently in Public Alpha, grades and appearance are all subject to change.</p>
             </div>
 
             <table className="w-full gap-4 mb-4 text-sm leading-6 hidden lg:grid">
