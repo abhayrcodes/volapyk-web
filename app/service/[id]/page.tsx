@@ -53,16 +53,10 @@ export default async function ServicePage({ params }: { params: { id: string } }
       <body className='bg-slate-900'>
         <Navbar />
 
-        <div className="relative flex items-center my-12">
-          <div className='flex absolute h-full hover:text-indigo-600 group'>
-            <div className='flex h-full absolute border-y-2 group-hover:border-y-indigo-600 bg-slate-100 items-center p-5 z-10 group'>
-                <Link className = "labil" href="/">←</Link>
-            </div>
-            <div className='flex h-full absolute border-2 group-hover:border-indigo-600 bg-slate-100 items-center p-5 transition-transform ease-in-out duration-300 -translate-x-3/4 group-hover:translate-x-0'>
-              <Link className = "labil" href="/">←</Link>
-              <Link className = "labil ml-5" href="/">Back to Services</Link>
-            </div>
-          </div>
+        <div className="flex my-12">
+          <Link className="absolute labil back-to-services border-2 border-slate-100 bg-slate-100 rounded-full hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back'] hover:translate-x-1 hover:text-center" href="/">
+            <span>←&nbsp;</span>
+          </Link>
       
           <div className="flex items-center justify-between w-2/3 mx-auto">
             <div className='flex items-center justify-between'>
@@ -99,3 +93,15 @@ export default async function ServicePage({ params }: { params: { id: string } }
     
   )
 }
+
+/*
+<div className='flex absolute h-full hover:text-indigo-600 group'>
+            <div className='flex h-full absolute border-y-2 group-hover:border-y-indigo-600 bg-slate-100 items-center p-5 z-10 group'>
+                <Link className = "labil" href="/">←</Link>
+            </div>
+            <div className='flex h-full absolute border-2 group-hover:border-indigo-600 bg-slate-100 items-center p-5 transition-transform ease-in-out duration-300 -translate-x-3/4 group-hover:translate-x-0'>
+              <Link className = "labil" href="/">←</Link>
+              <Link className = "labil ml-5" href="/">Back to Services</Link>
+            </div>
+          </div>
+          */

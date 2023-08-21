@@ -8,6 +8,11 @@
     src: url(/fonts/LabilGrotesk-Medium.ttf);
 }
 
+@font-face {
+    font-family: Space;
+    src: url(/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
 body {
     background-color: #0f172a;
 }
@@ -21,7 +26,14 @@ h1 {
 }
 
 .labil {
-    font-family: labil
+    font-family: Space;
+}
+
+.back-to-services {
+    transform: translateX(-50%);
+    width: 10%;
+    text-align: right;
+    padding: 2%;
 }
 
 @tailwind base;
