@@ -23,6 +23,8 @@ export default async function ServicePage({ params }: { params: { id: string } }
     return element.link;
   });
 
+  console.log(links);
+
   const case_titles = [
     {"title": data[0].case0_title, "class": data[0].case0_class},
     {"title": data[0].case1_title, "class": data[0].case1_class},
