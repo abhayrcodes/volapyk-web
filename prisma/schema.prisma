@@ -3,113 +3,113 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./frontend2.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model cases {
-  id             Int     @unique
-  title          String? @unique
-  classification String
+  id             Int    @id @default(autoincrement())
+  title          String @unique @db.VarChar(255)
+  classification String @db.VarChar(255)
 }
 
 model modified_services {
+  entry_id   Int @id @default(autoincrement())
   service_id Int @unique
 }
 
 model new_links {
-  service_id   Int
-  service_name String
-  link         String @unique
+  entry_id     Int    @id @default(autoincrement())
+  service_name String @db.VarChar(255)
+  link         String @unique @db.VarChar(255)
 }
 
 model quotes {
   service_id Int
   link_id    Int
-  quote_id   Int    @unique
-  quote      String
+  quote_id   Int    @id @default(autoincrement())
+  quote      String @db.VarChar(255)
 }
 
 model scored_links {
   service_id Int
-  link_id    Int    @unique
-  link       String @unique
+  link_id    Int    @id @default(autoincrement())
+  link       String @unique @db.VarChar(255)
 }
 
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
 model service_main {
-  service_id Int @unique
+  entry_id   BigInt  @id @default(autoincrement())
+  service_id Int
   link_id    Int
   quote_id   Int
   value1     Int
-  value2     Float
+  value2     Decimal @db.Decimal
 }
 
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
 model service_scores {
-  service_id        Int @unique
-  service_name      String
-  num_score         Float
-  char_score        String
+  service_id        Int     @id @default(autoincrement())
+  service_name      String  @db.VarChar(255)
+  num_score         Decimal @db.Decimal
+  char_score        String  @db.VarChar(255)
   relevance_percent Int
   case0_id          Int
-  case0_title       String
-  case0_class       String
+  case0_title       String  @db.VarChar(255)
+  case0_class       String  @db.VarChar(255)
   case1_id          Int
-  case1_title       String
-  case1_class       String
+  case1_title       String  @db.VarChar(255)
+  case1_class       String  @db.VarChar(255)
   case2_id          Int
-  case2_title       String
-  case2_class       String
+  case2_title       String  @db.VarChar(255)
+  case2_class       String  @db.VarChar(255)
   case3_id          Int
-  case3_title       String
-  case3_class       String
+  case3_title       String  @db.VarChar(255)
+  case3_class       String  @db.VarChar(255)
   case4_id          Int
-  case4_title       String
-  case4_class       String
+  case4_title       String  @db.VarChar(255)
+  case4_class       String  @db.VarChar(255)
   case5_id          Int
-  case5_title       String
-  case5_class       String
+  case5_title       String  @db.VarChar(255)
+  case5_class       String  @db.VarChar(255)
   case6_id          Int
-  case6_title       String
-  case6_class       String
+  case6_title       String  @db.VarChar(255)
+  case6_class       String  @db.VarChar(255)
   case7_id          Int
-  case7_title       String
-  case7_class       String
+  case7_title       String  @db.VarChar(255)
+  case7_class       String  @db.VarChar(255)
   case8_id          Int
-  case8_title       String
-  case8_class       String
+  case8_title       String  @db.VarChar(255)
+  case8_class       String  @db.VarChar(255)
   case9_id          Int
-  case9_title       String
-  case9_class       String
+  case9_title       String  @db.VarChar(255)
+  case9_class       String  @db.VarChar(255)
   case10_id         Int
-  case10_title      String
-  case10_class      String
+  case10_title      String  @db.VarChar(255)
+  case10_class      String  @db.VarChar(255)
   case11_id         Int
-  case11_title      String
-  case11_class      String
+  case11_title      String  @db.VarChar(255)
+  case11_class      String  @db.VarChar(255)
   case12_id         Int
-  case12_title      String
-  case12_class      String
+  case12_title      String  @db.VarChar(255)
+  case12_class      String  @db.VarChar(255)
   case13_id         Int
-  case13_title      String
-  case13_class      String
+  case13_title      String  @db.VarChar(255)
+  case13_class      String  @db.VarChar(255)
   case14_id         Int
-  case14_title      String
-  case14_class      String
+  case14_title      String  @db.VarChar(255)
+  case14_class      String  @db.VarChar(255)
   case15_id         Int
-  case15_title      String
-  case15_class      String
+  case15_title      String  @db.VarChar(255)
+  case15_class      String  @db.VarChar(255)
   case16_id         Int
-  case16_title      String
-  case16_class      String
+  case16_title      String  @db.VarChar(255)
+  case16_class      String  @db.VarChar(255)
   case17_id         Int
-  case17_title      String
-  case17_class      String
+  case17_title      String  @db.VarChar(255)
+  case17_class      String  @db.VarChar(255)
   case18_id         Int
-  case18_title      String
-  case18_class      String
+  case18_title      String  @db.VarChar(255)
+  case18_class      String  @db.VarChar(255)
   case19_id         Int
-  case19_title      String
-  case19_class      String
+  case19_title      String  @db.VarChar(255)
+  case19_class      String  @db.VarChar(255)
 }

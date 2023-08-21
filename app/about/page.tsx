@@ -97,11 +97,11 @@ export default function About() {
       </p>
       <div className='flex'>
         <figure className="w-1/2 mr-2">
-          <img className="max-h-60 max-w-full rounded-lg mx-auto" src="/images/davin.jpeg" alt="image description"></img>
+          <img className="max-h-80 max-w-full rounded-lg mx-auto" src="/images/davin.jpeg" alt="image description"></img>
           <figcaption className="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Davin</figcaption>
         </figure>
         <figure className="w-1/2 ml-2">
-          <img className="max-h-60 max-w-full rounded-lg mx-auto" src="/images/abhay.jpeg" alt="image description"></img>
+          <img className="max-h-80 max-w-full rounded-lg mx-auto" src="/images/abhay.jpeg" alt="image description"></img>
           <figcaption className="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Abhay</figcaption>
         </figure>
       </div>
@@ -116,17 +116,20 @@ export default function About() {
       <p className='font-bold text-purple-500'>Short Term:</p>
       <ul className='pl-4 mb-3 list-disc w-full'>
         <li>Add case pages to show specific quotes backing each case for every service</li>
-        <li>Optimize website for speed and mobile devices</li>
+        <li>Add user login portal (ability to follow companies, get alerts, personalize scoring, etc.)</li>
+        <li>Speed up AI processing and transer database to server</li>
       </ul>
       <p className='font-bold text-purple-500'>Medium Term:</p>
       <ul className='pl-4 mb-3 list-disc w-full'>
-        <li>Speed up AI processing and transer database to server</li>
         <li>Enable the Add a Service feature for crowdsourcing services</li>
+        <li>User selects case ratings for personalized service scores</li>
+        <li>Send alerts for positive or negative changes to service scores</li>
       </ul>
       <p className='font-bold text-purple-500'>Long Term:</p>
       <ul className='pl-4 list-disc w-full'>
         <li>Expand from 14 Alpha services to 7500+ in the final product</li>
         <li>Create browser extension</li>
+        <li>Recommend alternative services</li>
       </ul>
     </div>
   );
@@ -148,7 +151,7 @@ export default function About() {
               </span>
             </h1>
             <div className="border-2 transition ease-in-out mb-7 block p-6 rounded-lg text-white shadow border-red-700">
-              <p className='text-red-400 font-bold text-center text-2xl'>NOTE: We are currently in Private Alpha, grades and appearance are all subject to change.</p>
+              <p className='text-red-400 font-bold text-center text-2xl'>NOTE: We are currently in Public Alpha, grades and appearance are all subject to change.</p>
             </div>
 
             <table className="w-full gap-4 mb-4 text-sm leading-6 hidden lg:grid">

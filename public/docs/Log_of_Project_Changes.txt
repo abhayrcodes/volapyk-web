@@ -31,11 +31,13 @@ July 17th - Alpha frontend pages and design finished and sql integration in prog
 July 18th - Alpha database optimized and reduced from 280 mb to 40 mb on alpha service set
 July 19th - Database successfully linked to services page (on local machine, issue w/ vercel deployment)
 July 21st - About page and donation site created completed
-July 25th - Service and search functionality added (with database patch on vercel deployment)
+July 25th - Prisma adopted as ORM to replace personal APIs
 
 ALPHA PHASE
 July 26th - Alpha launched!
 July 28th - Contributors, roadmap, and hamburger menu added; service page redesigned
+August 1st - Search and service function added through AWS PostgreSQL RDS attached by prisma
+August 6th - volapyk.net domain secured and service page remodel
 
 BETA PHASE
 tbd - Beta launched!
@@ -52,3 +54,12 @@ April prototype results
 # Proton = -943,446 https://proton.me/legal/privacy
 # Apple = -3,991,176 https://www.apple.com/legal/privacy/en-ww/
 # Paypal = -2,813,848 https://www.paypal.com/us/legalhub/privacy-full
+
+July pre-normalized score results
+# Reddit = 7.79
+# Duckduckgo = 8.09
+# Spotify = 7.6
+# Startpage = 8.33
+# Proton = N/A
+# Apple = 7.59
+# Paypal = 7.52
