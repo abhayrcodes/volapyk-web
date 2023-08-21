@@ -37,7 +37,9 @@ ALPHA PHASE
 July 26th - Alpha launched!
 July 28th - Contributors, roadmap, and hamburger menu added; service page redesigned
 August 1st - Search and service function added through AWS PostgreSQL RDS attached by prisma
-August 6th - volapyk.net domain secured and service page remodel
+August 7th - Backend transfer to PostgreSQL and client-side calculations prototyped for personalized grading
+August 10th - Vectorized case to sentence comparison reduces case applier ai from 6 to 0.2 seconds per sentence
+August 11th - Hyperefficient database schema adopted and case applier model shifted to distilbart 12-3 (sentence time down to 0.1 secs)
 
 BETA PHASE
 tbd - Beta launched!
