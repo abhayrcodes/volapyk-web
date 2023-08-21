@@ -32,7 +32,7 @@ export default function Navbar(props: any) {
   console.log(props);
 
   return (
-    <nav className={`border-gray-200 bg-gray-900 ${isNavbarExpanded ? 'h-screen' : ''}`}>
+    <nav className={`labil bg-gray-900 ${isNavbarExpanded ? 'h-screen' : ''}`}>
       <div className="flex flex-wrap items-center justify-between mx-10 p-4">
         <Link href="/" className="flex items-center">
           <span id = "logo-text" className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">volapyk</span>
@@ -45,42 +45,42 @@ export default function Navbar(props: any) {
           </svg>
         </button>
         <div className="hidden w-full lg:block lg:w-auto" id="navbar-default">
-          <ul className="font-bold text-white flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row md:space-x-8 lg:mt-0 lg:border-0">
+          <ul className="text-white flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row md:space-x-8 lg:mt-0 lg:border-0">
             <li>
-              <Link href="/" className="block border-2 border-transparent text-purple-600 bg-purple-600 rounded bg-transparent p-2 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150" aria-current="page">Home</Link>
+              <Link href="/" className="block border-2 border-transparent text-purple-600 bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150" aria-current="page">Home</Link>
             </li>
             <li>
-              <Link href="/about" className="block border-2 border-transparent bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">About</Link>
+              <Link href="/about" className="block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">About</Link>
             </li>
             <li>
-              <Link href="/add-service" className="block border-2 border-transparent bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">Add a Service</Link>
+              <Link href="/add-service" className="block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Add a Service</Link>
             </li>
             <li>
-              <Link href="/instant-checker" className="block border-2 border-transparent bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">Instant Checker</Link>
+              <Link href="/instant-checker" className="block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Instant Checker</Link>
             </li>
             <li>
-              <Link href="https://gofundme.com/f/volapyk" className="block border-2 border-transparent bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">Donate</Link>
+              <Link href="https://gofundme.com/f/volapyk" className="block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Donate</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className={`${isNavbarExpanded ? '' : 'hidden'}`}>
         <div>
-          <ul className="font-bold text-white text-center">
+          <ul className="text-white text-center">
             <li>
-              <Link href="/" className="w-fit mx-auto mb-1 block border-2 border-transparent text-purple-600 bg-purple-600 rounded bg-transparent p-2 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150" aria-current="page">Home</Link>
+              <Link href="/" className="w-fit mx-auto mb-1 block border-2 border-transparent text-purple-600 bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150" aria-current="page">Home</Link>
             </li>
             <li>
-              <Link href="/about" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">About</Link>
+              <Link href="/about" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">About</Link>
             </li>
             <li>
-              <Link href="/add-service" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">Add a Service</Link>
+              <Link href="/add-service" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Add a Service</Link>
             </li>
             <li>
-              <Link href="/instant-checker" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">Instant Checker</Link>
+              <Link href="/instant-checker" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Instant Checker</Link>
             </li>
             <li>
-              <Link href="https://gofundme.com/f/volapyk" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-20 ease-in-out duration-150">Donate</Link>
+              <Link href="https://gofundme.com/f/volapyk" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Donate</Link>
             </li>
           </ul>
         </div>

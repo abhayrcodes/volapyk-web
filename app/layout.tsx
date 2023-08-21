@@ -1,8 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Jost } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
+const jost = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Volapyk',
@@ -19,7 +20,7 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/images/favicon.ico'/>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={jost.className}>{children}</body>
     </html>
   )
 }

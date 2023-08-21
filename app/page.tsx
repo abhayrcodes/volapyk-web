@@ -1,8 +1,10 @@
 import Card from '../components/Card.tsx';
 import Navbar from '../components/Navbar.tsx';
+import LoadingCard from '@/components/LoadingCard.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
 import React from 'react';
 import { PrismaClient } from '@prisma/client';
+import { Suspense } from 'react';
 
 const prisma = new PrismaClient();
 
@@ -18,7 +20,8 @@ export default async function Home() {
       <tr key={i}>
         <td className='pr-3 w-1/2'>
           {firstService && (
-            <Card
+            <Suspense fallback={<LoadingCard/>}>
+              <Card
               service_id = {firstService.service_id}
               service_name={firstService.service_name}
               char_score={firstService.char_score}
@@ -37,11 +40,14 @@ export default async function Home() {
                 firstService.case4_class,
               ]}
             />
+            </Suspense>
+            
           )}
         </td>
         <td className='pl-3 w-1/2'>
           {secondService && (
-            <Card
+            <Suspense fallback={<LoadingCard/>}>
+              <Card
             service_id = {secondService.service_id}
               service_name={secondService.service_name}
               char_score={secondService.char_score}
@@ -60,6 +66,8 @@ export default async function Home() {
                 secondService.case4_class,
               ]}
             />
+            </Suspense>
+            
           )}
         </td>
       </tr>
@@ -70,9 +78,12 @@ export default async function Home() {
   const stackedContent = data.map((item: any, index: any) => (
     <tr key={index}>
       <td colSpan={2}>
-        <Card service_id = {item.service_id} service_name={item.service_name} char_score={item.char_score} 
+        <Suspense fallback={<LoadingCard />}>
+          <Card service_id = {item.service_id} service_name={item.service_name} char_score={item.char_score} 
           numbers={[item.case0_title, item.case1_title, item.case2_title, item.case3_title, item.case4_title]}
           colors={[item.case0_class, item.case1_class, item.case2_class, item.case3_class, item.case4_class]} />
+        </Suspense>
+        
       </td>
     </tr>
   ));

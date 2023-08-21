@@ -1,6 +1,8 @@
 import CasesList from '@/components/CasesList';
+import NormList from '@/components/NormList';
 import Navbar from '@/components/Navbar';
 import { PrismaClient } from '@prisma/client';
+import Link from 'next/link';
 
 const prisma = new PrismaClient();
 
@@ -10,7 +12,16 @@ export default async function ServicePage({ params }: { params: { id: string } }
       service_id: Number(params.id),
     },
   });
-  console.log(data)
+
+  const links_promise = await prisma.scored_links.findMany({
+    where: {
+      service_id: Number(params.id),
+    },
+  })
+
+  const links = links_promise.map((element) => {
+    return element.link;
+  });
 
   const case_titles = [
     {"title": data[0].case0_title, "class": data[0].case0_class},
@@ -41,24 +52,36 @@ export default async function ServicePage({ params }: { params: { id: string } }
         <Navbar />
 
         <div className="flex items-center justify-between w-2/3 mx-auto my-12">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">{data[0].service_name}</h1>
+          <div className='flex items-center justify-between'>
+            <Link className = "labil border-2 border-slate-100 transition ease-in-out duration-300 bg-slate-100 rounded-full px-10 py-5 mx-5 hover:bg-transparent hover:text-slate-100 hover:shadow-lg hover:shadow-indigo-600" href="/">← Back to Services</Link>
+            <h2 className="labil text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-100">{data[0].service_name}</h2>
+          </div>
+          
 
           <div className='grid grid-flow-col auto-cols-max'>
-            <div className="text-lg mr-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
+            <div className="labil text-lg mr-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
               Character Grade <br></br> {data[0].char_score}
             </div>
-            <div className="text-lg ml-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
+            <div className="labil text-lg ml-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
               Numerical Grade <br></br> {data[0].num_score}
             </div>
           </div>
         </div>
 
-        <div className='w-3/4 mx-auto my-5 border-2 rounded-lg border-indigo-600 shadow-lg shadow-indigo-600'>
+        <div className='w-3/4 mx-auto border border-slate-800 rounded-lg md:rounded-md'>
           <CasesList
             case_titles = {case_titles}
           />
         </div>
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-sm text-red-900 w-3/4 mx-auto my-12">* CASES ABOVE ARE ONLY TOP 20, AND DO NOT REPRESENT FULL DATA USED TO COMPUTE SCORES</h1>
+
+        <h1 className="labil text-3xl text-red-900 w-3/4 mx-auto my-12 animate-pulse">⚠ Cases above only represent the top 20, and do not represent the full data used to compute scores.</h1>
+        
+        <h3 className="w-3/4 my-2 mx-auto labil sm:text-3xl md:text-4xl lg:text-5xl text-slate-100 mb-7">Links</h3>
+        <div className="w-3/4 my-2 mx-auto border border-slate-800 rounded-lg md:rounded-md mb-7">
+          <NormList
+            numbers = {links}
+          />
+        </div>
         
       </body>
     </html>

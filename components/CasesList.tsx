@@ -18,9 +18,9 @@ export default function CasesList(props: any) {
 
     return (
       <div className="">
-        <li key={index} className={`flex justify-between transition ease-in-out duration-300 p-2 my-2 border hover:border-2 border-indigo-600 rounded-lg text-gray-300 font-sans hover:scale-x-[1.025] hover:shadow-md hover:shadow-indigo-600 hover:bg-slate-800`}>
+        <li key={index} className={`flex justify-between transition ease-in-out duration-300 p-2 px-4 my-2 border hover:border-2 border-transparent rounded-lg text-gray-300 font-sans hover:scale-x-[1.025] hover:shadow-md hover:shadow-indigo-600 hover:bg-slate-800 hover:border-indigo-600`}>
           <div className="overflow-hidden line-clamp-1 py-1">
-            {number.title}
+            <h5 className="labil">{number.title}</h5>
           </div>
           {listItemRating.element}
         </li>
