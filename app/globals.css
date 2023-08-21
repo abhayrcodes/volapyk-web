@@ -33,7 +33,11 @@ h1 {
     transform: translateX(-50%);
     width: 10%;
     text-align: right;
-    padding: 2%;
+    padding: 1% 2%;
+}
+
+.back-to-services:hover {
+    transform: translateX(-25%);
 }
 
 @tailwind base;

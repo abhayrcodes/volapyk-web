@@ -54,7 +54,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
         <Navbar />
 
         <div className="flex my-12">
-          <Link className="absolute labil back-to-services border-2 border-slate-100 bg-slate-100 rounded-full hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back'] hover:translate-x-1 hover:text-center" href="/">
+          <Link className="absolute labil back-to-services border-2 border-slate-100 bg-slate-100 rounded-lg hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back'] hover:text-center" href="/">
             <span>←&nbsp;</span>
           </Link>
       
