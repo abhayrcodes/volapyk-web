@@ -15,7 +15,7 @@ export default function About() {
               <div className="h-8 mb-2 p-2 border border-green-400 rounded-lg items-center justify-center text-green-400 inline-flex">
                 Grade A
               </div>
-              {' '}-&gt;
+              {' '}→
             </td>
             <td className='p-1'>
               Respects user privacy and data 
