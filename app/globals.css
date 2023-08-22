@@ -8,40 +8,15 @@
 }
 
 @font-face {
-    font-family: 'Labil';
-    src: url(/fonts/LabilGrotesk-Medium.ttf);
-}
-
-@font-face {
     font-family: 'Space';
     src: url(/fonts/SpaceGrotesk-VariableFont_wght.ttf);
 }
 
-@layer base {
-    html {
-      font-family: Space;
-    }
-}
-
 body {
     background-color: #0f172a;
-}
-
-h1 {
-    font-family: Yapari;
+    font-family: Space;
 }
 
 #logo-text {
     font-family: Yapari;
-}
-
-.back-to-services {
-    transform: translateX(-65%);
-    width: 150px;
-    text-align: right;
-    padding: 15px 15px 15px 45px;
-}
-
-.back-to-services:hover {
-    transform: translateX(-25%);
 }

@@ -1,10 +1,8 @@
 import CasesList from '@/components/CasesList';
 import NormList from '@/components/NormList';
 import Navbar from '@/components/Navbar';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '../../../prisma/client.ts';
 import Link from 'next/link';
-
-const prisma = new PrismaClient();
 
 export default async function ServicePage({ params }: { params: { id: string } }) {
   const data = await prisma.service_info.findMany({
@@ -50,7 +48,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
         <Navbar />
 
         <div className="flex items-center my-12">
-          <Link className="hidden lg:block absolute back-to-services font-bold border-2 border-slate-100 bg-slate-100 rounded-lg hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back'] hover:text-center" href="/">
+          <Link className="hidden lg:block absolute text-right p-[15px] w-[150px] -translate-x-2/3 hover:-translate-x-1/3 font-bold border-2 border-slate-100 bg-slate-100 rounded-lg hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back']" href="/">
             <span>🡸  </span>
           </Link>
       

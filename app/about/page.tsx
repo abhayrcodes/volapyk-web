@@ -140,7 +140,7 @@ export default function About() {
         <Navbar />
         <div className="flex items-center justify-center">
           <div className="w-5/6">
-            <h1 className="mt-20 mb-10 text-3xl font-extrabold text-white md:text-3xl lg:text-5xl text-center">
+            <h1 id='logo-text' className="mt-20 mb-10 text-3xl font-extrabold text-white md:text-3xl lg:text-5xl text-center">
               Simple{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
                 Privacy

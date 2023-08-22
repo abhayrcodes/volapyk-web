@@ -3,10 +3,8 @@ import Navbar from '../components/Navbar.tsx';
 import LoadingCard from '@/components/LoadingCard.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
 import React from 'react';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '../prisma/client.ts';
 import { Suspense } from 'react';
-
-const prisma = new PrismaClient();
 
 export default async function Home() {
   const cases = await prisma.cases.findMany();
