@@ -1,5 +1,5 @@
 import CasesList from '@/components/CasesList';
-import NormList from '@/components/NormList';
+import LinksList from '@/components/LinksList.tsx';
 import Navbar from '@/components/Navbar';
 import { prisma } from '../../../prisma/client.ts';
 import Link from 'next/link';
@@ -42,6 +42,14 @@ export default async function ServicePage({ params }: { params: { id: string } }
     case_titles.push({ 'title': title, 'class': classname });
   }
 
+  const gradeColorMap: { [key: string]: string; } = {
+    'A': 'border-green-500 text-green-500',
+    'B': 'border-lime-500 text-lime-500',
+    'C': 'border-yellow-500 text-yellow-500',
+    'D': 'border-orange-500 text-orange-500',
+    'E': 'border-red-500 text-red-500',
+  };
+
   return (
     <html>
       <body className='bg-slate-900'>
@@ -57,10 +65,10 @@ export default async function ServicePage({ params }: { params: { id: string } }
               <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-100 font-bold">{data[0].service_name}</h2>
             </div>
             <div className='grid grid-flow-col auto-cols-max text-sm sm:text-base lg:text-lg'>
-              <div className="mr-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
+              <div className={`mr-2 p-4 border rounded-lg items-center justify-center ${gradeColorMap[data[0].char_score]}`}>
                 Character Grade <br></br> {data[0].char_score}
               </div>
-              <div className="ml-2 p-4 border border-green-400 rounded-lg items-center justify-center text-green-400">
+              <div className={`ml-2 p-4 border rounded-lg items-center justify-center ${gradeColorMap[data[0].char_score]}`}>
                 Numerical Grade <br></br> {String(data[0].num_score)}
               </div>
             </div>
@@ -77,7 +85,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
         
         <h3 className="w-3/4 my-2 mx-auto sm:text-3xl md:text-4xl lg:text-5xl text-slate-100 mb-7">Links</h3>
         <div className="w-3/4 my-2 mx-auto border border-slate-800 rounded-lg md:rounded-md mb-7">
-          <NormList
+          <LinksList
             numbers = {links}
           />
         </div>
