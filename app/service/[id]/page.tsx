@@ -7,7 +7,7 @@ import Link from 'next/link';
 const prisma = new PrismaClient();
 
 export default async function ServicePage({ params }: { params: { id: string } }) {
-  const data = await prisma.service_scores.findMany({
+  const data = await prisma.service_info.findMany({
     where: {
       service_id: Number(params.id),
     },
@@ -17,36 +17,32 @@ export default async function ServicePage({ params }: { params: { id: string } }
     where: {
       service_id: Number(params.id),
     },
-  })
-
+  });
   const links = links_promise.map((element) => {
     return element.link;
   });
 
-  console.log(links);
+  const cases = await prisma.cases.findMany();
+  const casesData: Record<number, [string, number]> = {};
+  for (const caseItem of cases) {
+    casesData[caseItem.case_id] = [caseItem.title, caseItem.classification];
+  }
 
-  const case_titles = [
-    {"title": data[0].case0_title, "class": data[0].case0_class},
-    {"title": data[0].case1_title, "class": data[0].case1_class},
-    {"title": data[0].case2_title, "class": data[0].case2_class},
-    {"title": data[0].case3_title, "class": data[0].case3_class},
-    {"title": data[0].case4_title, "class": data[0].case4_class},
-    {"title": data[0].case5_title, "class": data[0].case5_class},
-    {"title": data[0].case6_title, "class": data[0].case6_class},
-    {"title": data[0].case7_title, "class": data[0].case7_class},
-    {"title": data[0].case8_title, "class": data[0].case8_class},
-    {"title": data[0].case9_title, "class": data[0].case9_class},
-    {"title": data[0].case10_title, "class": data[0].case10_class},
-    {"title": data[0].case11_title, "class": data[0].case11_class},
-    {"title": data[0].case12_title, "class": data[0].case12_class},
-    {"title": data[0].case13_title, "class": data[0].case13_class},
-    {"title": data[0].case14_title, "class": data[0].case14_class},
-    {"title": data[0].case15_title, "class": data[0].case15_class},
-    {"title": data[0].case16_title, "class": data[0].case16_class},
-    {"title": data[0].case17_title, "class": data[0].case17_class},
-    {"title": data[0].case18_title, "class": data[0].case18_class},
-    {"title": data[0].case19_title, "class": data[0].case19_class},
-  ]
+  const case_titles = []
+  for (const case_id of data[0].case_ids) {
+    const [title, classification] = casesData[case_id];
+    let classname = ''; // Initialize classname variable
+    if (classification === 10) {
+      classname = 'good';
+    } else if (classification === 0) {
+      classname = 'neutral';
+    } else if (classification === -10) {
+      classname = 'bad';
+    } else if (classification === -30) {
+      classname = 'blocker';
+    }
+    case_titles.push({ 'title': title, 'class': classname });
+  }
 
   return (
     <html>

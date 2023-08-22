@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function Card(props: any) {
   const numbers = props.numbers;
 
-  const colorMap: { [key: string]: string } = {
-    good: 'bg-green-600 hover:bg-opacity-75',
-    neutral: 'bg-gray-600 hover:bg-opacity-75',
-    bad: 'bg-orange-500 hover:bg-opacity-75',
-    blocker: 'bg-red-500 hover:bg-opacity-75'
+  const colorMap: { [key: string]: string; } = {
+    '10': 'bg-green-600 hover:bg-opacity-75',
+    '0': 'bg-gray-600 hover:bg-opacity-75',
+    '-10': 'bg-orange-500 hover:bg-opacity-75',
+    '-30': 'bg-red-500 hover:bg-opacity-75',
     // Add more mappings as needed
   };
 

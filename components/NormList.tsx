@@ -7,7 +7,7 @@ export default function NormList(props: any) {
 
     return (
         <Link href = {number}>
-            <li key={index} className={"flex justify-between transition ease-in-out duration-300 p-2 px-4 my-2 border hover:border-2 border-transparent rounded-lg text-gray-300 hover:scale-x-[1.025] hover:shadow-md hover:shadow-indigo-600 hover:bg-slate-800 hover:border-indigo-600"}>
+            <li key={index} className={"flex justify-between transition ease-in-out p-2 px-4 my-2 border-2 hover:border-2 border-transparent rounded-lg text-gray-300 hover:scale-x-[1.025] hover:shadow-md hover:shadow-indigo-600 hover:bg-slate-800 hover:border-indigo-600"}>
                 <div className="overflow-hidden line-clamp-1">
                 {number}
                 </div>
