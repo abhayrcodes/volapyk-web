@@ -16,8 +16,23 @@ export default async function Home() {
   }
   const data = await prisma.service_info.findMany()
 
-  function generateCardProps(service) {
-    const cardProps = {
+  interface Service {
+    service_id: number;
+    service_name: string;
+    num_score: number;
+    char_score: string;
+    case_ids: number[];
+    // Add other properties as needed
+  }
+
+  function generateCardProps(service: Service) {
+    const cardProps: {
+      service_id: number;
+      service_name: string;
+      char_score: string;
+      numbers: string[]; // Adjust the type if needed
+      colors: number[];  // Adjust the type if needed
+    } = {
       service_id: service.service_id,
       service_name: service.service_name,
       char_score: service.char_score,
