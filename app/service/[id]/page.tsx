@@ -55,7 +55,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
       <body className='bg-slate-900'>
         <Navbar />
 
-        <div className="flex items-center my-12">
+        <div className="flex items-center mt-12 mb-5">
           <Link className="hidden lg:block absolute text-right p-[15px] w-[150px] -translate-x-2/3 hover:-translate-x-1/3 font-bold border-2 border-slate-100 bg-slate-100 rounded-lg hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back']" href="/">
             <span>🡸  </span>
           </Link>
@@ -75,16 +75,14 @@ export default async function ServicePage({ params }: { params: { id: string } }
           </div>
         </div>
 
-        <div className='w-3/4 mx-auto border border-slate-800 rounded-lg md:rounded-md'>
+        <div className='w-3/4 mx-auto border-t-2 border-slate-800 lg:pt-2'>
           <CasesList
             case_titles = {case_titles}
           />
         </div>
-
-        <h1 className="text-lg sm:text-2xl lg:text-3xl text-red-900 w-3/4 mx-auto my-12">⚠ Cases above only represent the top 20, not the full data used to compute scores.</h1>
         
-        <h3 className="w-3/4 my-2 mx-auto sm:text-3xl md:text-4xl lg:text-5xl text-slate-100 mb-7">Links</h3>
-        <div className="w-3/4 my-2 mx-auto border border-slate-800 rounded-lg md:rounded-md mb-7">
+        <h3 className="w-3/4 mt-10 mb-5 text-center font-bold mx-auto text-2xl sm:text-3xl md:text-4xl text-slate-100">Sources</h3>
+        <div className="w-3/4 mx-auto border border-slate-800 rounded-lg md:rounded-md mb-7">
           <LinksList
             numbers = {links}
           />

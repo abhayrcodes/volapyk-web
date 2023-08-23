@@ -66,7 +66,7 @@ export default function Navbar(props: any) {
       </div>
       <div className={`${isNavbarExpanded ? '' : 'hidden'}`}>
         <div>
-          <ul className="text-white font-bold text-center">
+          <ul className="text-white font-bold text-xl text-center mt-5">
             <li>
               <Link href="/" className="w-fit mx-auto mb-1 block border-2 border-transparent text-purple-600 bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150" aria-current="page">Home</Link>
             </li>
