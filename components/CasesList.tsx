@@ -17,17 +17,14 @@ export default function CasesList(props: any) {
     };
 
     return (
-      <div className="">
-        <li key={index} className={`flex justify-between transition ease-in-out p-2 px-4 my-2 border-2 hover:border-2 border-transparent border-b-slate-800 lg:border-b-transparent rounded-lg text-gray-300 hover:scale-x-[1.025] hover:shadow-md hover:shadow-indigo-600 hover:bg-slate-800 hover:border-indigo-600`}>
-          <div className="py-1 pr-4">
-            <h5>{number.title}</h5>
-          </div>
-          <div>
-            {listItemRating.element}
-          </div>
-        </li>
-      </div>
-      
+      <li key={index} className={`flex justify-between transition ease-in-out p-2 px-4 border-2 hover:border-2 border-transparent border-b-slate-800 lg:border-b-transparent hover:rounded-lg text-gray-300 hover:scale-x-[1.025] hover:shadow-md hover:shadow-indigo-600 hover:bg-slate-800 hover:border-indigo-600`}>
+        <div className="py-1 pr-4">
+          <h5>{number.title}</h5>
+        </div>
+        <div className="flex items-center">
+          {listItemRating.element}
+        </div>
+      </li>
     );
   });
 

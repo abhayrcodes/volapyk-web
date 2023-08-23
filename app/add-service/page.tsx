@@ -1,15 +1,16 @@
 import Navbar from '@/components/Navbar.tsx'
+import SearchInput from '@/components/SearchInput';
 
 export default function AddService() {
   return (
     <html>
-        <body className="static bg-slate-900">
-            <Navbar/>
-            <div className='fixed flex items-center min-h-screen'>
-                <h1 id='logo-text' className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">| C0MING S00N</h1>
-            </div>
-        
-        </body>
+      <body className="static bg-slate-900">
+        <Navbar/>
+        <SearchInput/>
+        <div className="pointer-events-none text-center">
+          <p className="text-md md:text-lg font-sans font-normal text-gray-400 lg:text-2xl">To add a service, you must search to ensure it is not already added</p>
+        </div>
+      </body>
     </html>
     
   )

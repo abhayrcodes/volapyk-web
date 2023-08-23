@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NormList(props: any) {
+export default function LinksList(props: any) {
   const numbers = props.numbers;
 
   const listItems = numbers && numbers.map((number: any, index: any) => {

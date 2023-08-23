@@ -6,7 +6,7 @@ export default function About() {
   const aboutGrades = (
     <div className="border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
       <p className="text-md lg:text-xl font-bold tracking-tight mb-5">
-        Volapyk (&quot;vola-pike&quot;) uses machine learning to automate the processing of privacy policies and terms of service. Each service is then given an easy to understand grade based on its documents.
+        Volapyk (&ldquo;vola-pike&rdquo;) uses machine learning to automate the processing of privacy policies and terms of service. Each service is then given an easy to understand grade based on its documents.
       </p>
       <table className='w-full'>
         <tbody>
@@ -111,7 +111,7 @@ export default function About() {
   const aboutRoadmap = (
     <div className="border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
       <p className="text-md lg:text-xl font-bold tracking-tight mb-5">
-        Volapyk means &quot;language of the world&quot;, this is how we will make privacy understandable to the masses in beta and beyond.
+        Volapyk means &ldquo;language of the world&rdquo;, this is how we will make privacy understandable to the masses in beta and beyond.
       </p>
       <p className='font-bold text-purple-500'>Short Term:</p>
       <ul className='pl-4 mb-3 list-disc w-full'>
