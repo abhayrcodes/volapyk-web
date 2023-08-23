@@ -45,12 +45,15 @@ export default function Navbar(props: any) {
           </svg>
         </button>
         <div className="hidden w-full lg:block lg:w-auto" id="navbar-default">
-          <ul className="text-white font-bold flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row md:space-x-8 lg:mt-0 lg:border-0">
+          <ul className="text-white font-semibold flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row md:space-x-8 lg:mt-0 lg:border-0">
             <li>
               <Link href="/" className="block border-2 border-transparent text-purple-600 bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150" aria-current="page">Home</Link>
             </li>
             <li>
               <Link href="/about" className="block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">About</Link>
+            </li>
+            <li>
+              <Link href="/?login=true" className="block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Login</Link>
             </li>
             <li>
               <Link href="/add-service" className="block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Add a Service</Link>
@@ -66,12 +69,15 @@ export default function Navbar(props: any) {
       </div>
       <div className={`${isNavbarExpanded ? '' : 'hidden'}`}>
         <div>
-          <ul className="text-white font-bold text-center">
+          <ul className="text-white font-semibold text-center">
             <li>
               <Link href="/" className="w-fit mx-auto mb-1 block border-2 border-transparent text-purple-600 bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150" aria-current="page">Home</Link>
             </li>
             <li>
               <Link href="/about" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">About</Link>
+            </li>
+            <li>
+              <Link href="/?login=true" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">About</Link>
             </li>
             <li>
               <Link href="/add-service" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Add a Service</Link>

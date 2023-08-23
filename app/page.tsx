@@ -2,11 +2,20 @@ import Card from '../components/Card.tsx';
 import Navbar from '../components/Navbar.tsx';
 import LoadingCard from '@/components/LoadingCard.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
+import LoginModal from '@/components/LoginModal.tsx';
 import React from 'react';
 import { prisma } from '../prisma/client.ts';
 import { Suspense } from 'react';
 
-export default async function Home() {
+export default async function Home({
+  params,
+  searchParams,
+}: {
+  params: { id: string };
+  searchParams?: { [key: string]: string };
+}) {
+  const login = (typeof searchParams === "undefined") ? true : (searchParams.login==="true" ? false : true);
+
   const cases = await prisma.cases.findMany();
   const casesData: Record<number, [string, number]> = {};
   for (const caseItem of cases) {
@@ -115,6 +124,9 @@ export default async function Home() {
             </table>
           </div>
         </div>
+
+        <LoginModal hidden={login} />
+        
       </body>
     </html>
   );

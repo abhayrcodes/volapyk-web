@@ -49,7 +49,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
 
         <div className="flex items-center my-12">
           <Link className="hidden lg:block absolute text-right p-[15px] w-[150px] -translate-x-2/3 hover:-translate-x-1/3 font-bold border-2 border-slate-100 bg-slate-100 rounded-lg hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back']" href="/">
-            <span>🡸  </span>
+            <span>←  </span>
           </Link>
       
           <div className="flex-col lg:flex-row flex items-center lg:justify-between w-3/4 lg:w-2/3 mx-auto">
@@ -73,7 +73,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
           />
         </div>
 
-        <h1 className="text-lg sm:text-2xl lg:text-3xl text-red-900 w-3/4 mx-auto my-12">⚠ Cases above only represent the top 20, not the full data used to compute scores.</h1>
+        <h1 className="text-lg sm:text-2xl lg:text-3xl text-red-900 w-3/4 mx-auto my-12 animate-pulse">⚠ Cases above only represent the top 20, not the full data used to compute scores.</h1>
         
         <h3 className="w-3/4 my-2 mx-auto sm:text-3xl md:text-4xl lg:text-5xl text-slate-100 mb-7">Links</h3>
         <div className="w-3/4 my-2 mx-auto border border-slate-800 rounded-lg md:rounded-md mb-7">
