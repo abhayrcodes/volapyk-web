@@ -35,7 +35,7 @@ export default function Navbar(props: any) {
     <nav className={`bg-gray-900 ${isNavbarExpanded ? 'h-screen' : ''}`}>
       <div className="flex flex-wrap items-center justify-between mx-10 p-4">
         <Link href="/" className="flex items-center">
-          <span id="logo-text" className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">volapyk</span>
+          <img src={'/images/logo2.svg'} height={50} width={50} alt="React Logo" />
         </Link>
         <button onClick={toggleNavbar} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 bg-none rounded-lg lg:hidden focus:outline-none">
           <span className="sr-only">Open main menu</span>
@@ -95,3 +95,5 @@ export default function Navbar(props: any) {
 
   )
 }
+
+// <span id="logo-text" className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">volapyk</span>

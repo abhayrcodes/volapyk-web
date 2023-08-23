@@ -7,11 +7,11 @@ export default function LoginModal(props:any) {
         <div className={`${hidden ? "hidden" : ""} w-full h-full bg-slate-900/80 fixed inset-0`}>
 
           <div className=" h-fit my-auto fixed inset-0 transition ease-in duration-150 border-2 border-indigo-600 hover:shadow-lg hover:shadow-indigo-600 p-10 rounded-lg w-1/2 mx-auto bg-slate-900">
-            <Link className=" hidden lg:block text-right p-[15px] w-[150px] -translate-x-2/3 hover:-translate-x-1/3 font-bold border-2 border-slate-100 bg-slate-100 rounded-lg hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600 hover:after:content-['Back']" href="/">
-                <span>←  </span>
+            <Link className=" hidden lg:block text-center p-[15px] w-[60px] hover:tra hover:-translate-x-1/4 font-bold border-2 border-slate-100 bg-slate-100 rounded-lg hover:text-slate-100 hover:bg-slate-900 transition ease-in-out duration-300 hover:shadow-lg hover:shadow-indigo-600" href="/">
+                <span>←</span>
             </Link>
         
-            <div className="flex row-span-1 mb-10 left-1/2  transform translate-x-1/4">
+            <div className="flex row-span-1 mb-10  translate-x-1/3">
 
                     <div className=" content-center w-fit grid place-items-center mr-5 animate-bounce">
                         <div className="transition duration-150 ease-in-out h-5 w-5 rounded-full bg-transparent border-2 border-slate-200 mb-1 shadow-lg shadow-indigo-600"></div>

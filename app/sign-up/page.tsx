@@ -22,6 +22,7 @@ export default function SignUp() {
                     <Link href="#">hi</Link>
                 </div>
               </form>
+              
           </body>
       </html>
       
@@ -49,4 +50,22 @@ export default function SignUp() {
                     </form>
                 </div>
               </div>
+              */
+
+
+/*
+<form className="flex w-full">
+                <div className="border-2 border-indigo-600 rounded-lg shadow-lg shadow-indigo-600 p-10">
+                    <Link href="#">hi</Link>
+                </div>
+                <div className="border-2 border-indigo-600 rounded-lg shadow-lg shadow-indigo-600 p-10">
+                    <Link href="#">hi</Link>
+                </div>
+                <div className="border-2 border-indigo-600 rounded-lg shadow-lg shadow-indigo-600 p-10">
+                    <Link href="#">hi</Link>
+                </div>
+                <div className="border-2 border-indigo-600 rounded-lg shadow-lg shadow-indigo-600 p-10">
+                    <Link href="#">hi</Link>
+                </div>
+              </form>
               */
