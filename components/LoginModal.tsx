@@ -31,7 +31,7 @@ export default function LoginModal(props:any) {
             </div>
 
             <div>
-                <h4 className="text-slate-100 text-center">Don't have an account? <Link href="/sign-up" className="text-indigo-400">Sign in</Link></h4>
+                <h4 className="text-slate-100 text-center">Don't have an account? <Link href="/sign-up" className="text-indigo-400">Sign Up</Link></h4>
             </div>
           </div>
         </div>

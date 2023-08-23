@@ -117,17 +117,17 @@ export default function About() {
       <ul className='pl-4 mb-3 list-disc w-full'>
         <li>Add case pages to show specific quotes backing each case for every service</li>
         <li>Add user login portal (ability to follow companies, get alerts, personalize scoring, etc.)</li>
-        <li>Speed up AI processing and transer database to server</li>
+        <li>Enable the Add a Service feature for crowdsourcing services</li>
       </ul>
       <p className='font-bold text-purple-500'>Medium Term:</p>
       <ul className='pl-4 mb-3 list-disc w-full'>
-        <li>Enable the Add a Service feature for crowdsourcing services</li>
+        <li>Expand from 14 Alpha services to 7500+ final services</li>
         <li>User selects case ratings for personalized service scores</li>
         <li>Send alerts for positive or negative changes to service scores</li>
       </ul>
       <p className='font-bold text-purple-500'>Long Term:</p>
       <ul className='pl-4 list-disc w-full'>
-        <li>Expand from 14 Alpha services to 7500+ in the final product</li>
+        <li>Enable instant checker for web links</li>
         <li>Create browser extension</li>
         <li>Recommend alternative services</li>
       </ul>
