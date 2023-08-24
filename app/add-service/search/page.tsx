@@ -54,6 +54,7 @@ export default async function Search({
                         </li>
                     </Link>
                 ))}
+                serviceName={item.service_name}
             />
           </td>
         </tr>
@@ -79,7 +80,7 @@ export default async function Search({
                                 <input className="flex-1 mb-2 mr-6 text-2xl tracking-tight font-bold bg-transparent focus:outline-none" placeholder="Type a new service name here..."/>
                                 <button className='h-[30px] w-[30px] bg-transparent' />
                             </div>
-                        } linksElement={<p/>} />
+                        } linksElement={<p/>} serviceName='hello'/>
                     </td>
                 </tr>
             </tbody>
