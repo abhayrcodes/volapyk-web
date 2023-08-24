@@ -3,10 +3,11 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-function AddServiceCard({ titleElement, linksElement, serviceName }: { titleElement: any; linksElement: any; serviceName: string }) {
+function AddServiceCard({ titleElement, linksElement, inputServiceName }: { titleElement: any; linksElement: any; inputServiceName: string }) {
   const router = useRouter();
   const [sourceInputs, setSourceInputs] = useState([{ link: '', value: '' }]);
   const [buttonStates, setButtonStates] = useState(Array(sourceInputs.length).fill('idle'));
+  const [inputValue, setInputValue] = useState('');
 
   const handleAddSource = () => {
     setSourceInputs(prevInputs => [...prevInputs, { link: '', value: '' }]);
@@ -17,6 +18,8 @@ function AddServiceCard({ titleElement, linksElement, serviceName }: { titleElem
     newInputs[index][field] = value;
     setSourceInputs(newInputs);
   };
+
+  const serviceName = inputValue || inputServiceName;
 
   const handleNavigate = async (link: string, index: number) => {
     if (isValidLink(link)) {
@@ -32,7 +35,7 @@ function AddServiceCard({ titleElement, linksElement, serviceName }: { titleElem
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ link }),
+          body: JSON.stringify({ link, serviceName }),
         });
   
         if (response.ok) {
@@ -74,7 +77,13 @@ function AddServiceCard({ titleElement, linksElement, serviceName }: { titleElem
 
   return (
     <div className="relative border-2 group transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg shadow bg-slate-900 border-gray-700">
-        {titleElement}
+        {inputServiceName !== '' &&titleElement}
+        {inputServiceName === '' && (
+          <div className="flex items-center justify-between text-white">
+            <input className="flex-1 mb-2 mr-6 text-2xl tracking-tight font-bold bg-transparent focus:outline-none" placeholder="Type a new service name here..." value={inputValue} onChange={e => setInputValue(e.target.value)}/>
+            <button className='h-[30px] w-[30px] bg-transparent' />
+          </div>
+        )}
         <div className='absolute flex items-center justify-end top-6 right-6 z-10'>
             <button className="flex h-[30px] w-[30px] text-white text-xl items-center justify-center font-bold bg-indigo-600 rounded-full hover:bg-indigo-500" onClick={handleAddSource}>+</button>
         </div>
