@@ -75,7 +75,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
           </div>
         </div>
 
-        <div className='w-3/4 mx-auto border-t-2 border-slate-800 lg:pt-2'>
+        <div className='w-3/4 mx-auto border-2 border-slate-800 lg:pt-2 rounded-lg'>
           <CasesList
             case_titles = {case_titles}
           />
