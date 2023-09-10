@@ -134,88 +134,86 @@ export default function About() {
   );
 
   return (
-    <html>
-      <body>
-        <Navbar />
-        <div className="flex items-center justify-center">
-          <div className="w-5/6">
-            <h1 id='logo-text' className="mt-20 mb-10 text-3xl font-extrabold text-white lg:text-4xl lg:leading-snug text-center">
-              Personalized{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
-                Privacy
-              </span>
-              {' '}through the power of{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
-                AI
-              </span>
-            </h1>
-            <div className="border-2 transition ease-in-out mb-7 block p-6 rounded-lg text-white shadow border-red-700">
-              <p className='text-red-400 font-sans font-bold text-center text-2xl'>NOTE: We are currently in Alpha, grades and appearance are all subject to change.</p>
-            </div>
-
-            <table className="w-full gap-4 mb-4 text-sm leading-6 hidden lg:grid">
-              <tbody>
-                <tr className='flex'>
-                  <td className='pr-3 flex w-1/2'>
-                    {aboutGrades}
-                  </td>
-                  <td className='pl-3 flex w-1/2'>
-                    {aboutCases}
-                  </td>
-                </tr>
-                <tr className='flex'>
-                  <td className='pr-3 flex w-1/2'>
-                    {aboutContributors}
-                  </td>
-                  <td className='pl-3 flex w-1/2'>
-                    {aboutRoadmap}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table className="w-full gap-4 text-sm leading-6 lg:hidden">
-              <tbody>
-                <tr>
-                  <td className='flex'>
-                    {aboutGrades}
-                  </td>
-                  <td className='flex'>
-                    {aboutCases}
-                  </td>
-                  <td className='flex'>
-                    {aboutContributors}
-                  </td>
-                  <td className='flex'>
-                    {aboutRoadmap}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <table className="w-full gap-4 text-sm mb-10 leading-6 grid-template-column justify-center text-white py-3">
-              <tbody>
-                <tr>
-                  <td className='w-1/3'>
-                    <a href="/docs/Log_of_Project_Changes.txt" className="border-2 mr-5 lg:mr-20 py-3 px-1 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
-                      View Project Timeline
-                    </a>
-                  </td>
-                  <td className='w-1/3'>
-                    <a href="/" className="border-2 p-6 group transition text-center text-md font-bold ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
-                      EXPLORE SCORED SERVICES
-                    </a>
-                  </td>
-                  <td className='w-1/3'>
-                    <a href="https://gofundme.com/f/volapyk" className="border-2 ml-5 lg:ml-20 py-3 px-1 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
-                      Fund Future Growth
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+    <div>
+      <Navbar />
+      <div className="flex items-center justify-center">
+        <div className="w-5/6">
+          <h1 id='logo-text' className="mt-20 mb-10 text-3xl font-extrabold text-white lg:text-4xl lg:leading-snug text-center">
+            Personalized{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
+              Privacy
+            </span>
+            {' '}through the power of{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
+              AI
+            </span>
+          </h1>
+          <div className="border-2 transition ease-in-out mb-7 block p-6 rounded-lg text-white shadow border-red-700">
+            <p className='text-red-400 font-sans font-bold text-center text-2xl'>NOTE: We are currently in Alpha, grades and appearance are all subject to change.</p>
           </div>
+
+          <table className="w-full gap-4 mb-4 text-sm leading-6 hidden lg:grid">
+            <tbody>
+              <tr className='flex'>
+                <td className='pr-3 flex w-1/2'>
+                  {aboutGrades}
+                </td>
+                <td className='pl-3 flex w-1/2'>
+                  {aboutCases}
+                </td>
+              </tr>
+              <tr className='flex'>
+                <td className='pr-3 flex w-1/2'>
+                  {aboutContributors}
+                </td>
+                <td className='pl-3 flex w-1/2'>
+                  {aboutRoadmap}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table className="w-full gap-4 text-sm leading-6 lg:hidden">
+            <tbody>
+              <tr>
+                <td className='flex'>
+                  {aboutGrades}
+                </td>
+                <td className='flex'>
+                  {aboutCases}
+                </td>
+                <td className='flex'>
+                  {aboutContributors}
+                </td>
+                <td className='flex'>
+                  {aboutRoadmap}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table className="w-full gap-4 text-sm mb-10 leading-6 grid-template-column justify-center text-white py-3">
+            <tbody>
+              <tr>
+                <td className='w-1/3'>
+                  <a href="/docs/Log_of_Project_Changes.txt" className="border-2 mr-5 lg:mr-20 py-3 px-1 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                    View Project Timeline
+                  </a>
+                </td>
+                <td className='w-1/3'>
+                  <a href="/" className="border-2 p-6 group transition text-center text-md font-bold ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                    EXPLORE SCORED SERVICES
+                  </a>
+                </td>
+                <td className='w-1/3'>
+                  <a href="https://gofundme.com/f/volapyk" className="border-2 ml-5 lg:ml-20 py-3 px-1 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                    Fund Future Growth
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </body>
-    </html>
+      </div>
+    </div>
   );
 }

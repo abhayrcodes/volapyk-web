@@ -25,3 +25,7 @@ body {
 .labil {
     font-family: Space;
 }
+
+.no-scrollbar {
+    overflow: hidden;
+}

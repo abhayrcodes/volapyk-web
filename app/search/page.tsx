@@ -108,33 +108,31 @@ export default async function Search({
   
 
   return (
-    <html>
-      <body className="bg-slate-900">
-        <Navbar />
+    <div>
+      <Navbar />
 
-        <div className="pointer-events-none text-center mt-20">
-          <h1 id='logo-text' className="mb-4 text-5xl font-extrabold text-white md:text-8xl lg:text-9xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">volapyk</span></h1>
-          <p className="text-md md:text-lg font-sans font-normal text-gray-400 lg:text-2xl">Keeping you safe, <span className="underline decoration-purple-600">one sentence at a time.</span></p>
-        </div>
+      <div className="pointer-events-none text-center mt-20">
+        <h1 id='logo-text' className="mb-4 text-5xl font-extrabold text-white md:text-8xl lg:text-9xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">volapyk</span></h1>
+        <p className="text-md md:text-lg font-sans font-normal text-gray-400 lg:text-2xl">Keeping you safe, <span className="underline decoration-purple-600">one sentence at a time.</span></p>
+      </div>
 
-        <SearchInput />
+      <SearchInput />
 
-        <div className="w-5/6 m-auto relative">
-          <table className="w-full text-sm text-left md:hidden">
+      <div className="w-5/6 m-auto relative">
+        <table className="w-full text-sm text-left md:hidden">
+          <tbody>
+            {stackedContent}
+          </tbody>
+        </table>
+
+        <div className="w-full gap-4 text-sm leading-6 hidden md:grid">
+          <table>
             <tbody>
-              {stackedContent}
+              {tableContent}
             </tbody>
           </table>
-
-          <div className="w-full gap-4 text-sm leading-6 hidden md:grid">
-            <table>
-              <tbody>
-                {tableContent}
-              </tbody>
-            </table>
-          </div>
         </div>
-      </body>
-    </html>
+      </div>
+    </div>
   );
 }

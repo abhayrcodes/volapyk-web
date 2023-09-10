@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSession } from "next-auth/react"
 import { signOut } from "next-auth/react"
 
@@ -9,30 +9,31 @@ export default function Navbar(props: any) {
   const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
   const { data: session, status } = useSession()
 
-  // Function to toggle the navbar state
   const toggleNavbar = () => {
     setIsNavbarExpanded((prevState) => !prevState);
   };
 
-  // Function to prevent scrolling when the navbar is expanded
-  const handleScroll = (event: Event) => {
-    if (isNavbarExpanded) {
-      event.preventDefault();
-    }
-  };
+  useEffect(() => {
+    const handleScroll = (event: Event) => {
+      if (isNavbarExpanded) {
+        event.preventDefault();
+      }
+    };
 
-  // Add an event listener to disable scrolling when the navbar is expanded
-  if (typeof window !== 'undefined') {
     if (isNavbarExpanded) {
       window.addEventListener('scroll', handleScroll, { passive: false });
-      document.body.style.overflow = 'hidden'; // Hide scrollbar when expanded
+      document.body.classList.add('no-scrollbar'); // Apply the CSS class
     } else {
       window.removeEventListener('scroll', handleScroll);
-      document.body.style.overflow = 'auto'; // Show scrollbar when collapsed
+      document.body.classList.remove('no-scrollbar'); // Remove the CSS class
     }
-  }
 
-  console.log(props);
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isNavbarExpanded]);
+
 
   if (status === "authenticated") {
     return (

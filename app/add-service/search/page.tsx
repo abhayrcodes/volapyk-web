@@ -64,24 +64,22 @@ export default async function Search({
         
 
   return (
-    <html>
-      <body className="bg-slate-900">
-        <Navbar />
-        <SearchInput />
+    <div>
+      <Navbar />
+      <SearchInput />
 
-        <div className="w-5/6 m-auto relative">
-          <table className="w-full text-sm text-left">
-            <tbody>
-                {stackedContent}
-                <tr>
-                    <td colSpan={2}>
-                        <AddServiceCard titleElement={<p/>} linksElement={<p/>} inputServiceName=''/>
-                    </td>
-                </tr>
-            </tbody>
-          </table>
-        </div>
-      </body>
-    </html>
+      <div className="w-5/6 m-auto relative">
+        <table className="w-full text-sm text-left">
+          <tbody>
+              {stackedContent}
+              <tr>
+                  <td colSpan={2}>
+                      <AddServiceCard titleElement={<p/>} linksElement={<p/>} inputServiceName=''/>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 }
