@@ -1,4 +1,3 @@
-// About.js
 import React from 'react';
 import Navbar from '@/components/Navbar';
 
@@ -140,8 +139,8 @@ export default function About() {
         <Navbar />
         <div className="flex items-center justify-center">
           <div className="w-5/6">
-            <h1 id='logo-text' className="mt-20 mb-10 text-3xl font-extrabold text-white md:text-3xl lg:text-5xl text-center">
-              Simple{' '}
+            <h1 id='logo-text' className="mt-20 mb-10 text-3xl font-extrabold text-white lg:text-4xl lg:leading-snug text-center">
+              Personalized{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-500 from-indigo-500">
                 Privacy
               </span>
@@ -151,7 +150,7 @@ export default function About() {
               </span>
             </h1>
             <div className="border-2 transition ease-in-out mb-7 block p-6 rounded-lg text-white shadow border-red-700">
-              <p className='text-red-400 font-sans font-bold text-center text-2xl'>NOTE: We are currently in Public Alpha, grades and appearance are all subject to change.</p>
+              <p className='text-red-400 font-sans font-bold text-center text-2xl'>NOTE: We are currently in Alpha, grades and appearance are all subject to change.</p>
             </div>
 
             <table className="w-full gap-4 mb-4 text-sm leading-6 hidden lg:grid">

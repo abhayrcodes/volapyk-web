@@ -1,8 +1,25 @@
-import RegularInput from "./RegInput"
+'use client'
+
 import Link from "next/link";
+import { signIn } from "next-auth/react"
+import { useState } from 'react';
 
 export default function LoginModal(props:any) {
     const hidden = props.hidden || "";
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+      
+    const handleSubmit = async (e: any) => {
+        e.preventDefault();
+    
+        const result = await signIn('credentials', {
+            redirect: true, // Redirect to a different page after login if needed
+            email: email,
+            password: password,
+            callbackUrl: '/', // Redirect URL after login
+        });
+    };
+
     return (
         <div className={`${hidden ? "hidden" : ""} w-full h-full bg-slate-900/80 fixed inset-0`}>
 
@@ -21,11 +38,11 @@ export default function LoginModal(props:any) {
             </div>
 
             <div>
-                <form>
-                    <h2 className="labil text-slate-100 lg:text-2xl font-semibold">Username</h2>
-                    <RegularInput placeholder = "Username" background = "d" otheredits = "mb-5 mt-2"></RegularInput>
+                <form onSubmit={handleSubmit}>
+                    <h2 className="labil text-slate-100 lg:text-2xl font-semibold">Email</h2>
+                    <input placeholder = "Email" value={email} onChange={(e) => setEmail(e.target.value)} className="transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 block w-full p-4 pl-5 text-sm border-2 rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-slate-900 border-gray-600 placeholder-gray-400 text-white mb-5 mt-2"></input>
                     <h2 className="labil text-slate-100 lg:text-2xl font-semibold">Password</h2>
-                    <RegularInput placeholder = "Password" background = "d" otheredits="my-2"></RegularInput>
+                    <input placeholder = "Password" value={password} onChange={(e) => setPassword(e.target.value)} className="transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 block w-full p-4 pl-5 text-sm border-2 rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-slate-900 border-gray-600 placeholder-gray-400 text-white mb-5 mt-2"></input>
                     <button type="submit" className="lg:rounded-lg transition ease-in-out duration-300 labil font-semibold w-full p-4 bg-slate-100 text-slate-900 my-5 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">LOGIN</button>
                 </form>
             </div>
