@@ -3,6 +3,8 @@ import SearchInput from '@/components/SearchInput.tsx';
 import { prisma } from '../../../prisma/client.ts';
 import Link from "next/link";
 import AddServiceCard from '@/components/AddServiceCard.tsx';
+import { getServerSession } from "next-auth/next"
+import { redirect } from 'next/navigation'
 
 export default async function Search({
     params,
@@ -19,6 +21,11 @@ export default async function Search({
       service_name: { contains: query }
     }
   })
+
+  const session = await getServerSession();
+  if (!session) {
+    redirect('/?login=true')
+  }
 
   async function serviceLinks(input_service_id: number) {
     const links_data = await prisma.scored_links.findMany({

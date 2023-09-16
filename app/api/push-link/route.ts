@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '../../../prisma/client.ts'
+import { getServerSession } from "next-auth/next"
 
 export async function POST( req: NextRequest ) {
+  const session = await getServerSession();
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
   try {
     const json = await req.json();
     const input_link = json['link']
