@@ -1,7 +1,14 @@
 import Navbar from '@/components/Navbar.tsx'
 import SearchInput from '@/components/SearchInput';
+import { getServerSession } from "next-auth/next"
+import { redirect } from 'next/navigation'
 
-export default function AddService() {
+export default async function AddService() {
+  const session = await getServerSession();
+  if (!session) {
+    redirect('/?login=true')
+  }
+
   return (
     <div className="static">
       <Navbar/>
