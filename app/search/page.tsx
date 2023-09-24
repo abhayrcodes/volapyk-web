@@ -1,6 +1,6 @@
-import Card from '../../components/Card.tsx';
+import Card from '../../components/Card-Service.tsx';
 import Navbar from '../../components/Navbar.tsx';
-import LoadingCard from '@/components/LoadingCard.tsx';
+import LoadingCard from '@/components/Card-Loading.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
 import React from 'react';
 import { prisma } from '../../prisma/client.ts';
@@ -18,7 +18,7 @@ export default async function Search({
 
   const data = await prisma.service_info.findMany({
     where: {
-      service_name: { contains: query }
+      service_name: { contains: query, mode: 'insensitive' }
     }
   })
 

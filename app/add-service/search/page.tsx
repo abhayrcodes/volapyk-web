@@ -2,7 +2,7 @@ import Navbar from '../../../components/Navbar.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
 import { prisma } from '../../../prisma/client.ts';
 import Link from "next/link";
-import AddServiceCard from '@/components/AddServiceCard.tsx';
+import AddServiceCard from '@/components/Card-AddService.tsx';
 import { getServerSession } from "next-auth/next"
 import { redirect } from 'next/navigation'
 
@@ -18,7 +18,7 @@ export default async function Search({
 
   const data = await prisma.service_info.findMany({
     where: {
-      service_name: { contains: query }
+      service_name: { contains: query, mode: 'insensitive' }
     }
   })
 
