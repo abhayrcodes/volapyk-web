@@ -1,8 +1,9 @@
-import Card from '../components/Card.tsx';
+import Card from '../components/Card-Service.tsx';
 import Navbar from '../components/Navbar.tsx';
-import LoadingCard from '@/components/LoadingCard.tsx';
+import LoadingCard from '@/components/Card-Loading.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
-import LoginModal from '@/components/LoginModal.tsx';
+import LoginModal from '@/components/Modal-Login.tsx';
+import SignUpModal from '@/components/Modal-SignUp.tsx';
 import React from 'react';
 import { prisma } from '../prisma/client.ts';
 import { Suspense } from 'react';
@@ -15,6 +16,7 @@ export default async function Home({
   searchParams?: { [key: string]: string };
 }) {
   const login = (typeof searchParams === "undefined") ? true : (searchParams.login==="true" ? false : true);
+  const signup = (typeof searchParams === "undefined") ? true : (searchParams.signup==="true" ? false : true);
 
   const cases = await prisma.cases.findMany();
   const casesData: Record<number, [string, number]> = {};
@@ -130,6 +132,7 @@ export default async function Home({
       </div>
 
       <LoginModal hidden={login} />
+      <SignUpModal hidden={signup} />
     </div>
   );
 }

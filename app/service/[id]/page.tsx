@@ -1,5 +1,5 @@
-import CasesList from '@/components/CasesList';
-import LinksList from '@/components/LinksList.tsx';
+import CasesList from '@/components/List-Cases.tsx';
+import LinksList from '@/components/List-Links.tsx';
 import Navbar from '@/components/Navbar';
 import { prisma } from '../../../prisma/client.ts';
 import Link from 'next/link';

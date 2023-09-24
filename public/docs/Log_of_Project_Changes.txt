@@ -43,6 +43,12 @@ August 11th - Hyperefficient database schema adopted and case applier model shif
 August 16th - New service page finalized
 August 21st - Frontend database migrated to the new schema
 August 22nd - Add a service and login/signup prototypes created; new project logo
+September 6th - Cosine similarity and relevance model experimentation yields bad results
+September 10th - Nextauth login backend and frontend integrated
+September 12th - Authenticated user page and api routes established
+September 15th - No relevance to straight case classification has best results for scoring
+September 17th - Tentative scoring equation found after expermentation with limit function, e constants, and data fitting
+September 21st - Case sorting for service card calculations shifted to client side
 
 BETA PHASE
 tbd - Beta launched!
