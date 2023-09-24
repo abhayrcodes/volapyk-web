@@ -8,6 +8,12 @@ npm fund
 npm run dev
 ```
 
+Issues with the database?
+```bash
+npx prisma db pull
+npx prisma generate
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
@@ -19,4 +25,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 ## Donate
-https://gofund.me/91740cfb
+https://gofundme.com/f/volapyk
