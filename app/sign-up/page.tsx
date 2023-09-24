@@ -13,7 +13,7 @@ export default function SignUp() {
 
             <div className="flex w-11/12 mx-auto my-5">
 
-                <div className="transition ease-in-out duration-200 block border-indigo-600 border-2 bg-slate-100 lg:rounded-lg md:rounded-md p-10 shadow-lg shadow-indigo-600 text-slate-900 w-7/12">
+                <div className="transition ease-in-out duration-200 block border-indigo-600 border-2 bg-slate-100/80 lg:rounded-lg md:rounded-md p-10 shadow-lg shadow-indigo-600 text-slate-900 w-7/12">
                     <div className="flex gap-5 mb-10">
                         <img src={'/images/logo2.svg'} className="-translate-y-3" height={50} width={50} alt="React Logo" />
                         <h1 id='logo-text' className="mb-4 text-3xl font-extrabold text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">volapyk</span></h1>
