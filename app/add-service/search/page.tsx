@@ -49,15 +49,14 @@ export default async function Search({
           <td colSpan={2}>
             <AddServiceCard 
                 titleElement={
-                    <div className="flex items-center justify-between text-white">
+                    <div className="flex items-center w-full pr-6 text-white">
                         <h2 className="mb-2 text-2xl tracking-tight font-bold">{item.service_name}</h2>
-                        <button className='h-[30px] w-[30px] bg-transparent' />
                     </div>
                 }
                 linksElement={links.map(({ key, link }) => (
                     <Link key={key} href={link} passHref>
                         <li className="flex justify-between transition ease-in-out p-2 px-4 my-2 border-2 hover:border-2 border-transparent rounded-lg text-gray-300 hover:scale-x-[1.025] hover:shadow-md hover:shadow-indigo-600 hover:bg-slate-800 hover:border-indigo-600">
-                            <div className="overflow-hidden line-clamp-1">{link}</div>
+                            <div className="overflow-hidden line-clamp-1 break-all">{link}</div>
                         </li>
                     </Link>
                 ))}

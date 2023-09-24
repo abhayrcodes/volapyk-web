@@ -10,11 +10,17 @@ export default function SignUpModal(props:any) {
     const router = useRouter();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [verifyPassword, setVerifyPassword] = useState('');
     const [error, setError] = useState(false);
       
     const handleSubmit = async (e: any) => {
         e.preventDefault();
-    
+
+        if (password !== verifyPassword) {
+            setError(true);
+            return;
+        }
+        
         const result = (await signIn('Credentials-Sign-Up', {
             redirect: false,
             email: email,
@@ -36,7 +42,7 @@ export default function SignUpModal(props:any) {
                 <span>←</span>
             </Link>
         
-            <div className="flex row-span-1 mb-10  justify-center">
+            <div className="flex row-span-1 mb-3 lg:mb-10 justify-center">
 
                     <div className=" content-center w-fit grid place-items-center mr-5 animate-bounce">
                         <div className="transition duration-150 ease-in-out h-5 w-5 rounded-full bg-transparent border-2 border-slate-200 mb-1 shadow-lg shadow-indigo-600"></div>
@@ -46,18 +52,20 @@ export default function SignUpModal(props:any) {
             </div>
 
             {error && (
-                <div className="bg-red-500 text-white text-center p-2 rounded-md my-2">
-                    Login failed. Check the details you provided are correct.
+                <div className="bg-red-500 text-white text-center text-xs lg:text-base p-3 rounded-md my-4">
+                    Sign up failed. Check the details you provided are correct.
                 </div>
             )}
 
             <div>
                 <form onSubmit={handleSubmit}>
                     <h2 className="labil text-slate-100 lg:text-2xl font-semibold">Email</h2>
-                    <input name='email' autoComplete='email' placeholder = "Email" value={email} onChange={(e) => setEmail(e.target.value)} className="transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 block w-full p-4 pl-5 text-sm border-2 rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-slate-900 border-gray-600 placeholder-gray-400 text-white mb-5 mt-2"></input>
+                    <input name='email' autoComplete='email' placeholder = "Email" value={email} onChange={(e) => setEmail(e.target.value)} className="transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 block w-full p-4 pl-5 text-sm border-2 rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-slate-900 border-gray-600 placeholder-gray-400 text-white mb-2 lg:mb-5 mt-2"></input>
                     <h2 className="labil text-slate-100 lg:text-2xl font-semibold">Password</h2>
-                    <input name='password' autoComplete='current-password' placeholder = "Password" value={password} onChange={(e) => setPassword(e.target.value)} className="transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 block w-full p-4 pl-5 text-sm border-2 rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-slate-900 border-gray-600 placeholder-gray-400 text-white mb-5 mt-2"></input>
-                    <button type="submit" className="rounded-lg transition ease-in-out duration-300 labil font-semibold w-full p-4 bg-slate-100 text-slate-900 my-5 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">CREATE ACCOUNT</button>
+                    <input name='password' type='password' autoComplete='new-password' placeholder = "Password" value={password} onChange={(e) => setPassword(e.target.value)} className="transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 block w-full p-4 pl-5 text-sm border-2 rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-slate-900 border-gray-600 placeholder-gray-400 text-white mb-2 lg:mb-5 mt-2"></input>
+                    <h2 className="labil text-slate-100 lg:text-2xl font-semibold">Verify Password</h2>
+                    <input name='password' type='password' autoComplete='new-password' placeholder = "Verify Password" value={verifyPassword} onChange={(e) => setVerifyPassword(e.target.value)} className="transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 block w-full p-4 pl-5 text-sm border-2 rounded-lg focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-slate-900 border-gray-600 placeholder-gray-400 text-white mb-2 lg:mb-5 mt-2"></input>
+                    <button type="submit" className="rounded-lg transition ease-in-out duration-300 labil font-semibold w-full p-4 bg-slate-100 text-slate-900 my-2 lg:my-5 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">CREATE ACCOUNT</button>
                 </form>
             </div>
 

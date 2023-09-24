@@ -37,7 +37,7 @@ export default function Navbar(props: any) {
 
   if (status === "authenticated") {
     return (
-      <nav className={`bg-gray-900 ${isNavbarExpanded ? 'h-screen' : ''}`}>
+      <nav className={`bg-gray-900 ${isNavbarExpanded ? 'absolute h-screen w-full z-10 top-0' : ''}`}>
         <div className="flex flex-wrap items-center justify-between mx-10 p-4">
           <Link href="/" className="flex items-center">
             <img src={'/images/logo2.svg'} height={50} width={50} alt="React Logo" />
@@ -94,7 +94,7 @@ export default function Navbar(props: any) {
     )
   }
   return (
-    <nav className={`bg-gray-900 ${isNavbarExpanded ? 'h-screen' : ''}`}>
+    <nav className={`bg-gray-900 ${isNavbarExpanded ? 'absolute h-screen w-full z-10 top-0' : ''}`}>
       <div className="flex flex-wrap items-center justify-between mx-10 p-4">
         <Link href="/" className="flex items-center">
           <img src={'/images/logo2.svg'} height={50} width={50} alt="React Logo" />
@@ -142,7 +142,7 @@ export default function Navbar(props: any) {
               <Link href="https://gofundme.com/f/volapyk" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Donate</Link>
             </li>
             <li>
-              <Link href="/?login=true" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Login</Link>
+              <Link onClick={toggleNavbar} href="/?login=true" className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Login</Link>
             </li>
           </ul>
         </div>

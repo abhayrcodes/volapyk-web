@@ -1,16 +1,10 @@
-//'use client'
-
 import Navbar from "@/components/Navbar";
-import RegularInput from "@/components/RegInput";
-import Link from "next/link";
-import { useState } from 'react';
 import { prisma } from '../../prisma/client.ts';
 import AllCasesPrefs from "@/components/PrefComps.tsx"
-import { get } from "http";
 
 async function getCases() {
     const cases = await prisma.cases.findMany();
-  return cases
+    return cases
 }
 
 export default async function SignUp() {
@@ -25,35 +19,11 @@ export default async function SignUp() {
                 cases={cases}
             />
             
+            <div className="grid fixed grid-cols-3 bottom-0 w-full">
+                <button type="submit" className="transition ease-in-out duration-300 labil font-semibold p-4 bg-slate-100 text-slate-900 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">SAVE CHANGES</button>
+                <button type="submit" className="transition ease-in-out duration-300 labil font-semibold p-4 bg-slate-100 text-slate-900 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">REVERT TO ORIGINAL</button>
+                <button type="submit" className="transition ease-in-out duration-300 labil font-semibold p-4 bg-slate-100 text-slate-900 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">CANCEL CHANGES</button>
+            </div>
         </div>
     )
-  }
-/*
-<div className="flex justify-between">
-                <ButtonGroup
-                text={"The service has the right to copy and distribute your data at its discretion."}
-                og={3}
-            />
-            <ButtonGroup
-                text={"The service has the right to copy and distribute your data at its discretion."}
-                og={1}
-            />
-            <ButtonGroup
-                text={"The service has the right to copy and distribute your data at its discretion."}
-                og={2}
-            />
-            </div>
-            <div className="flex justify-between">
-                <ButtonGroup
-                text={"The service has the right to copy and distribute your data at its discretion."}
-                og={3}
-            />
-            <ButtonGroup
-                text={"The service has the right to copy and distribute your data at its discretion."}
-                og={1}
-            />
-            <ButtonGroup
-                text={"The service has the right to copy and distribute your data at its discretion."}
-                og={2}
-            />
-            </div>*/
+}
