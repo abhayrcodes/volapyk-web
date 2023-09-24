@@ -1,7 +1,6 @@
 'use client'
 
 import Navbar from "@/components/Navbar";
-import RegularInput from "@/components/RegInput";
 import Link from "next/link";
 import { useState } from 'react';
 
