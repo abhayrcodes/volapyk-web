@@ -26,4 +26,5 @@ export default async function SignUp() {
             </div>
         </div>
     )
+    )
 }
