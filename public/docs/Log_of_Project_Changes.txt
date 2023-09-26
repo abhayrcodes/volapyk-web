@@ -48,7 +48,8 @@ September 10th - Nextauth login backend and frontend integrated
 September 12th - Authenticated user page and api routes established
 September 15th - No relevance to straight case classification has best results for scoring
 September 17th - Tentative scoring equation found after expermentation with limit function, e constants, and data fitting
-September 21st - Case sorting for service card calculations shifted to client side
+September 21st - Case sorting for service card calculations shifted to client side, new scoring scheme with tailored effectiveness
+September 24th - Sign up api routes seperated, preferences prototype deployed, mobile scaling patches across the board
 
 BETA PHASE
 tbd - Beta launched!

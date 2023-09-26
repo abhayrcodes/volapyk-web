@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
+import NumCountUp from '@/components/NumCountUp';
 
 export default function About() {
   const aboutGrades = (
@@ -78,7 +79,7 @@ export default function About() {
         Good: A positive case that signifies protection of user privacy
       </div>
       <div className={`relative transition ease-in-out duration-250 text-white bg-gray-600 hover:bg-opacity-75 block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
-        Neutral: A case that neither helps nor hurts the final grade but is important information
+        Neutral: A case that neither helps nor hurts the final grade, but is important information
       </div>
       <div className={`relative transition ease-in-out duration-250 text-white bg-orange-500 hover:bg-opacity-75 block border border-transparent overflow-hidden rounded-lg p-2 my-1`}>
         Bad: A negative case that signifies disrespect for user privacy
@@ -115,8 +116,8 @@ export default function About() {
       <p className='font-bold text-purple-500'>Short Term:</p>
       <ul className='pl-4 mb-3 list-disc w-full'>
         <li>Add case pages to show specific quotes backing each case for every service</li>
-        <li>Add user login portal (ability to follow companies, get alerts, personalize scoring, etc.)</li>
-        <li>Enable the Add a Service feature for crowdsourcing services</li>
+        <li>Establish strong scoring formula and review cases with network</li>
+        <li>Improve ease of use on the preferences selection</li>
       </ul>
       <p className='font-bold text-purple-500'>Medium Term:</p>
       <ul className='pl-4 mb-3 list-disc w-full'>
@@ -148,8 +149,10 @@ export default function About() {
               AI
             </span>
           </h1>
-          <div className="border-2 transition ease-in-out mb-7 block p-6 rounded-lg text-white shadow border-red-700">
-            <p className='text-red-400 font-sans font-bold text-center text-2xl'>NOTE: We are currently in Alpha, grades and appearance are all subject to change.</p>
+          <div className="grid lg:grid-cols-3 border-2 transition ease-in-out mb-7 p-6 rounded-lg text-white shadow border-red-700">
+            <p className='text-red-400 font-sans font-bold text-center text-2xl'>Project Phase: Alpha</p>
+            <p className='text-red-400 font-sans font-bold text-center text-2xl'>Beta Launch: October 16, 2023</p>
+            <p className='text-red-400 font-sans font-bold text-center text-2xl'>Scored Services: <NumCountUp number={17}/></p>
           </div>
 
           <table className="w-full gap-4 mb-4 text-sm leading-6 hidden lg:grid">
