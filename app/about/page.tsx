@@ -150,8 +150,8 @@ export default function About() {
             </span>
           </h1>
           <div className="grid lg:grid-cols-3 border-2 transition ease-in-out mb-7 p-6 rounded-lg text-white shadow border-red-700">
-            <p className='text-red-400 font-sans font-bold text-center text-2xl'>Project Phase: Alpha</p>
-            <p className='text-red-400 font-sans font-bold text-center text-2xl'>Beta Launch: October 16, 2023</p>
+            <p className='text-red-400 font-sans mb-3 lg:mb-0 font-bold text-center text-2xl'>Project Phase: Alpha</p>
+            <p className='text-red-400 font-sans mb-3 lg:mb-0 font-bold text-center text-2xl'>Beta Launch: October 16, 2023</p>
             <p className='text-red-400 font-sans font-bold text-center text-2xl'>Scored Services: <NumCountUp number={17}/></p>
           </div>
 

@@ -16,15 +16,17 @@ function ButtonGroup(props:any) {
     const colorKey = ["border-red-500 hover:shadow-red-500/60", "border-orange-500 hover:shadow-orange-500/60", "border-slate-600 hover:shadow-slate-600/60", "border-green-600 hover:shadow-green-600/60"];
 
     return (
-        <div className={`m-3 pb-6 border-2 rounded-lg shadow-2xl ${colorKey[current]} hover:scale-105 transition ease-in-out duration-200`}>
-            <p className="text-slate-100 text-center text-sm p-3">{text}</p>
-
-            <div className="w-11/12 flex mx-auto align-text-bottom h-max bottom-0">
-                <button data-id={0} onClick={handleChange} className={`text-xs rounded-l-lg w-1/4 from-slate-800 to-red-500/30 px-2 py-3 text-red-500/50 border-2 border-red-500 hover:shadow-lg hover:shadow-red-500/70 ${current==0 ? "bg-gradient-radial" : " "} transition ease-in-out duration-200`}>Blocker</button>
-                <button data-id={1} onClick={handleChange} className={`text-xs w-1/4 from-slate-800 to-orange-500/30 px-2 py-3 text-orange-500 border-2 border-orange-500 hover:shadow-lg hover:shadow-orange-500/70 ${current==1 ? "bg-gradient-radial" : " "} transition ease-in-out duration-200`}>Bad</button>
-                <button data-id={2} onClick={handleChange} className={`text-xs w-1/4 from-slate-800 to-gray-600/30 px-2 py-3 text-gray-600 border-2 border-gray-600 hover:shadow-lg hover:shadow-slate-600/70 ${current==2 ? "bg-gradient-radial" : " "} transition ease-in-out duration-200`}>Neutral</button>
-                <button data-id={3} onClick={handleChange} className={`text-xs rounded-r-lg w-1/4 from-slate-800 to-green-600/30 py-3 text-green-600 border-2 border-green-600 hover:shadow-lg hover:shadow-green-600/70 ${current==3 ? "bg-gradient-radial" : " "} transition ease-in-out duration-200`}>Good</button>
+        <div className={`m-3 pb-3 border-2 rounded-lg shadow-2xl ${colorKey[current]} lg:hover:scale-105 transition ease-in-out duration-200`}>
+            <div className='flex flex-col justify-between items-center h-full'>
+                <p className="text-slate-100 text-center text-sm p-3">{text}</p>
+                <div className="w-11/12 flex mx-auto align-text-bottom h-max">
+                    <button data-id={0} onClick={handleChange} className={`text-xs rounded-l-lg w-1/4 from-slate-800 to-red-500/30 px-2 py-3 text-red-500/50 border-2 border-red-500 hover:shadow-lg hover:shadow-red-500/70 ${current==0 ? "bg-gradient-radial" : " "} transition ease-in-out duration-200`}>Blocker</button>
+                    <button data-id={1} onClick={handleChange} className={`text-xs w-1/4 from-slate-800 to-orange-500/30 px-2 py-3 text-orange-500 border-2 border-orange-500 hover:shadow-lg hover:shadow-orange-500/70 ${current==1 ? "bg-gradient-radial" : " "} transition ease-in-out duration-200`}>Bad</button>
+                    <button data-id={2} onClick={handleChange} className={`text-xs w-1/4 from-slate-800 to-gray-600/30 px-2 py-3 text-gray-600 border-2 border-gray-600 hover:shadow-lg hover:shadow-slate-600/70 ${current==2 ? "bg-gradient-radial" : " "} transition ease-in-out duration-200`}>Neutral</button>
+                    <button data-id={3} onClick={handleChange} className={`text-xs rounded-r-lg w-1/4 from-slate-800 to-green-600/30 py-3 text-green-600 border-2 border-green-600 hover:shadow-lg hover:shadow-green-600/70 ${current==3 ? "bg-gradient-radial" : " "} transition ease-in-out duration-200`}>Good</button>
+                </div>
             </div>
+        
         </div>
         
     )   
