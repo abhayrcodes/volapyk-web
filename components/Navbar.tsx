@@ -40,7 +40,7 @@ export default function Navbar(props: any) {
       <nav className={`bg-gray-900 ${isNavbarExpanded ? 'absolute h-screen w-full z-10 top-0' : ''}`}>
         <div className="flex flex-wrap items-center justify-between mx-10 p-4">
           <Link href="/" className="flex items-center">
-            <img src={'/images/logo2.svg'} height={50} width={50} alt="React Logo" />
+            <img src={'/images/logo.svg'} height={50} width={50} alt="Volapyk Logo" />
           </Link>
           <button onClick={toggleNavbar} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 bg-none rounded-lg lg:hidden focus:outline-none">
             <span className="sr-only">Open main menu</span>
@@ -97,7 +97,7 @@ export default function Navbar(props: any) {
     <nav className={`bg-gray-900 ${isNavbarExpanded ? 'absolute h-screen w-full z-10 top-0' : ''}`}>
       <div className="flex flex-wrap items-center justify-between mx-10 p-4">
         <Link href="/" className="flex items-center">
-          <img src={'/images/logo2.svg'} height={50} width={50} alt="React Logo" />
+          <img src={'/images/logo.svg'} height={50} width={50} alt="Volapyk Logo" />
         </Link>
         <button onClick={toggleNavbar} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 bg-none rounded-lg lg:hidden focus:outline-none">
           <span className="sr-only">Open main menu</span>

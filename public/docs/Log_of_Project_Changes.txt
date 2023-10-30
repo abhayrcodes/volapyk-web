@@ -50,6 +50,12 @@ September 15th - No relevance to straight case classification has best results f
 September 17th - Tentative scoring equation found after expermentation with limit function, e constants, and data fitting
 September 21st - Case sorting for service card calculations shifted to client side, new scoring scheme with tailored effectiveness
 September 24th - Sign up api routes seperated, preferences prototype deployed, mobile scaling patches across the board
+September 30th - Meeting with math doctorate to discuss the nuances of calculating scores
+October 4th - Manual processing of 100 beta sources for link cleaning and proper sentence pulling
+October 13th - Project submitted to ycombinator winter 2024 batch
+October 17th - Gradient descent tests yield good results on small dataset but not large one
+October 24th - Application for two project grants worth roughly $10k
+October 29th - Member benefits page working prototype and api patches (add a service activated)
 
 BETA PHASE
 tbd - Beta launched!

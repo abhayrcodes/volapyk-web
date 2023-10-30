@@ -121,7 +121,7 @@ export default function About() {
       </ul>
       <p className='font-bold text-purple-500'>Medium Term:</p>
       <ul className='pl-4 mb-3 list-disc w-full'>
-        <li>Expand from 14 Alpha services to 7500+ final services</li>
+        <li>Expand from 17 Alpha services to 7500+ final services</li>
         <li>User selects case ratings for personalized service scores</li>
         <li>Send alerts for positive or negative changes to service scores</li>
       </ul>
@@ -151,7 +151,7 @@ export default function About() {
           </h1>
           <div className="grid lg:grid-cols-3 border-2 transition ease-in-out mb-7 p-6 rounded-lg text-white shadow border-red-700">
             <p className='text-red-400 font-sans mb-3 lg:mb-0 font-bold text-center text-2xl'>Project Phase: Alpha</p>
-            <p className='text-red-400 font-sans mb-3 lg:mb-0 font-bold text-center text-2xl'>Beta Launch: October 16, 2023</p>
+            <p className='text-red-400 font-sans mb-3 lg:mb-0 font-bold text-center text-2xl'>Beta Launch: December 1, 2023</p>
             <p className='text-red-400 font-sans font-bold text-center text-2xl'>Scored Services: <NumCountUp number={17}/></p>
           </div>
 

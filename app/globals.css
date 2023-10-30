@@ -30,3 +30,7 @@ body {
     overflow: hidden;
 }
 
+:root {
+    --custom-max-height: calc(100vh - 150px);
+}
+

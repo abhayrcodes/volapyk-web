@@ -12,9 +12,16 @@ export default function SignUpModal(props:any) {
     const [password, setPassword] = useState('');
     const [verifyPassword, setVerifyPassword] = useState('');
     const [error, setError] = useState(false);
+
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
       
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+
+        if (!email.match(emailRegex)) {
+            setError(true);
+            return;
+        }
 
         if (password !== verifyPassword) {
             setError(true);
