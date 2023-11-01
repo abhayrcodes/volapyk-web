@@ -79,7 +79,7 @@ function AddServiceCard({ titleElement, linksElement, inputServiceName }: { titl
           {inputServiceName !== '' &&titleElement}
           {inputServiceName === '' && (
             <div className="w-full items-center justify-between text-white">
-              <input className="w-full mb-2 pr-6 text-2xl tracking-tight font-bold bg-transparent focus:outline-none" placeholder="Type a new service name here..." value={inputValue} onChange={e => setInputValue(e.target.value)}/>
+              <input name="service" className="w-full mb-2 pr-6 text-2xl tracking-tight font-bold bg-transparent focus:outline-none" placeholder="Type a new service name here..." value={inputValue} onChange={e => setInputValue(e.target.value)}/>
             </div>
           )}
           <div className='w-[30px] items-center justify-end top-6 right-6'>
@@ -89,7 +89,7 @@ function AddServiceCard({ titleElement, linksElement, inputServiceName }: { titl
         {linksElement}
         {sourceInputs.map((inputData, index) => (
             <div key={index} className="flex items-center w-full mt-4 justify-between rounded-lg text-gray-300 bg-slate-800">
-              <input className="w-full bg-transparent px-4 py-1 focus:outline-none" placeholder="Link of source to add..." value={inputData.link} onChange={e => handleSourceInputChange(index, 'link', e.target.value)}/>
+              <input name="source" className="w-full bg-transparent px-4 py-1 focus:outline-none" placeholder="Link of source to add..." value={inputData.link} onChange={e => handleSourceInputChange(index, 'link', e.target.value)}/>
               <button className="flex w-min whitespace-nowrap items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-r-lg text-white" onClick={() => handleNavigate(inputData.link, index)}>
                   {inputData.value || buttonStates[index] === 'loading' ? 'Loading...' : buttonStates[index] === 'success' ? '✔' : 'Add Source'}
               </button>

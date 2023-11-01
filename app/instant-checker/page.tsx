@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar.tsx'
 import { getServerSession } from "next-auth/next"
 import { redirect } from 'next/navigation'
 
-export default async function AddService() {
+export default async function InstantChecker() {
   const session = await getServerSession();
   if (!session) {
     redirect('/?login=true')

@@ -34,9 +34,9 @@ export default function Card(props: any) {
 
   return (
     <Link href={"/service/"+props.service_id} className="border-2 group transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg shadow bg-slate-900 border-gray-700">
-      <div className="flex items-center justify-between">
-        <h2 className="mb-2 text-2xl tracking-tight text-white font-bold">{props.service_name}</h2>
-        <div className={`h-8 mb-2 p-2 border rounded-lg items-center justify-center inline-flex ${gradeColorMap[props.char_score]}`}>
+      <div className="flex items-center justify-between mb-2">
+        <h2 className="py-1 text-2xl tracking-tight text-white font-bold">{props.service_name}</h2>
+        <div className={`h-fit my-auto py-1 px-2 border rounded-lg items-center justify-center inline-flex ${gradeColorMap[props.char_score]}`}>
           Grade {props.char_score}
         </div>
       </div>

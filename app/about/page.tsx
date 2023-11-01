@@ -198,17 +198,17 @@ export default function About() {
             <tbody>
               <tr>
                 <td className='w-1/3'>
-                  <a href="/docs/Log_of_Project_Changes.txt" className="border-2 mr-5 lg:mr-20 py-3 px-1 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                  <a href="/docs/Log_of_Project_Changes.txt" className="border-2 mr-5 lg:mr-20 py-3 px-1 group transition text-center font-bold ease-in-out bg-slate-100 text-slate-900 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600 block rounded-lg shadow">
                     View Project Timeline
                   </a>
                 </td>
                 <td className='w-1/3'>
-                  <a href="/" className="border-2 p-6 group transition text-center text-md font-bold ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                  <a href="/" className="border-2 p-6 group transition text-center text-md font-bold ease-in-out bg-slate-100 text-slate-900 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600 block rounded-lg shadow">
                     EXPLORE SCORED SERVICES
                   </a>
                 </td>
                 <td className='w-1/3'>
-                  <a href="https://gofundme.com/f/volapyk" className="border-2 ml-5 lg:ml-20 py-3 px-1 group transition text-center font-medium ease-in-out hover:shadow-lg bg-indigo-600 hover:bg-indigo-500 hover:shadow-indigo-600 hover:border-indigo-500 block rounded-lg shadow border-none">
+                  <a href="https://gofundme.com/f/volapyk" className="border-2 ml-5 lg:ml-20 py-3 px-1 group transition text-center font-bold ease-in-out bg-slate-100 text-slate-900 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600 block rounded-lg shadow">
                     Fund Future Growth
                   </a>
                 </td>
