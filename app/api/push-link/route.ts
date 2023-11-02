@@ -10,7 +10,7 @@ export async function POST( req: NextRequest ) {
   try {
     const json = await req.json();
     const input_link = json['link']
-    const serviceName = json['submitServiceName']
+    const serviceName = json['serviceName']
 
     const data_push = await prisma.new_links.create({
       data: {
