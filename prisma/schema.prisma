@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model approved_links {
+  entry_id     Int    @id @default(autoincrement())
+  service_name String
+  link         String @unique
+}
+
+model case_weights {
+  service_id   Int          @id
+  case_ids     Int[]
+  service_info service_info @relation(fields: [service_id], references: [service_id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model cases {
+  case_id        Int    @id @default(autoincrement())
+  title          String @unique
+  classification Int
+}
+
+model new_links {
+  entry_id     Int    @id @default(autoincrement())
+  service_name String
+  link         String @unique
+}
+
+model scored_links {
+  link_id      Int          @id @default(autoincrement())
+  link         String       @unique
+  service_id   Int
+  service_info service_info @relation(fields: [service_id], references: [service_id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model service_info {
+  service_id   Int            @id @default(autoincrement())
+  service_name String
+  num_score    Float          @db.Real
+  char_score   String
+  case_ids     Int[]
+  case_weights case_weights?
+  scored_links scored_links[]
+}
+
+model users {
+  user_id       Int    @id @default(autoincrement())
+  email         String @unique
+  password_hash String
+  case_scores   Json   @db.Json
+}

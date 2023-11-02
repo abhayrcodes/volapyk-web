@@ -1,12 +1,11 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import Providers from '@/components/Providers'
+import type { Metadata } from 'next'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Volapyk',
-  description: 'Volapyk',
+export const metadata: Metadata = {
+  title: 'Volapyk - Personalized Privacy',
+  description: 'Volapyk is an application that allows users to see how services align with their personalized privacy preferences. We utilize AI to automatically process terms of service and privacy policies, providing easy to understand scores and relevant information.',
 }
 
 export default function RootLayout({
@@ -16,8 +15,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-      <Analytics />
+      <head>
+        <link rel='icon' href='/images/favicon.ico'/>
+      </head>
+      <body className="bg-slate-900">
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }

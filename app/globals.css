@@ -1,20 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: 'Yapari';
     src: url(/fonts/YapariTrial-Bold.ttf);
 }
 
-body {
-    background-color: #0f172a;
+@font-face {
+    font-family: 'Space';
+    src: url(/fonts/SpaceGrotesk-VariableFont_wght.ttf);
 }
 
-h1 {
-    font-family: Yapari;
+body {
+    background-color: #0f172a;
+    font-family: Space;
+    height: 100%;
 }
 
 #logo-text {
-    font-family: Yapari
+    font-family: Yapari;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.labil {
+    font-family: Space;
+}
+
+.no-scrollbar {
+    overflow: hidden;
+}
+
+:root {
+    --custom-max-height: calc(100vh - 150px);
+}
+

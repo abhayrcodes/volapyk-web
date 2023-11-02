@@ -29,11 +29,33 @@ July 9th - Alpha service set selected (16 services, 88 policies), double mnli ru
 July 10th - 404 page and frontend basics complete
 July 17th - Alpha frontend pages and design finished and sql integration in progress
 July 18th - Alpha database optimized and reduced from 280 mb to 40 mb on alpha service set
-July 19th - Database successfully linked to services page
-July 21st - Service pages, search, and about pages completed
+July 19th - Database successfully linked to services page (on local machine, issue w/ vercel deployment)
+July 21st - About page and donation site created completed
+July 25th - Prisma adopted as ORM to replace personal APIs
 
 ALPHA PHASE
-tbd - Alpha launched!
+July 26th - Alpha launched!
+July 28th - Contributors, roadmap, and hamburger menu added; service page redesigned
+August 1st - Search and service function added through AWS PostgreSQL RDS attached by prisma
+August 7th - Backend transfer to PostgreSQL and client-side calculations prototyped for personalized grading
+August 10th - Vectorized case to sentence comparison reduces case applier ai from 6 to 0.2 seconds per sentence
+August 11th - Hyperefficient database schema adopted and case applier model shifted to distilbart 12-3 (sentence time down to 0.1 secs)
+August 16th - New service page finalized
+August 21st - Frontend database migrated to the new schema
+August 22nd - Add a service and login/signup prototypes created; new project logo
+September 6th - Cosine similarity and relevance model experimentation yields bad results
+September 10th - Nextauth login backend and frontend integrated
+September 12th - Authenticated user page and api routes established
+September 15th - No relevance to straight case classification has best results for scoring
+September 17th - Tentative scoring equation found after expermentation with limit function, e constants, and data fitting
+September 21st - Case sorting for service card calculations shifted to client side, new scoring scheme with tailored effectiveness
+September 24th - Sign up api routes seperated, preferences prototype deployed, mobile scaling patches across the board
+September 30th - Meeting with math doctorate to discuss the nuances of calculating scores
+October 4th - Manual processing of 100 beta sources for link cleaning and proper sentence pulling
+October 13th - Project submitted to ycombinator winter 2024 batch
+October 17th - Gradient descent tests yield good results on small dataset but not large one
+October 24th - Application for two project grants worth roughly $10k
+October 29th - Member benefits page working prototype and api patches (add a service activated)
 
 BETA PHASE
 tbd - Beta launched!
@@ -50,3 +72,12 @@ April prototype results
 # Proton = -943,446 https://proton.me/legal/privacy
 # Apple = -3,991,176 https://www.apple.com/legal/privacy/en-ww/
 # Paypal = -2,813,848 https://www.paypal.com/us/legalhub/privacy-full
+
+July pre-normalized score results
+# Reddit = 7.79
+# Duckduckgo = 8.09
+# Spotify = 7.6
+# Startpage = 8.33
+# Proton = N/A
+# Apple = 7.59
+# Paypal = 7.52
