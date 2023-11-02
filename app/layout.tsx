@@ -6,6 +6,10 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Volapyk - Personalized Privacy',
   description: 'Volapyk is an application that allows users to see how services align with their personalized privacy preferences. We utilize AI to automatically process terms of service and privacy policies, providing easy to understand scores and relevant information.',
+  openGraph: {
+    title: 'Volapyk - Personalized Privacy',
+    images: ['/images/open-graph.jpg'],
+  }
 }
 
 export default function RootLayout({
