@@ -31,7 +31,7 @@ export default function CategoryList() {
         <div>
             {initialCategories.map((category, index) => (
                 <div key={index} className="mb-6">
-                    <div className="flex text-white cursor-pointer text-xl" onClick={() => toggleCategory(category)}>
+                    <div className="p-2 transition ease-in-out duration-200 flex text-white cursor-pointer text-xl border-2 border-transparent hover:shadow-lg hover:shadow-yellow-500 hover:border-2 hover:border-yellow-500 rounded-lg" onClick={() => toggleCategory(category)}>
                         <div className="flex-shrink mr-4 md:mr-6">
                             <i className={`fas fa-chevron-${openCategories.includes(category) ? 'up' : 'down'}`}></i>
                         </div>
