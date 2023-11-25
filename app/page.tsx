@@ -1,5 +1,4 @@
 import Card from '../components/Card-Service.tsx';
-import Navbar from '../components/Navbar.tsx';
 import LoadingCard from '@/components/Card-Loading.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
 import LoginModal from '@/components/Modal-Login.tsx';
@@ -106,8 +105,6 @@ export default async function Home({
 
   return (
     <div>
-      <Navbar />
-
       <div className="pointer-events-none text-center mt-20">
         <h1 id='logo-text' className="mb-4 text-5xl font-extrabold text-white md:text-8xl lg:text-9xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">volapyk</span></h1>
         <p className="text-md md:text-lg font-sans font-normal text-gray-400 lg:text-2xl">Keeping you safe, <span className="underline decoration-purple-600">one sentence at a time.</span></p>

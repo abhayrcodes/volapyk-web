@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import { ButtonGroup } from "@/components/PrefComps.tsx"
 
 export default function MemberBenefits() {
@@ -109,8 +108,6 @@ export default function MemberBenefits() {
 
     return (
         <div>
-            <Navbar />
-
             <div className="block lg:flex w-11/12 mx-auto my-5">
                 <div className="flex w-full lg:w-1/2 justify-center items-center lg:min-h-[var(--custom-max-height)]">
                     <div className="text-center p-5">

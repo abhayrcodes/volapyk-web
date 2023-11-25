@@ -2,6 +2,7 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import Providers from '@/components/Providers'
 import type { Metadata } from 'next'
+import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   title: 'Volapyk - Personalized Privacy',
@@ -28,6 +29,7 @@ export default function RootLayout({
       </head>
       <body className="bg-slate-900">
         <Providers>
+          <Navbar/>
           {children}
         </Providers>
       </body>

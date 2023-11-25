@@ -1,4 +1,3 @@
-import Navbar from '../../../components/Navbar.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
 import { prisma } from '../../../prisma/client.ts';
 import Link from "next/link";
@@ -71,7 +70,6 @@ export default async function Search({
 
   return (
     <div>
-      <Navbar />
       <SearchInput />
 
       <div className="w-5/6 m-auto relative">

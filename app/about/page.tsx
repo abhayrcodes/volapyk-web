@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '@/components/Navbar';
 import NumCountUp from '@/components/NumCountUp';
 
 export default function About() {
@@ -134,9 +133,34 @@ export default function About() {
     </div>
   );
 
+  const aboutSpeed = (
+    <div className="flex w-full justify-between">
+      <div className='mr-3 w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700'>
+        <p className='text-orange-400 font-sans font-bold text-center text-8xl mb-2'>100x</p>
+        <p className='text-white font-sans font-bold text-center text-2xl'>Faster than a human</p>
+      </div>
+      <div className='ml-3 w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700'>
+      <p className='text-green-400 font-sans font-bold text-center text-8xl mb-2'>0.1s</p>
+        <p className='text-white font-sans font-bold text-center text-2xl'>To process a sentence</p>
+      </div>
+    </div>
+  );
+
+  const aboutModels = (
+    <div className="flex w-full justify-between">
+      <div className='mr-3 w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700'>
+        <p className='text-blue-400 font-sans font-bold text-center text-8xl mb-2'>4+</p>
+        <p className='text-white font-sans font-bold text-center text-2xl'>Customized AI models</p>
+      </div>
+      <div className='ml-3 w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700'>
+      <p className='text-red-400 font-sans font-bold text-center text-8xl mb-2'>80k</p>
+        <p className='text-white font-sans font-bold text-center text-2xl'>Datapoints for training</p>
+      </div>
+    </div>
+  );
+
   return (
     <div>
-      <Navbar />
       <div className="flex items-center justify-center">
         <div className="w-5/6">
           <h1 id='logo-text' className="mt-20 mb-10 text-3xl font-extrabold text-white lg:text-4xl lg:leading-snug text-center">
@@ -166,6 +190,14 @@ export default function About() {
                 </td>
               </tr>
               <tr className='flex'>
+                  <td className='pr-3 flex w-1/2'>
+                    {aboutSpeed}
+                  </td>
+                  <td className='pl-3 flex w-1/2'>
+                    {aboutModels}
+                  </td>
+              </tr>
+              <tr className='flex'>
                 <td className='pr-3 flex w-1/2'>
                   {aboutContributors}
                 </td>
@@ -183,6 +215,12 @@ export default function About() {
                 </td>
                 <td className='flex'>
                   {aboutCases}
+                </td>
+                <td className='flex'>
+                  {aboutSpeed}
+                </td>
+                <td className='flex'>
+                  {aboutModels}
                 </td>
                 <td className='flex'>
                   {aboutContributors}
