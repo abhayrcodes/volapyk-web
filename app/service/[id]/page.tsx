@@ -51,11 +51,12 @@ export default async function ServicePage({ params }: { params: { id: string } }
 
   return (
     <main className='w-3/4 mx-auto'>
-      <header className='flex flex-col lg:flex-row lg:space-x-20 my-10'>
-        <div className='w-full lg:w-4/5'>
+      <header className='flex flex-col my-10 text-center space-y-5 lg:flex-row lg:space-x-20'>
+        <div className='flex w-full space-x-4 lg:w-4/5 lg:text-left'>
+          <img src={`/images/service-icons/${data[0].service_id}.png`} alt="Service Logo" className="h-14"/>
           <h2 className="text-6xl text-slate-100 font-bold">{data[0].service_name}</h2>
         </div>
-        <div className='w-full lg:w-1/5 text-right text-5xl'>
+        <div className='w-full text-5xl lg:w-1/5 lg:text-right'>
           <span className='font-bold text-red-500'>4.9</span><span className='text-red-700'>/10</span>
         </div>
       </header>
