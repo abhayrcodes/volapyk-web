@@ -109,7 +109,7 @@ export default function MemberBenefits() {
     return (
         <div>
             <div className="block lg:flex w-11/12 mx-auto my-5">
-                <div className="flex w-full lg:w-1/2 justify-center items-center lg:min-h-[var(--custom-max-height)]">
+                <div className="flex w-full lg:w-1/2 justify-center items-center lg:h-[var(--custom-max-height)] overflow-hidden">
                     <div className="text-center p-5">
                         <h1 id="logo-text" className="w-full mb-4 text-3xl lg:text-5xl font-extrabold text-white">Sign up to become a member of</h1>
                         <h1 id="logo-text" className="w-full mb-4 text-5xl lg:text-7xl font-extrabold text-white">

@@ -1,4 +1,3 @@
-import CasesList from '@/components/List-Cases.tsx';
 import LinksList from '@/components/List-Links.tsx';
 import { prisma } from '../../../prisma/client.ts';
 import CategoryList from '@/components/List-Categories.tsx'
@@ -19,41 +18,11 @@ export default async function ServicePage({ params }: { params: { id: string } }
     return element.link;
   });
 
-  const cases = await prisma.cases.findMany();
-  const casesData: Record<number, [string, number]> = {};
-  for (const caseItem of cases) {
-    casesData[caseItem.case_id] = [caseItem.title, caseItem.classification];
-  }
-
-  const case_titles = []
-  for (const case_id of data[0].case_ids) {
-    const [title, classification] = casesData[case_id];
-    let classname = ''; // Initialize classname variable
-    if (classification === 10) {
-      classname = 'good';
-    } else if (classification === 0) {
-      classname = 'neutral';
-    } else if (classification === -10) {
-      classname = 'bad';
-    } else if (classification === -30) {
-      classname = 'blocker';
-    }
-    case_titles.push({ 'title': title, 'class': classname });
-  }
-
-  const gradeColorMap: { [key: string]: string; } = {
-    'A': 'border-green-500 text-green-500',
-    'B': 'border-lime-500 text-lime-500',
-    'C': 'border-yellow-500 text-yellow-500',
-    'D': 'border-orange-500 text-orange-500',
-    'E': 'border-red-500 text-red-500',
-  };
-
   return (
     <main className='w-3/4 mx-auto'>
       <header className='flex flex-col my-10 text-center space-y-5 lg:flex-row lg:space-x-20'>
-        <div className='flex w-full space-x-4 lg:w-4/5 lg:text-left'>
-          <img src={`/images/service-icons/${data[0].service_id}.png`} alt="Service Logo" className="h-14"/>
+        <div className='flex flex-col items-center space-x-4 space-y-5 lg:flex-row lg:w-4/5 lg:text-left'>
+          <img src={`/images/service-icons/${data[0].service_id}.png`} alt="Service Logo" className="h-14 w-fit"/>
           <h2 className="text-6xl text-slate-100 font-bold">{data[0].service_name}</h2>
         </div>
         <div className='w-full text-5xl lg:w-1/5 lg:text-right'>

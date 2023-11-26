@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation'
 import '@fortawesome/fontawesome-free/css/all.css';
 
 type Category = string;
@@ -18,6 +19,15 @@ const initialCategories: Category[] = [
 
 export default function CategoryList() {
     const [openCategories, setOpenCategories] = useState<Category[]>([]);
+    const searchParams = useSearchParams()
+    const seachCategory = searchParams.get('category')
+
+    useEffect(() => {
+        const categoryToOpen = seachCategory as Category;
+        if (categoryToOpen && initialCategories.includes(categoryToOpen)) {
+            setOpenCategories([categoryToOpen]);
+        }
+    }, [seachCategory]);
 
     const toggleCategory = (category: Category) => {
         setOpenCategories((prevOpenCategories) => (
