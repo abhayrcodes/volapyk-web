@@ -138,12 +138,12 @@ export default function About() {
   const aboutSpeed = (
     <div className="h-full flex w-full justify-between space-x-6">
       <div className={aboutCard}>
-        <p className='text-orange-400 font-sans font-bold text-center text-8xl mb-2'>100x</p>
-        <p className='text-white font-sans font-bold text-center text-2xl'>Faster than a human</p>
+        <p className='text-orange-400 font-sans font-bold text-center text-4xl mb-2'>100x</p>
+        <p className='text-white font-sans font-bold text-center lg:text-lg'>Faster than a human</p>
       </div>
       <div className={aboutCard}>
-        <p className='text-green-400 font-sans font-bold text-center text-8xl mb-2'>0.1s</p>
-        <p className='text-white font-sans font-bold text-center text-2xl'>To process a sentence</p>
+        <p className='text-green-400 font-sans font-bold text-center text-4xl mb-2'>0.1s</p>
+        <p className='text-white font-sans font-bold text-center lg:text-lg'>To process a sentence</p>
       </div>
     </div>
   );
@@ -151,12 +151,12 @@ export default function About() {
   const aboutModels = (
     <div className="h-full flex w-full justify-between space-x-6">
       <div className={aboutCard}>
-        <p className='text-blue-400 font-sans font-bold text-center text-8xl mb-2'>4+</p>
-        <p className='text-white font-sans font-bold text-center text-2xl'>Customized AI models</p>
+        <p className='text-blue-400 font-sans font-bold text-center text-4xl mb-2'>200+</p>
+        <p className='text-white font-sans font-bold text-center lg:text-lg'>Privacy Assessments</p>
       </div>
       <div className={aboutCard}>
-        <p className='text-red-400 font-sans font-bold text-center text-8xl mb-2'>80k</p>
-        <p className='text-white font-sans font-bold text-center text-2xl'>Datapoints for training</p>
+        <p className='text-red-400 font-sans font-bold text-center text-4xl mb-2'>80k</p>
+        <p className='text-white font-sans font-bold text-center lg:text-lg'>Datapoints for training</p>
       </div>
     </div>
   );
@@ -181,7 +181,7 @@ export default function About() {
             <p className='text-red-400 font-sans font-bold text-center text-2xl'>Scored Services: <NumCountUp number={17}/></p>
           </div>
 
-          <div className="grid lg:grid-cols-2 w-full gap-6 mb-10 text-sm text-white leading-6">
+          <div className="grid lg:grid-cols-2 w-full max-w-screen overflow-hidden gap-6 mb-10 text-sm text-white leading-6">
             <div>
               {aboutGrades}
             </div>

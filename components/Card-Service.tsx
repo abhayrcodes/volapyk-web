@@ -35,7 +35,7 @@ export default function ServiceCard(props: any) {
     <Link href={"/service/"+props.service_id} className="block p-6 rounded-lg border-2 border-gray-700 transition ease-in-out hover:bg-slate-800 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500">
       <div className="flex items-center justify-between mb-2">
         <div className="flex flex-row space-x-2">
-          <img src={`/images/service-icons/${props.service_id}.png`} alt="Service Logo" className="h-9 my-auto"/>
+          <img src={`/images/service-icons/${props.service_id}.webp`} alt="Service Logo" className="h-10 my-auto rounded-md"/>
           <h2 className="py-1 text-2xl tracking-tight text-white font-bold">{props.service_name}</h2>
         </div>
         <div className={`text-xl text-${gradeColorMap[props.char_score]}-500`}>

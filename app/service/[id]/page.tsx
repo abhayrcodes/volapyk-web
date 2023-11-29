@@ -21,11 +21,11 @@ export default async function ServicePage({ params }: { params: { id: string } }
   return (
     <main className='w-3/4 mx-auto'>
       <header className='flex flex-col my-10 text-center space-y-5 lg:flex-row lg:space-x-20'>
-        <div className='flex flex-col items-center space-x-4 space-y-5 lg:flex-row lg:w-4/5 lg:text-left'>
-          <img src={`/images/service-icons/${data[0].service_id}.png`} alt="Service Logo" className="h-14 w-fit"/>
-          <h2 className="text-6xl text-slate-100 font-bold">{data[0].service_name}</h2>
+        <div className='flex flex-col items-center space-x-4 gap-y-5 lg:space-y-0 lg:flex-row lg:w-4/5 lg:text-left'>
+          <img src={`/images/service-icons/${data[0].service_id}.webp`} alt="Service Logo" className="h-16 w-fit rounded-md"/>
+          <h2 className="text-4xl lg:text-6xl text-slate-100 font-bold">{data[0].service_name}</h2>
         </div>
-        <div className='w-full text-5xl lg:w-1/5 lg:text-right'>
+        <div className='w-full text-4xl lg:text-5xl lg:w-1/5 lg:text-right'>
           <span className='font-bold text-red-500'>4.9</span><span className='text-red-700'>/10</span>
         </div>
       </header>
