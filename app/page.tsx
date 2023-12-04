@@ -105,6 +105,12 @@ export default async function Home({
 
   return (
     <div>
+
+      <div className="mt-5 gap-3 flex mx-auto text-sm transition ease-in-out duration-1500 text-indigo-500 border-2 border-indigo-500 bg-indigo-600/10 rounded-full w-80 py-3 flex items-center justify-center hover:border-indigo-600 hover:text-indigo-400 hover:bg-indigo-600/15 hover:shadow-lg hover:shadow-indigo-600/50">
+        <h3 className='text-center'> Congressional App Challenge <br></br> 2023 Winner </h3>
+        <h3 className=' text-4xl'>🎉</h3>
+      </div>
+
       <div className="pointer-events-none text-center mt-20">
         <h1 id='logo-text' className="mb-4 text-5xl font-extrabold text-white md:text-8xl lg:text-9xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-indigo-600">volapyk</span></h1>
         <p className="text-md md:text-lg font-sans font-normal text-gray-400 lg:text-2xl">Keeping you safe, <span className="underline decoration-purple-600">one sentence at a time.</span></p>
