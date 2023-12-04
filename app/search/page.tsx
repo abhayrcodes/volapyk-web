@@ -1,9 +1,7 @@
-import Card from '../../components/Card-Service.tsx';
-import LoadingCard from '@/components/Card-Loading.tsx';
+import ServiceCard from '../../components/Card-Service.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
 import React from 'react';
 import { prisma } from '../../prisma/client.ts';
-import { Suspense } from 'react';
 
 export default async function Search({
     params,
@@ -51,57 +49,15 @@ export default async function Search({
       colors: [],
     };
   
-    for (let i = 0; i < 5 && i < service.case_ids.length; i++) {
-      const case_id = service.case_ids[i];
-      cardProps.numbers.push(casesData[case_id][0]);
-      cardProps.colors.push(casesData[case_id][1]);
-    }
-  
     return cardProps;
   }
-
-  const tableContent = [];
-  for (let i = 0; i < data.length; i += 2) {
-    const firstService = data[i];
-    const secondService = data[i + 1];
-    const serviceRows = [];
-    if (firstService) {
-      const firstServiceCardProps = generateCardProps(firstService);
-      serviceRows.push(
-        <td className='pr-3 w-1/2' key={firstService.service_id}>
-          <Suspense fallback={<LoadingCard/>}>
-            <Card {...firstServiceCardProps} />
-          </Suspense>
-        </td>
-      );
-    }
-    if (secondService) {
-      const secondServiceCardProps = generateCardProps(secondService);
-      serviceRows.push(
-        <td className='pl-3 w-1/2' key={secondService.service_id}>
-          <Suspense fallback={<LoadingCard/>}>
-            <Card {...secondServiceCardProps} />
-          </Suspense>
-        </td>
-      );
-    }
-    tableContent.push(
-      <tr key={i}>
-        {serviceRows}
-      </tr>
-    );
-  }
-
-  const stackedContent = data.map((item: any, index: any) => {
+  
+  const serviceCards = data.map((item: Service, index: number) => {
     const cardProps = generateCardProps(item);
     return (
-      <tr key={index}>
-        <td colSpan={2}>
-          <Suspense fallback={<LoadingCard />}>
-            <Card {...cardProps} />
-          </Suspense>
-        </td>
-      </tr>
+      <div key={index}>
+        <ServiceCard {...cardProps} />
+      </div>
     );
   });
   
@@ -115,20 +71,8 @@ export default async function Search({
 
       <SearchInput />
 
-      <div className="w-5/6 m-auto relative">
-        <table className="w-full text-sm text-left md:hidden">
-          <tbody>
-            {stackedContent}
-          </tbody>
-        </table>
-
-        <div className="w-full gap-4 text-sm leading-6 hidden md:grid">
-          <table>
-            <tbody>
-              {tableContent}
-            </tbody>
-          </table>
-        </div>
+      <div className="grid lg:grid-cols-2 w-5/6 mx-auto gap-6">
+        {serviceCards}
       </div>
     </div>
   );

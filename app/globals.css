@@ -37,10 +37,6 @@ body {
 div::-webkit-scrollbar {
     width: 0.5em;
 }
-   
-div::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
 
 div::-webkit-scrollbar-thumb {
     background-color: #0f172a;
@@ -50,10 +46,6 @@ div::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar {
     width: 0.5em;
-}
-   
-body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 body::-webkit-scrollbar-thumb {

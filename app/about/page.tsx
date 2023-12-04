@@ -2,8 +2,10 @@ import React from 'react';
 import NumCountUp from '@/components/NumCountUp';
 
 export default function About() {
+  const aboutCard: string = 'w-full h-full p-6 rounded-lg border-2 border-gray-700 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500'
+
   const aboutGrades = (
-    <div className="border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+    <div className={aboutCard}>
       <p className="text-md lg:text-xl font-bold tracking-tight mb-5">
         Volapyk (&ldquo;vola-pike&rdquo;) uses machine learning to automate the processing of privacy policies and terms of service. Each service is then given an easy to understand grade based on its documents.
       </p>
@@ -70,7 +72,7 @@ export default function About() {
   );
 
   const aboutCases = (
-    <div className="border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+    <div className={aboutCard}>
       <p className="text-md lg:text-xl font-bold tracking-tight mb-5">
         For every sentence marked as relevant by our machine learning model, the probabalility of 250+ privacy related cases are calculated. The top 5 of these cases appear on each service card, color-coded by class.
       </p>
@@ -90,7 +92,7 @@ export default function About() {
   );
 
   const aboutContributors = (
-    <div className="border-2 transition w-full ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+    <div className={aboutCard}>
       <p className="text-md lg:text-xl text-center font-bold tracking-tight mb-5">
         Our Team
       </p>
@@ -108,7 +110,7 @@ export default function About() {
   );
 
   const aboutRoadmap = (
-    <div className="border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+    <div className={aboutCard}>
       <p className="text-md lg:text-xl font-bold tracking-tight mb-5">
         Volapyk means &ldquo;language of the world&rdquo;, this is how we will make privacy understandable to the masses in beta and beyond.
       </p>
@@ -134,27 +136,27 @@ export default function About() {
   );
 
   const aboutSpeed = (
-    <div className="flex w-full justify-between">
-      <div className='mr-3 w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700'>
-        <p className='text-orange-400 font-sans font-bold text-center text-8xl mb-2'>100x</p>
-        <p className='text-white font-sans font-bold text-center text-2xl'>Faster than a human</p>
+    <div className="h-full flex w-full justify-between space-x-6">
+      <div className={aboutCard}>
+        <p className='text-orange-400 font-sans font-bold text-center text-4xl mb-2'>100x</p>
+        <p className='text-white font-sans font-bold text-center lg:text-lg'>Faster than a human</p>
       </div>
-      <div className='ml-3 w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700'>
-      <p className='text-green-400 font-sans font-bold text-center text-8xl mb-2'>0.1s</p>
-        <p className='text-white font-sans font-bold text-center text-2xl'>To process a sentence</p>
+      <div className={aboutCard}>
+        <p className='text-green-400 font-sans font-bold text-center text-4xl mb-2'>0.1s</p>
+        <p className='text-white font-sans font-bold text-center lg:text-lg'>To process a sentence</p>
       </div>
     </div>
   );
 
   const aboutModels = (
-    <div className="flex w-full justify-between">
-      <div className='mr-3 w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700'>
-        <p className='text-blue-400 font-sans font-bold text-center text-8xl mb-2'>4+</p>
-        <p className='text-white font-sans font-bold text-center text-2xl'>Customized AI models</p>
+    <div className="h-full flex w-full justify-between space-x-6">
+      <div className={aboutCard}>
+        <p className='text-blue-400 font-sans font-bold text-center text-4xl mb-2'>200+</p>
+        <p className='text-white font-sans font-bold text-center lg:text-lg'>Privacy Assessments</p>
       </div>
-      <div className='ml-3 w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700'>
-      <p className='text-red-400 font-sans font-bold text-center text-8xl mb-2'>80k</p>
-        <p className='text-white font-sans font-bold text-center text-2xl'>Datapoints for training</p>
+      <div className={aboutCard}>
+        <p className='text-red-400 font-sans font-bold text-center text-4xl mb-2'>80k</p>
+        <p className='text-white font-sans font-bold text-center lg:text-lg'>Datapoints for training</p>
       </div>
     </div>
   );
@@ -179,58 +181,26 @@ export default function About() {
             <p className='text-red-400 font-sans font-bold text-center text-2xl'>Scored Services: <NumCountUp number={17}/></p>
           </div>
 
-          <table className="w-full gap-4 mb-4 text-sm leading-6 hidden lg:grid">
-            <tbody>
-              <tr className='flex'>
-                <td className='pr-3 flex w-1/2'>
-                  {aboutGrades}
-                </td>
-                <td className='pl-3 flex w-1/2'>
-                  {aboutCases}
-                </td>
-              </tr>
-              <tr className='flex'>
-                  <td className='pr-3 flex w-1/2'>
-                    {aboutSpeed}
-                  </td>
-                  <td className='pl-3 flex w-1/2'>
-                    {aboutModels}
-                  </td>
-              </tr>
-              <tr className='flex'>
-                <td className='pr-3 flex w-1/2'>
-                  {aboutContributors}
-                </td>
-                <td className='pl-3 flex w-1/2'>
-                  {aboutRoadmap}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table className="w-full gap-4 text-sm leading-6 lg:hidden">
-            <tbody>
-              <tr>
-                <td className='flex'>
-                  {aboutGrades}
-                </td>
-                <td className='flex'>
-                  {aboutCases}
-                </td>
-                <td className='flex'>
-                  {aboutSpeed}
-                </td>
-                <td className='flex'>
-                  {aboutModels}
-                </td>
-                <td className='flex'>
-                  {aboutContributors}
-                </td>
-                <td className='flex'>
-                  {aboutRoadmap}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="grid lg:grid-cols-2 w-full max-w-screen overflow-hidden gap-6 mb-10 text-sm text-white leading-6">
+            <div>
+              {aboutGrades}
+            </div>
+            <div>
+              {aboutCases}
+            </div>
+            <div>
+              {aboutSpeed}
+            </div>
+            <div>
+              {aboutModels}
+            </div>
+            <div>
+              {aboutContributors}
+            </div>
+            <div>
+              {aboutRoadmap}
+            </div>
+          </div>
 
           <table className="w-full gap-4 text-sm mb-10 leading-6 grid-template-column justify-center text-white py-3">
             <tbody>
