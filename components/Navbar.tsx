@@ -13,6 +13,10 @@ export default function Navbar(props: any) {
     setIsNavbarExpanded((prevState) => !prevState);
   };
 
+  const hideNavbar = () => {
+    setIsNavbarExpanded(false);
+  };
+
   useEffect(() => {
     const handleScroll = (event: Event) => {
       if (isNavbarExpanded) {
@@ -44,7 +48,7 @@ export default function Navbar(props: any) {
     if (status === "authenticated") {
       return (<button onClick={() => signOut({ callbackUrl: "/" })} className="block border-2 mx-auto border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Sign Out</button>);
     }
-    return (<Link href="/?login=true" onClick={toggleNavbar} className="block border-2 mx-auto border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Login</Link>);
+    return (<Link href="/?login=true" onClick={hideNavbar} className="block border-2 mx-auto border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">Login</Link>);
   }
 
   if (status === "authenticated") {
@@ -90,16 +94,16 @@ export default function Navbar(props: any) {
         <div>
           <ul className="text-white font-bold text-xl text-center mt-5">
             <li>
-              <Link href="/" onClick={toggleNavbar} className="w-fit mx-auto mb-1 block border-2 border-transparent text-purple-600 bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150" aria-current="page">Home</Link>
+              <Link href="/" onClick={hideNavbar} className="w-fit mx-auto mb-1 block border-2 border-transparent text-purple-600 bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150" aria-current="page">Home</Link>
             </li>
             <li>
-              <Link href={navItems[0][0]} onClick={toggleNavbar} className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">{navItems[0][1]}</Link>
+              <Link href={navItems[0][0]} onClick={hideNavbar} className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">{navItems[0][1]}</Link>
             </li>
             <li>
-              <Link href={navItems[1][0]} onClick={toggleNavbar} className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">{navItems[1][1]}</Link>
+              <Link href={navItems[1][0]} onClick={hideNavbar} className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">{navItems[1][1]}</Link>
             </li>
             <li>
-              <Link href={navItems[2][0]} onClick={toggleNavbar} className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">{navItems[2][1]}</Link>
+              <Link href={navItems[2][0]} onClick={hideNavbar} className="w-fit mx-auto mb-1 block border-2 border-transparent bg-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-600 bg-transparent p-2 hover:text-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:bg-opacity-10 ease-in-out duration-150">{navItems[2][1]}</Link>
             </li>
             <li>
               {signInOutButton()}
