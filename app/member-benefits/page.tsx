@@ -2,7 +2,7 @@ import { ButtonGroup } from "@/components/PrefComps.tsx"
 
 export default function MemberBenefits() {
     const addService = (
-        <div className="w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+        <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
             <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
                 Add New Services & Sources
@@ -33,7 +33,7 @@ export default function MemberBenefits() {
         </div>
     );
     const instantCHecker = (
-        <div className="w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+        <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
             <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
                 Instantly Check Sources
@@ -61,7 +61,7 @@ export default function MemberBenefits() {
         </div>
     );
     const preferences = (
-        <div className="w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+        <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
             <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
                 Set Your Case Preferences
@@ -77,7 +77,7 @@ export default function MemberBenefits() {
         </div>
     );
     const emailAlerts = (
-        <div className="w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+        <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
             <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
                 Recieve Updates About Changes
@@ -122,24 +122,12 @@ export default function MemberBenefits() {
                 </div>
                 <div className="w-full lg:w-1/2">
                     <div className="overflow-y-auto lg:max-h-[var(--custom-max-height)]">
-                        <table className="grid w-full gap-4 text-sm leading-6 px-5">
-                            <tbody>
-                                <tr>
-                                    <td className='flex'>
-                                        {addService}
-                                    </td>
-                                    <td className='flex'>
-                                        {preferences}
-                                    </td>
-                                    <td className='flex'>
-                                        {emailAlerts}
-                                    </td>
-                                    <td className='flex'>
-                                        {instantCHecker}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div className="grid w-full gap-y-6 text-sm leading-6 px-5">
+                            {addService}
+                            {preferences}
+                            {emailAlerts}
+                            {instantCHecker}
+                        </div>
                     </div>
                 </div>
             </div>

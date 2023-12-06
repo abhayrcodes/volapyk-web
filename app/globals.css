@@ -18,6 +18,10 @@ body {
     height: 100%;
 }
 
+html {
+    scrollbar-gutter: stable both-edges;
+}
+
 #logo-text {
     font-family: Yapari;
 }
@@ -35,21 +39,23 @@ body {
 }
 
 div::-webkit-scrollbar {
-    width: 0.5em;
+    width: 1.5em;
 }
 
 div::-webkit-scrollbar-thumb {
     background-color: #0f172a;
-    outline: 2px solid #6366f1;
-    border-radius: 10px;
+    border: 6px solid transparent;
+    box-shadow: inset 0 0 0 2px #6366f1; /* Adjust the spread value as needed */
+    border-radius: 30px;
 }
 
 body::-webkit-scrollbar {
-    width: 0.5em;
+    width: 1.5em;
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #0f172a;
-    outline: 2px solid #6366f1;
-    border-radius: 10px;
+    border: 6px solid transparent;
+    box-shadow: inset 0 0 0 2px #6366f1; /* Adjust the spread value as needed */
+    border-radius: 30px;
 }

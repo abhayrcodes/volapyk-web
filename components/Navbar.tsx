@@ -59,11 +59,11 @@ export default function Navbar(props: any) {
   
   return (
     <nav className={`bg-gray-900 ${isNavbarExpanded ? 'absolute h-screen w-full z-10 top-0' : ''}`}>
-      <div className="flex flex-wrap items-center justify-between mx-10 p-4">
+      <div className="flex flex-wrap items-center justify-between mx-5 p-4">
         <Link href="/" className="flex items-center">
           <img src={'/images/logo.svg'} height={50} width={50} alt="Volapyk Logo" />
         </Link>
-        <button onClick={toggleNavbar} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 bg-none rounded-lg lg:hidden focus:outline-none">
+        <button onClick={toggleNavbar} type="button" className="inline-flex items-center p-2 text-sm text-gray-500 bg-none rounded-lg lg:hidden focus:outline-none">
           <span className="sr-only">Open main menu</span>
           <svg className={`w-6 h-6 ${isNavbarExpanded ? 'hidden' : ''}`} fill="currentColor" viewBox="0 0 20 20" xmlns="https://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
           <svg className={`w-6 h-6 ${isNavbarExpanded ? '' : 'hidden'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="https://www.w3.org/2000/svg">

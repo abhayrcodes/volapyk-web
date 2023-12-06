@@ -61,7 +61,7 @@ export default async function Home({
   return (
     <div>
 
-      <div className="mt-5 gap-3 flex mx-auto text-sm transition ease-in-out duration-1500 text-indigo-500 border-2 border-indigo-500 bg-indigo-600/10 rounded-full w-80 py-3 flex items-center justify-center hover:border-indigo-600 hover:text-indigo-400 hover:bg-indigo-600/15 hover:shadow-lg hover:shadow-indigo-600/50">
+      <div className="mt-5 gap-3 mx-auto text-sm transition ease-in-out duration-1500 text-indigo-500 border-2 border-indigo-500 bg-indigo-600/10 rounded-full w-80 py-3 flex items-center justify-center hover:border-indigo-600 hover:text-indigo-400 hover:bg-indigo-600/15 hover:shadow-lg hover:shadow-indigo-600/50">
         <h3 className='text-center'> Congressional App Challenge <br></br> 2023 Winner </h3>
         <h3 className=' text-4xl'>🎉</h3>
       </div>
@@ -73,7 +73,7 @@ export default async function Home({
 
       <SearchInput />
 
-      <div className="grid lg:grid-cols-2 w-5/6 mx-auto gap-6">
+      <div className="grid lg:grid-cols-2 w-5/6 mx-auto gap-6 mb-6">
         {serviceCards}
       </div>
 
