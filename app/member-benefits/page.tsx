@@ -117,7 +117,7 @@ export default function MemberBenefits() {
                         </h1>
                         <a href="/?signup=true"><button className="rounded-lg transition ease-in-out duration-300 labil font-semibold w-full p-4 bg-slate-100 text-slate-900 my-2 lg:my-5 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">Sign Up</button></a>
                         <a href="/?login=true"><button className="rounded-lg transition ease-in-out duration-300 labil font-semibold w-full p-4 bg-slate-100 text-slate-900 my-2 lg:my-5 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">Login</button></a>
-                        <a href="https://gofundme.com/f/volapyk"><button className="rounded-lg transition ease-in-out duration-300 labil font-semibold w-full p-4 bg-slate-100 text-slate-900 my-2 lg:my-5 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">Donate</button></a>
+                        
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2">

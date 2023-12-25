@@ -1,6 +1,7 @@
 import LinksList from '@/components/List-Links.tsx';
 import { prisma } from '../../../prisma/client.ts';
 import CategoryList from '@/components/List-Categories.tsx'
+import {CircularProgress} from "@nextui-org/progress";
 
 export default async function ServicePage({ params }: { params: { id: string } }) {
   const data = await prisma.service_info.findMany({
@@ -25,9 +26,20 @@ export default async function ServicePage({ params }: { params: { id: string } }
           <img src={`/images/service-icons/${data[0].service_id}.webp`} alt="Service Logo" className="h-16 w-fit rounded-md"/>
           <h2 className="text-4xl lg:text-6xl text-slate-100 font-bold">{data[0].service_name}</h2>
         </div>
-        <div className='flex items-center justify-center text-4xl lg:text-5xl lg:text-right'>
-          <span className='font-bold text-red-500'>4.9</span><span className='text-red-700'>/10</span>
-        </div>
+        <CircularProgress
+          aria-label="Loading..."
+          classNames={{
+            svg: "w-16 h-16 drop-shadow-md",
+            indicator: "stroke-red-500",
+            track: "stroke-gray-700",
+            value: "text-xl font-semibold text-red-500",
+          }}
+          formatOptions={{style: 'decimal'}}
+          maxValue={10}
+          value={4.9}
+          strokeWidth={4}
+          showValueLabel={true}
+        />
       </header>
       <div className='flex flex-col mx-auto'>
         <section className='w-full'>

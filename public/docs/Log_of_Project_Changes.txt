@@ -61,7 +61,12 @@ November 14th - Multiple choice AI model has preliminary testing along with ques
 November 18th - Complete case rewrite with standardized diction and syntax, categories are also created for score grouping and ai processing
 November 23rd - Prototype question answering to multiple choice has extremely promising results
 November 24th - New prototype for cards and services to work with new category model
-November 25th - critical security patches and code cleaning
+November 25th - Critical security patches and code cleaning
+November 29th - Backend database and scraper class creation
+December 5th - Back to the ai drawing board with an analysis of similar databases like RACE to find good models
+December 10th - Case updates withe question and categroy modification for improved performance
+December 16th - Full transition away from flan and into new roberta model pipeline development
+December 20th - Roberta pipeline prototype completed with optimization underway
 
 BETA PHASE
 tbd - Beta launched!
