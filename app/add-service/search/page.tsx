@@ -15,9 +15,9 @@ export default async function Search({
 
   const query = (typeof searchParams === "undefined") ? "" : searchParams.q;
 
-  const data = await prisma.service_info.findMany({
+  const data = await prisma.services.findMany({
     where: {
-      service_name: { contains: query, mode: 'insensitive' }
+      name: { contains: query, mode: 'insensitive' }
     }
   })
 
@@ -26,10 +26,10 @@ export default async function Search({
     redirect('/?login=true')
   }
 
-  async function serviceLinks(input_service_id: number) {
-    const links_data = await prisma.scored_links.findMany({
+  async function serviceLinks(input_name: string) {
+    const links_data = await prisma.approved_links.findMany({
       where: {
-        service_id: input_service_id
+        service_name: input_name,
       }
     });
     
@@ -41,7 +41,7 @@ export default async function Search({
   
   const stackedContent = await Promise.all(
     data.map(async (item: any, index: any) => {
-      const links = await serviceLinks(item.service_id);
+      const links = await serviceLinks(item.name);
   
       return (
         <tr key={index}>
@@ -49,7 +49,7 @@ export default async function Search({
             <AddServiceCard 
                 titleElement={
                     <div className="flex items-center w-full pr-6 text-white">
-                        <h2 className="mb-2 text-2xl tracking-tight font-bold">{item.service_name}</h2>
+                        <h2 className="mb-2 text-2xl tracking-tight font-bold">{item.name}</h2>
                     </div>
                 }
                 linksElement={links.map(({ key, link }) => (
@@ -59,7 +59,7 @@ export default async function Search({
                         </li>
                     </Link>
                 ))}
-                inputServiceName={item.service_name}
+                inputServiceName={item.name}
             />
           </td>
         </tr>

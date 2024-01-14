@@ -54,7 +54,7 @@ export default function About() {
           </div>
           <div className='flex items-center justify-center rounded-lg bg-gradient-to-r to-purple-500 from-indigo-500 hover:scale-105 ease-in-out duration-300'>
             <div className='my-10 text-center space-y-2'>
-              <h2 className='text-white text-4xl lg:text-6xl font-bold'>ALPHA</h2>
+              <h2 className='text-white text-4xl lg:text-6xl font-bold'>BETA</h2>
               <p className='text-slate-900 font-bold'>Project Phase</p>
             </div>
           </div>
@@ -62,8 +62,8 @@ export default function About() {
         <div className='lg:order-2 grid grid-cols-2 gap-6'>
           <div className='flex items-center justify-center rounded-lg bg-gradient-to-r to-purple-500 from-indigo-500 hover:scale-105 ease-in-out duration-300'>
             <div className='text-center space-y-2'>
-              <h2 className='text-white text-4xl lg:text-6xl font-bold'>Jan 1</h2>
-              <p className='text-slate-900 font-bold'>Planned Beta Release</p>
+              <h2 className='text-white text-4xl lg:text-6xl font-bold'>Aug 1</h2>
+              <p className='text-slate-900 font-bold'>Planned Final Launch</p>
             </div>
           </div>
           <div className='flex items-center justify-center rounded-lg bg-gradient-to-r to-purple-500 from-indigo-500 hover:scale-105 ease-in-out duration-300'>

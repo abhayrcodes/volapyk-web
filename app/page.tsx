@@ -15,37 +15,42 @@ export default async function Home({
   const login = (typeof searchParams === "undefined") ? true : (searchParams.login==="true" ? false : true);
   const signup = (typeof searchParams === "undefined") ? true : (searchParams.signup==="true" ? false : true);
 
-  const cases = await prisma.cases.findMany();
-  const casesData: Record<number, [string, number]> = {};
-  for (const caseItem of cases) {
-    casesData[caseItem.case_id] = [caseItem.title, caseItem.classification];
-  }
-  const data = await prisma.service_info.findMany()
+  const data = await prisma.services.findMany({
+    take: 10,
+    orderBy: {
+      id: 'asc'
+    },
+    select: {
+      id: true,
+      name: true,
+      aliases: true,
+      score: true,
+      cat_scores: true,
+    }
+  })
 
   interface Service {
-    service_id: number;
-    service_name: string;
-    num_score: number;
-    char_score: string;
-    case_ids: number[];
-    // Add other properties as needed
+    id: number;
+    name: string;
+    aliases: string[];
+    score: number;
+    cat_scores: number[];
   }
 
   function generateCardProps(service: Service) {
     const cardProps: {
-      service_id: number;
-      service_name: string;
-      char_score: string;
-      numbers: string[]; // Adjust the type if needed
-      colors: number[];  // Adjust the type if needed
+      id: number;
+      name: string;
+      aliases: string[];
+      score: number;
+      cat_scores: number[]; // Adjust the type if needed
     } = {
-      service_id: service.service_id,
-      service_name: service.service_name,
-      char_score: service.char_score,
-      numbers: [],
-      colors: [],
+      id: service.id,
+      name: service.name,
+      aliases: service.aliases,
+      score: service.score,
+      cat_scores: service.cat_scores,
     };
-  
     return cardProps;
   }
 

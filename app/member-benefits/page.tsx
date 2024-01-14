@@ -4,7 +4,7 @@ export default function MemberBenefits() {
     const addService = (
         <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
-            <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
+            <p className="py-1 mr-4 text-lg lg:text-xl font-bold tracking-tight">
                 Add New Services & Sources
             </p>
             <div className="h-fit my-auto py-1 px-2 border rounded-lg items-center justify-center inline-flex border-green-500 text-green-500">
@@ -35,7 +35,7 @@ export default function MemberBenefits() {
     const instantCHecker = (
         <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
-            <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
+            <p className="py-1 mr-4 text-lg lg:text-xl font-bold tracking-tight">
                 Instantly Check Sources
             </p>
             <div className="h-fit my-auto py-1 px-2 border rounded-lg items-center justify-center inline-flex border-orange-500 text-orange-500">
@@ -63,7 +63,7 @@ export default function MemberBenefits() {
     const preferences = (
         <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
-            <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
+            <p className="py-1 mr-4 text-lg lg:text-xl font-bold tracking-tight">
                 Set Your Case Preferences
             </p>
             <div className="h-fit my-auto py-1 px-2 border rounded-lg items-center justify-center inline-flex border-yellow-500 text-yellow-500">
@@ -79,7 +79,7 @@ export default function MemberBenefits() {
     const emailAlerts = (
         <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
-            <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
+            <p className="py-1 mr-4 text-lg lg:text-xl font-bold tracking-tight">
                 Recieve Updates About Changes
             </p>
             <div className="h-fit my-auto py-1 px-2 border rounded-lg items-center justify-center inline-flex border-orange-500 text-orange-500">
@@ -107,9 +107,9 @@ export default function MemberBenefits() {
     );
 
     return (
-        <div>
+        <main>
             <div className="block lg:flex w-11/12 mx-auto my-5">
-                <div className="flex w-full lg:w-1/2 justify-center items-center lg:h-[var(--custom-max-height)] overflow-hidden">
+                <div className="flex w-full lg:w-1/2 justify-center items-center mb-[80px] lg:mb-0 h-[var(--custom-max-height)] overflow-hidden">
                     <div className="text-center p-5">
                         <h1 id="logo-text" className="w-full mb-4 text-3xl lg:text-5xl font-extrabold text-white">Sign up to become a member of</h1>
                         <h1 id="logo-text" className="w-full mb-4 text-5xl lg:text-7xl font-extrabold text-white">
@@ -131,7 +131,7 @@ export default function MemberBenefits() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
 
     )
   }
