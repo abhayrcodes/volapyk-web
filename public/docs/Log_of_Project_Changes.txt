@@ -56,6 +56,17 @@ October 13th - Project submitted to ycombinator winter 2024 batch
 October 17th - Gradient descent tests yield good results on small dataset but not large one
 October 24th - Application for two project grants worth roughly $10k
 October 29th - Member benefits page working prototype and api patches (add a service activated)
+November 9th - Huge swaths of data pulled from usableprivacy.org for relevance training, results still lacking
+November 14th - Multiple choice AI model has preliminary testing along with question answering (mediocre results)
+November 18th - Complete case rewrite with standardized diction and syntax, categories are also created for score grouping and ai processing
+November 23rd - Prototype question answering to multiple choice has extremely promising results
+November 24th - New prototype for cards and services to work with new category model
+November 25th - Critical security patches and code cleaning
+November 29th - Backend database and scraper class creation
+December 5th - Back to the ai drawing board with an analysis of similar databases like RACE to find good models
+December 10th - Case updates withe question and categroy modification for improved performance
+December 16th - Full transition away from flan and into new roberta model pipeline development
+December 20th - Roberta pipeline prototype completed with optimization underway
 
 BETA PHASE
 tbd - Beta launched!

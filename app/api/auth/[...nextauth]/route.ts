@@ -74,7 +74,7 @@ const handler = NextAuth({
                         data: {
                             email: email,
                             password_hash: await hash(password, 12),
-                            case_scores: {}
+                            category_weights: {}
                         }
                     })
           

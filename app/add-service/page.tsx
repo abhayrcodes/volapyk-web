@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar.tsx'
 import SearchInput from '@/components/SearchInput';
 import { getServerSession } from "next-auth/next"
 import { redirect } from 'next/navigation'
@@ -11,7 +10,6 @@ export default async function AddService() {
 
   return (
     <div className="static">
-      <Navbar/>
       <SearchInput/>
       <div className="flex flex-col text-center items-center mb-20">
         <h1 className='w-2/3 lg:mt-20 mb-3 font-bold text-slate-100 text-xl md:text-2xl'>Add a Service Instructions</h1>

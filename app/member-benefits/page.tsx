@@ -1,11 +1,10 @@
-import Navbar from "@/components/Navbar";
 import { ButtonGroup } from "@/components/PrefComps.tsx"
 
 export default function MemberBenefits() {
     const addService = (
-        <div className="w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+        <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
-            <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
+            <p className="py-1 mr-4 text-lg lg:text-xl font-bold tracking-tight">
                 Add New Services & Sources
             </p>
             <div className="h-fit my-auto py-1 px-2 border rounded-lg items-center justify-center inline-flex border-green-500 text-green-500">
@@ -34,9 +33,9 @@ export default function MemberBenefits() {
         </div>
     );
     const instantCHecker = (
-        <div className="w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+        <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
-            <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
+            <p className="py-1 mr-4 text-lg lg:text-xl font-bold tracking-tight">
                 Instantly Check Sources
             </p>
             <div className="h-fit my-auto py-1 px-2 border rounded-lg items-center justify-center inline-flex border-orange-500 text-orange-500">
@@ -62,9 +61,9 @@ export default function MemberBenefits() {
         </div>
     );
     const preferences = (
-        <div className="w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+        <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
-            <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
+            <p className="py-1 mr-4 text-lg lg:text-xl font-bold tracking-tight">
                 Set Your Case Preferences
             </p>
             <div className="h-fit my-auto py-1 px-2 border rounded-lg items-center justify-center inline-flex border-yellow-500 text-yellow-500">
@@ -78,9 +77,9 @@ export default function MemberBenefits() {
         </div>
     );
     const emailAlerts = (
-        <div className="w-full border-2 transition ease-in-out mb-6 hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
+        <div className="w-full border-2 transition ease-in-out hover:shadow-lg hover:shadow-indigo-600 hover:border-indigo-500 block p-6 rounded-lg text-white shadow bg-slate-900 border-gray-700">
           <div className="flex justify-between mb-5">
-            <p className="py-1 text-lg lg:text-xl font-bold tracking-tight">
+            <p className="py-1 mr-4 text-lg lg:text-xl font-bold tracking-tight">
                 Recieve Updates About Changes
             </p>
             <div className="h-fit my-auto py-1 px-2 border rounded-lg items-center justify-center inline-flex border-orange-500 text-orange-500">
@@ -108,11 +107,9 @@ export default function MemberBenefits() {
     );
 
     return (
-        <div>
-            <Navbar />
-
+        <main>
             <div className="block lg:flex w-11/12 mx-auto my-5">
-                <div className="flex w-full lg:w-1/2 justify-center items-center lg:min-h-[var(--custom-max-height)]">
+                <div className="flex w-full lg:w-1/2 justify-center items-center mb-[80px] lg:mb-0 h-[var(--custom-max-height)] overflow-hidden">
                     <div className="text-center p-5">
                         <h1 id="logo-text" className="w-full mb-4 text-3xl lg:text-5xl font-extrabold text-white">Sign up to become a member of</h1>
                         <h1 id="logo-text" className="w-full mb-4 text-5xl lg:text-7xl font-extrabold text-white">
@@ -120,33 +117,21 @@ export default function MemberBenefits() {
                         </h1>
                         <a href="/?signup=true"><button className="rounded-lg transition ease-in-out duration-300 labil font-semibold w-full p-4 bg-slate-100 text-slate-900 my-2 lg:my-5 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">Sign Up</button></a>
                         <a href="/?login=true"><button className="rounded-lg transition ease-in-out duration-300 labil font-semibold w-full p-4 bg-slate-100 text-slate-900 my-2 lg:my-5 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">Login</button></a>
-                        <a href="https://gofundme.com/f/volapyk"><button className="rounded-lg transition ease-in-out duration-300 labil font-semibold w-full p-4 bg-slate-100 text-slate-900 my-2 lg:my-5 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600">Donate</button></a>
+                        
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2">
                     <div className="overflow-y-auto lg:max-h-[var(--custom-max-height)]">
-                        <table className="grid w-full gap-4 text-sm leading-6 px-5">
-                            <tbody>
-                                <tr>
-                                    <td className='flex'>
-                                        {addService}
-                                    </td>
-                                    <td className='flex'>
-                                        {preferences}
-                                    </td>
-                                    <td className='flex'>
-                                        {emailAlerts}
-                                    </td>
-                                    <td className='flex'>
-                                        {instantCHecker}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div className="grid w-full gap-y-6 text-sm leading-6 px-5">
+                            {addService}
+                            {preferences}
+                            {emailAlerts}
+                            {instantCHecker}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
 
     )
   }
