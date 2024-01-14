@@ -30,6 +30,9 @@ export default function RootLayout({
       </head>
       <body className="bg-slate-900">
         <Providers>
+          <div className='text-red-200 bg-red-500/75 text-center p-3 border-red-300 border-2 border-t-0 rounded-b-lg'>
+          🚩 Due to beta-phase status, methods used to calculate total and category scores are not completely accurate and are heavily subject to change later on.
+          </div>
           <Navbar/>
           {children}
         </Providers>
