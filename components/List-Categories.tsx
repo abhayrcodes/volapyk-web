@@ -76,7 +76,7 @@ export default function CategoryList(case_map: any) {
                         <div className='rounded-b-lg border-2 border-slate-800 p-2'>
                             {case_map['case_map'][index].map((item: string, i: number) => (
                                 i % 2 === 1 && i + 1 < case_map['case_map'][index].length ? (
-                                    <li className="flex justify-between items-center p-2 px-4 space-x-5 rounded-lg text-gray-300 border-2 border-transparent transition ease-in-out hover:scale-x-[1.025] hover:shadow-md hover:shadow-indigo-600 hover:bg-slate-800 hover:border-indigo-600">
+                                    <li key={i} className="flex justify-between items-center p-2 px-4 space-x-5 rounded-lg text-gray-300 border-2 border-transparent transition ease-in-out hover:scale-x-[1.025] hover:shadow-md hover:shadow-indigo-600 hover:bg-slate-800 hover:border-indigo-600">
                                         <h5>{case_map['case_map'][index][i]}</h5>
                                         <div className={`w-min px-2 py-1 rounded-lg bg-gradient-radial from-slate-800 to-${caseColor[case_map['case_map'][index][i + 1]]}/30 text-${caseColor[case_map['case_map'][index][i + 1]]} border-2 border-${caseColor[case_map['case_map'][index][i + 1]]}`}>{case_map['case_map'][index][i + 1]}</div>
                                     </li>

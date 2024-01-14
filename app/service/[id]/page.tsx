@@ -4,30 +4,24 @@ import CategoryList from '@/components/List-Categories.tsx'
 import {CircularProgress} from "@nextui-org/progress";
 
 export default async function ServicePage({ params }: { params: { id: string } }) {
-  function scoreColor(score: number): string {
-    if (score >= 8) {
-      return "green-500";
-    } else if (score >= 6) {
-      return "orange-500"
-    } else {
-      return "red-500"
-    }
-  }
-  function categoryColor(cat_score: number): string {
-    if (cat_score >= 8) {
-      return "green-600";
-    } else if (cat_score >= 6) {
-      return "orange-500"
-    } else {
-      return "red-500"
-    }
-  }
-
   const data = await prisma.services.findMany({
     where: {
       id: Number(params.id),
     },
   });
+
+  let strokeColor: string = "";
+  let textColor: string = "";
+  if (data[0].score >= 8) {
+    strokeColor = "stroke-green-500"
+    textColor = "text-xl font-semibold text-green-500"
+  } else if (data[0].score >= 6) {
+    strokeColor = "stroke-orange-500"
+    textColor = "text-xl font-semibold text-orange-500"
+  } else {
+    strokeColor = "stroke-red-500"
+    textColor = "text-xl font-semibold text-red-500"
+  }
 
   const cases = await prisma.cases.findMany();
 
@@ -65,9 +59,9 @@ export default async function ServicePage({ params }: { params: { id: string } }
           aria-label="Loading..."
           classNames={{
             svg: "w-16 h-16 drop-shadow-md",
-            indicator: `stroke-${scoreColor(data[0].score)}`,
+            indicator: strokeColor,
             track: "stroke-gray-700",
-            value: `text-xl font-semibold text-${scoreColor(data[0].score)}`,
+            value: textColor,
           }}
           formatOptions={{style: 'decimal'}}
           maxValue={10}

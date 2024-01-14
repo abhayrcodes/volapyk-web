@@ -2,15 +2,19 @@ import Link from "next/link";
 import {CircularProgress} from "@nextui-org/progress";
 
 export default function ServiceCard(props: any) {
-  function scoreColor(score: number): string {
-    if (score >= 8) {
-      return "green-500";
-    } else if (score >= 6) {
-      return "orange-500"
-    } else {
-      return "red-500"
-    }
+  let strokeColor: string = "";
+  let textColor: string = "";
+  if (props.score >= 8) {
+    strokeColor = "stroke-green-500"
+    textColor = "text-md font-semibold text-green-500"
+  } else if (props.score >= 6) {
+    strokeColor = "stroke-orange-500"
+    textColor = "text-md font-semibold text-orange-500"
+  } else {
+    strokeColor = "stroke-red-500"
+    textColor = "text-md font-semibold text-red-500"
   }
+
   function categoryColor(cat_score: number): string {
     if (cat_score >= 8) {
       return "green-600";
@@ -40,18 +44,19 @@ export default function ServiceCard(props: any) {
           <h2 className="py-1 text-2xl tracking-tight text-white font-bold">{props.name}</h2>
         </div>
         <CircularProgress
-          aria-label="Loading..."
+          aria-label="Score"
           classNames={{
             svg: "w-11 h-11 drop-shadow-md",
-            indicator: `stroke-${scoreColor(props.score)}`,
+            indicator: strokeColor,
             track: "stroke-gray-700",
-            value: `text-md font-semibold text-${scoreColor(props.score)}`,
+            value: textColor,
           }}
           formatOptions={{style: 'decimal'}}
           value={props.score}
           maxValue={10}
           strokeWidth={4}
           showValueLabel={true}
+          disableAnimation={true}
         />
       </div>
       <hr className="h-[2px] my-4 bg-gray-700 border-0"></hr>

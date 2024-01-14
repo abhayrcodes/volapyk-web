@@ -1,7 +1,10 @@
 import React from 'react';
 import {CircularProgress} from "@nextui-org/progress";
+import { prisma } from '../../prisma/client.ts';
 
-export default function About() {
+export default async function About() {
+  const serviceCount = await prisma.services.count()
+
   return (
     <main>
       <div className='grid lg:grid-cols-2 w-5/6 mx-auto gap-6 gap-y-10 lg:gap-y-40 mb-40'>
@@ -22,13 +25,13 @@ export default function About() {
         <div className='flex lg:h-[var(--custom-max-height)] items-center justify-center'>
           <div className="hidden lg:grid grid-flow-row grid-rows-3 grid-cols-3 gap-8">
             <div className="transform scale-110 -rotate-6 -translate-x-10 translate-y-10">
-              <img src="/images/service-icons/1.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
+              <img src="/images/service-icons/0.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
             </div>
             <div className="transform scale-75 rotate-6 -translate-y-10">
-              <img src="/images/service-icons/2.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
+              <img src="/images/service-icons/1.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
             </div>
             <div className="transform scale-125 translate-x-10 translate-y-10">
-              <img src="/images/service-icons/6.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
+              <img src="/images/service-icons/8.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
             </div>
             <div/>
             <div className="transform scale-150">
@@ -36,13 +39,13 @@ export default function About() {
             </div>
             <div/>
             <div className="transform scale-90 rotate-6 -translate-x-10 -translate-y-10">
-              <img src="/images/service-icons/17.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
+              <img src="/images/service-icons/30.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
             </div>
             <div className="transform scale-110 translate-y-10">
-              <img src="/images/service-icons/14.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
+              <img src="/images/service-icons/110.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
             </div>
             <div className="transform scale-85 -rotate-6 translate-x-10 -translate-y-10">
-              <img src="/images/service-icons/8.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
+              <img src="/images/service-icons/15.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
             </div>
           </div>
         </div>
@@ -68,7 +71,7 @@ export default function About() {
           </div>
           <div className='flex items-center justify-center rounded-lg bg-gradient-to-r to-purple-500 from-indigo-500 hover:scale-105 ease-in-out duration-300'>
             <div className='my-10 text-center space-y-2'>
-              <h2 className='text-white text-4xl lg:text-6xl font-bold'>100</h2>
+              <h2 className='text-white text-4xl lg:text-6xl font-bold'>{serviceCount}</h2>
               <p className='text-slate-900 font-bold'>Scored Services</p>
             </div>
           </div>
@@ -117,6 +120,7 @@ export default function About() {
                 maxValue={10}
                 strokeWidth={4}
                 showValueLabel={true}
+                disableAnimation={true}
               />
               <p className='text-center text-white text-xl font-bold mt-4'>Overall Service Score</p>
             </div>
