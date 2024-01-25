@@ -22,32 +22,8 @@ export default async function About() {
             <a href="/" className='rounded-lg transition ease-in-out duration-300 labil font-semibold w-fit p-4 bg-slate-100 text-slate-900 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600'>Explore Scored Services</a>
           </div>
         </div>
-        <div className='flex lg:h-[var(--custom-max-height)] items-center justify-center'>
-          <div className="hidden lg:grid grid-flow-row grid-rows-3 grid-cols-3 gap-8">
-            <div className="transform scale-110 -rotate-6 -translate-x-10 translate-y-10">
-              <img src="/images/service-icons/0.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
-            </div>
-            <div className="transform scale-75 rotate-6 -translate-y-10">
-              <img src="/images/service-icons/1.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
-            </div>
-            <div className="transform scale-125 translate-x-10 translate-y-10">
-              <img src="/images/service-icons/8.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
-            </div>
-            <div/>
-            <div className="transform scale-150">
-              <img src="/images/logo.svg" className="h-32 w-32 rounded-lg" alt="" loading="lazy"/>
-            </div>
-            <div/>
-            <div className="transform scale-90 rotate-6 -translate-x-10 -translate-y-10">
-              <img src="/images/service-icons/30.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
-            </div>
-            <div className="transform scale-110 translate-y-10">
-              <img src="/images/service-icons/110.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
-            </div>
-            <div className="transform scale-85 -rotate-6 translate-x-10 -translate-y-10">
-              <img src="/images/service-icons/15.webp" className="h-32 w-32 rounded-xl" alt="" loading="lazy"/>
-            </div>
-          </div>
+        <div className='hidden lg:flex lg:h-[var(--custom-max-height)] items-center justify-center px-10'>
+            <img src="/images/about-icons.jpg" className="w-full" alt="" loading="lazy"/>
         </div>
         <div className='lg:order-1 grid grid-cols-2 gap-6'>
           <div className='flex items-center justify-center'>

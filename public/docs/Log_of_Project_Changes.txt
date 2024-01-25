@@ -66,10 +66,15 @@ November 29th - Backend database and scraper class creation
 December 5th - Back to the ai drawing board with an analysis of similar databases like RACE to find good models
 December 10th - Case updates withe question and categroy modification for improved performance
 December 16th - Full transition away from flan and into new roberta model pipeline development
-December 20th - Roberta pipeline prototype completed with optimization underway
+December 20th - Roberta pipeline prototype introduced with optimization underway
+January 4th - Roberta tuning results are strong but are overfitted to the training services
+January 8th - Pipeline prototypes finalized with small variable corrections necessary
+January 11th - AI model reaches beta state with promising results on only loss calculations (fine-tuning still necessary)
+January 12th - Database updated to properly store ai outputs in easy to process format
+January 13th - Website integrated with new database to properly show categories and scores
 
 BETA PHASE
-tbd - Beta launched!
+1/14/24 - Beta launched!
 
 PRODUCTION PHASE
 tbd - Project launched!

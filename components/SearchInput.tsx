@@ -24,8 +24,8 @@ const SearchInput = () => {
     };
     
     return (
-        <div>            
-            <form className="w-5/6 mt-20 mb-10 m-auto" onSubmit={onSearch}>   
+        <div className='w-5/6 mx-auto mt-20 mb-10'>         
+            <form className="w-full" onSubmit={onSearch}>   
                 <label htmlFor="default-search" className="mb-2 text-sm font-bold text-white sr-only">Search</label>
                 <div className="relative">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -35,8 +35,7 @@ const SearchInput = () => {
                     <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-indigo-600 hover:bg-indigo-500 focus:ring-4 focus:outline-none focus:ring-indigo-800 font-medium rounded-lg text-sm px-4 py-2">Search</button>
                 </div>
             </form>
-        </div>
-        
+        </div>  
     )
 };
 
