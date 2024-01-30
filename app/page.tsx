@@ -2,7 +2,6 @@ import ServiceCard from '../components/Card-Service.tsx';
 import SearchInput from '@/components/SearchInput.tsx';
 import LoginModal from '@/components/Modal-Login.tsx';
 import SignUpModal from '@/components/Modal-SignUp.tsx';
-import React from 'react';
 import { prisma } from '../prisma/client.ts';
 
 export default async function Home({
@@ -64,8 +63,7 @@ export default async function Home({
   });
 
   return (
-    <div>
-
+    <main>
       <div className="mt-5 gap-3 mx-auto text-sm transition ease-in-out duration-1500 text-indigo-500 border-2 border-indigo-500 bg-indigo-600/10 rounded-full w-80 py-3 flex items-center justify-center hover:border-indigo-600 hover:text-indigo-400 hover:bg-indigo-600/15 hover:shadow-lg hover:shadow-indigo-600/50">
         <h3 className='text-center'> Congressional App Challenge <br></br> 2023 Winner </h3>
         <h3 className=' text-4xl'>🎉</h3>
@@ -84,6 +82,6 @@ export default async function Home({
 
       <LoginModal hidden={login} />
       <SignUpModal hidden={signup} />
-    </div>
+    </main>
   );
 }
