@@ -24,7 +24,14 @@ const SearchInput = () => {
     };
     
     return (
-        <div className='w-5/6 mx-auto mt-20 mb-10'>         
+        <div className='w-5/6 mx-auto mt-20 mb-10'>
+            <div className='flex w-full text-gray-400 font-bold mb-2 justify-around'>
+                <p>As featured on:</p>
+                <a href='https://www.producthunt.com/posts/volapyk'>Product Hunt</a>
+                <a href='https://www.linkedin.com/company/volapyk-ai'>LinkedIn</a>
+                <a href='https://adamsmith.house.gov/2024/1/rep-smith-announces-ninth-district-winners-of-the-2023-congressional-app-challenge'>US House of Representatives</a>
+                <a href='https://nwasianweekly.com/2024/01/winner-of-congressional-app-challenge/'>NW Asian Weekly</a>
+            </div>            
             <form className="w-full" onSubmit={onSearch}>   
                 <label htmlFor="default-search" className="mb-2 text-sm font-bold text-white sr-only">Search</label>
                 <div className="relative">

@@ -4,7 +4,7 @@ import {CircularProgress} from "@nextui-org/progress";
 export default function ServiceCard(props: any) {
   let strokeColor: string = "";
   let textColor: string = "";
-  if (props.score >= 8) {
+  if (props.score >= 7) {
     strokeColor = "stroke-green-500"
     textColor = "text-md font-semibold text-green-500"
   } else if (props.score >= 6) {

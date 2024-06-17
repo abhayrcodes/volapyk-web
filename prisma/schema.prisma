@@ -14,10 +14,10 @@ model approved_links {
 }
 
 model cases {
-  id             Int    @id @default(autoincrement())
-  title          String @unique
-  classification String
-  category_id    Int?
+  id          Int    @id @default(autoincrement())
+  title       String @unique
+  score       Int
+  category_id Int?
 }
 
 model new_links {
