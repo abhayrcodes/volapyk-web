@@ -12,7 +12,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
 
   let strokeColor: string = "";
   let textColor: string = "";
-  if (data[0].score >= 8) {
+  if (data[0].score >= 7) {
     strokeColor = "stroke-green-500"
     textColor = "text-xl font-semibold text-green-500"
   } else if (data[0].score >= 6) {
@@ -45,7 +45,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
   data[0].case_ids.forEach((case_id) => {
     const cat = Number(cases[case_id].category_id);
     caseMap[cat].push(String(cases[case_id].title));
-    caseMap[cat].push(String(cases[case_id].classification));
+    caseMap[cat].push(String(cases[case_id].score));
   });
 
   return (
