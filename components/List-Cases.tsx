@@ -1,13 +1,15 @@
+// not sure if we even need this code anymore
+
 export default function CasesList(props: any) {
   const numbers = props.case_titles;
 
 //{listItemStyle.backgroundColor}
 
   const colorMap: { [key: string]: JSX.Element } = {
-    good: (<div className="order-last bg-gradient-radial from-slate-800 to-green-600/30 w-min px-2 py-1 rounded-lg text-green-600 border-2 border-green-600">Good</div>),
-    neutral: (<div className="order-last bg-gradient-radial from-slate-800 to-gray-600/30 w-min px-2 py-1 rounded-lg text-gray-600 border-2 border-gray-600">Neutral</div>),
-    bad: (<div className="order-last bg-gradient-radial from-slate-800 to-orange-500/30 w-min px-2 py-1 rounded-lg text-orange-500 border-2 border-orange-500">Bad</div>),
-    blocker: (<div className="order-last bg-gradient-radial from-slate-800 to-red-500/30 w-min px-2 py-1 rounded-lg text-red-500 border-2 border-red-500">Blocker</div>)
+    10: (<div className="order-last bg-gradient-radial from-slate-800 to-green-600/30 w-min px-2 py-1 rounded-lg text-green-600 border-2 border-green-600">Good</div>),
+    7: (<div className="order-last bg-gradient-radial from-slate-800 to-gray-600/30 w-min px-2 py-1 rounded-lg text-gray-600 border-2 border-gray-600">Neutral</div>),
+    4: (<div className="order-last bg-gradient-radial from-slate-800 to-orange-500/30 w-min px-2 py-1 rounded-lg text-orange-500 border-2 border-orange-500">Bad</div>),
+    0: (<div className="order-last bg-gradient-radial from-slate-800 to-red-500/30 w-min px-2 py-1 rounded-lg text-red-500 border-2 border-red-500">Blocker</div>)
     // Add more mappings as needed
   };
 

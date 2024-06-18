@@ -38,10 +38,10 @@ export default function CategoryList(case_map: any) {
     };
 
     const caseColor: { [key: string]: string; } = {
-        'Good': 'green-600',
-        'Neutral': 'gray-600',
-        'Bad': 'orange-500',
-        'Blocker': 'red-500',
+        '10': 'green-600',
+        '7': 'gray-600',
+        '4': 'orange-500',
+        '0': 'red-500',
       };
 
     function categoryColor(cat_score: number): string {

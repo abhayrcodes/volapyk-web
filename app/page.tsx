@@ -15,7 +15,7 @@ export default async function Home({
   const signup = (typeof searchParams === "undefined") ? true : (searchParams.signup==="true" ? false : true);
 
   const data = await prisma.services.findMany({
-    take: 10,
+    take: 99,
     orderBy: {
       id: 'asc'
     },
