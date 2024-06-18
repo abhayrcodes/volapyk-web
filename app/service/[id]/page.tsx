@@ -52,7 +52,7 @@ export default async function ServicePage({ params }: { params: { id: string } }
     <main className='w-3/4 mx-auto'>
       <header className='flex flex-col justify-between my-10 gap-y-5 lg:flex-row lg:gap-y-0'>
         <div className='flex flex-col items-center lg:space-x-4 gap-y-5 lg:flex-row lg:text-left'>
-          <img src={`/images/service-icons/${data[0].id}.webp`} alt="Service Logo" className="h-16 w-fit rounded-md"/>
+          <img src={`/images/service-icons/${data[0].name}.webp`} alt="Service Logo" className="h-16 w-fit rounded-md"/>
           <h2 className="text-4xl lg:text-6xl text-slate-100 font-bold">{data[0].name}</h2>
         </div>
         <CircularProgress
