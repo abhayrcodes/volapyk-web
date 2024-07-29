@@ -41,7 +41,7 @@ export default async function About() {
         <div className='lg:order-2 grid grid-cols-2 gap-6'>
           <div className='flex items-center justify-center rounded-lg bg-gradient-to-r to-purple-500 from-indigo-500 hover:scale-105 ease-in-out duration-300'>
             <div className='text-center space-y-2'>
-              <h2 className='text-white text-4xl lg:text-6xl font-bold'>Aug 1</h2>
+              <h2 className='text-white text-4xl lg:text-6xl font-bold'>TBD</h2>
               <p className='text-slate-900 font-bold'>Planned Final Launch</p>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default async function About() {
             <p className="text-md text-slate-400 lg:text-xl font-bold tracking-tight">
               We strive to integrate as many perspectives as possible into our final product. We have worked with educational leaders at Columbia, Yale, the University of Washington and much more. We have also recieved input from leaders in cybersecurity through professional organizations like the ISSA and ISC2. We would love to hear your thoughts as well!
             </p>
-            <a href="mailto:support@volapyk.net" className='rounded-lg transition ease-in-out duration-300 labil font-semibold w-fit p-4 bg-slate-100 text-slate-900 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600'>Contact Us</a>
+            <a href="mailto:volapyk@tutamail.com" className='rounded-lg transition ease-in-out duration-300 labil font-semibold w-fit p-4 bg-slate-100 text-slate-900 border-2 border-slate-100 hover:text-slate-100 hover:bg-slate-900 hover:shadow-lg hover:shadow-indigo-600'>Contact Us</a>
           </div>
         </div>
         <div className='lg:order-6 flex items-center justify-center'>
