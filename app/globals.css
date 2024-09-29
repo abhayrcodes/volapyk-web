@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Yapari';
-    src: url(/fonts/YapariTrial-Bold.ttf);
+    font-family: 'Induction';
+    src: url(/fonts/Induction.otf);
 }
 
 @font-face {
@@ -23,7 +23,7 @@ html {
 }
 
 #logo-text {
-    font-family: Yapari;
+    font-family: Induction;
 }
 
 .labil {
